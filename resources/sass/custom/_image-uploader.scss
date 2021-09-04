@@ -1,0 +1,63 @@
+.image-uploaded {
+    max-height: 150px;
+    max-width: 150px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.image-uploaded-xs {
+    max-height: 50px !important;
+    max-width: 50px !important;
+}
+
+.image-uploaded-s {
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.image-uploaded-m {
+    max-height: 150px;
+    max-width : 150px;
+}
+
+.image-uploaded-l {
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.image-uploaded-xl {
+    max-height: 250px;
+    max-width: 250px;
+}
+
+.image-large-viewer-wrapper {
+    background-color: $dark;
+    position: fixed;
+    z-index: 100000000000000000000000000000000000000000000000;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    .btn-image-large-viewer-close {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        font-size: 30px;
+        color: $light;
+        z-index: 1000000000000000000000000000000000000000000000000000000000;
+    }
+
+    .image-uploaded-large-viewer {
+        max-height: 70%;
+        max-width: 70%;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
