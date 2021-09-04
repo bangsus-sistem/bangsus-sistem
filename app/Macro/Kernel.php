@@ -42,4 +42,11 @@ class Kernel
         // Timestamp.
         'expiredAt' => Blueprint\Timestamp\ExpiredAtBlueprint::class,
     ];
+
+    /**
+     * @var array
+     */
+    public static $rules = [
+
+    ];
 }
