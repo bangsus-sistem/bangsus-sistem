@@ -28,8 +28,12 @@ return [
     ],
     'observer' => [
         'kernel' => [
-            \App\Observers\Kernel::class,
             \App\Observers\Kernel::class
+        ],
+    ],
+    'eloquent' => [
+        'kernel' => [
+            \App\Models\Kernel::class
         ],
     ],
 ];
