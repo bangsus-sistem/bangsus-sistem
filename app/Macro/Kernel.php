@@ -10,7 +10,7 @@ class Kernel
     public static $blueprints = [
         // Booleans.
         'active' => Blueprint\Booleans\ActiveBlueprint::class,
-        'allApplications' => Blueprint\Booleans\AllApplicationsBlueprint::class,
+        'allBranches' => Blueprint\Booleans\AllBranchesBlueprint::class,
         'allFeatures' => Blueprint\Booleans\AllFeaturesBlueprint::class,
         'allReports' => Blueprint\Booleans\AllReportsBlueprint::class,
         'allWidgets' => Blueprint\Booleans\AllWidgetsBlueprint::class,
