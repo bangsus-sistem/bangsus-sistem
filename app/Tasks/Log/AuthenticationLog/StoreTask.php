@@ -2,7 +2,7 @@
 
 namespace App\Tasks\Log\AuthenticationLog;
 
-use Cheddarboss\Foundation\Task;
+use Bsb\Foundation\Task;
 use App\Models\Log\AuthenticationLog;
 
 class StoreTask extends Task
