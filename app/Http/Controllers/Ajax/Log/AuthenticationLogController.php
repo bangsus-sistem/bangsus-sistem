@@ -13,10 +13,7 @@ use App\Http\Requests\Ajax\Log\AuthenticationLog\{
     RevealLatestRequest,
     RevealTrafficRequest,
 };
-use App\Tasks\Log\AuthenticationLog\{
-    StoreTask,
-    DestroyTask,
-};
+use App\Tasks\Log\AuthenticationLog\DestroyTask;
 use App\Services\{
     SanctumLoginService,
     SanctumLogoutService,
@@ -37,9 +34,7 @@ class AuthenticationLogController extends Controller
     public function manifest()
     {
         return response()->json(
-            new AuthenticationLogSingleCollection(
-                AuthenticationLog::all()
-            ),
+            new AuthenticationLogSingleCollection(AuthenticationLog::all()),
             200
         );
     }
@@ -125,7 +120,10 @@ class AuthenticationLogController extends Controller
      */
     public function destroy(DestroyRequest $request)
     {
-        $this->transmit(new DestroyTask, $request);
+        $authenticationLog = AuthenticationLog::findOrFail(
+            $request->input('id')
+        );
+        $this->transaction(fn () => $authenticationLog->delete());
         return response()->noContent();
     }
 
@@ -135,9 +133,7 @@ class AuthenticationLogController extends Controller
      */
     public function revealLatest(RevealLatestRequest $request)
     {
-        return response()->json(
-            $this->reveal(new LatestWidget, $request)
-        );
+        return response()->json($this->reveal(new LatestWidget, $request));
     }
 
     /**
@@ -146,8 +142,6 @@ class AuthenticationLogController extends Controller
      */
     public function revealTraffic(RevealTrafficRequest $request)
     {
-        return response()->json(
-            $this->reveal(new TrafficWidget, $request)
-        );
+        return response()->json($this->reveal(new TrafficWidget, $request));
     }
 }

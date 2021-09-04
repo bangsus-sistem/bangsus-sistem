@@ -12,7 +12,6 @@ use App\Http\Requests\Ajax\Log\ActivityLog\{
     RevealLatestRequest,
     RevealTrafficRequest,
 };
-use App\Tasks\Log\ActivityLog\DestroyTask;
 use App\Widgets\Log\ActivityLog\{
     LatestWidget,
     TrafficWidget,
@@ -29,9 +28,7 @@ class ActivityLogController extends Controller
     public function manifest()
     {
         return response()->json(
-            new ActivityLogSingleCollection(
-                ActivityLog::all()
-            ),
+            new ActivityLogSingleCollection(ActivityLog::all()),
             200
         );
     }
@@ -66,9 +63,7 @@ class ActivityLogController extends Controller
     public function show(ShowRequest $request, $id)
     {
         return response()->json(
-            new ActivityLogRelatedResource(
-                ActivityLog::findOrFail($id)
-            ),
+            new ActivityLogRelatedResource(ActivityLog::findOrFail($id)),
             200
         );
     }
@@ -79,7 +74,8 @@ class ActivityLogController extends Controller
      */
     public function destroy(DestroyRequest $request)
     {
-        $this->transmit(new DestroyTask, $request);
+        $activityLog = ActivityLog::findOrFail($request->input('id'));
+        $this->transaction(fn () => $activityLog->delete());
         return response()->noContent();
     }
 
@@ -89,9 +85,7 @@ class ActivityLogController extends Controller
      */
     public function revealLatest(RevealLatestRequest $request)
     {
-        return response()->json(
-            $this->reveal(new LatestWidget, $request)
-        );
+        return response()->json($this->reveal(new LatestWidget, $request));
     }
 
     /**
@@ -100,8 +94,6 @@ class ActivityLogController extends Controller
      */
     public function revealTraffic(RevealTrafficRequest $request)
     {
-        return response()->json(
-            $this->reveal(new TrafficWidget, $request)
-        );
+        return response()->json($this->reveal(new TrafficWidget, $request));
     }
 }
