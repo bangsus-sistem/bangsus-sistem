@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "code": "SPA",
+        "name": "Superadmin",
+        "active": true,
+        "locked": true,
+        "hidden": true,
+        "all_applications": true,
+        "all_features": true,
+        "all_widgets": true,
+        "all_reports": true,
+        "description": "Role Superadmin.",
+        "note": "Tidak bisa diubah atau dihapus."
+    }
+]

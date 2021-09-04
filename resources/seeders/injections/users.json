@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "username": "superadmin@cheddarboss",
+        "password": "cheddarboss112233",
+        "full_name": "Cheddarboss Superadmin",
+        "role_id": 1,
+        "active": true,
+        "locked": true,
+        "hidden": true,
+        "description": "Akun Superadmin.",
+        "note": "Tidak bisa diubah ataupun dihapus.",
+        "user_create_id": 1
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "ref": "index"
+    },
+    {
+        "ref": "create"
+    },
+    {
+        "ref": "read"
+    },
+    {
+        "ref": "update"
+    },
+    {
+        "ref": "delete"
+    }
+]

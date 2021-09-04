@@ -1,0 +1,75 @@
+[
+    {
+        "ref": "account",
+        "modules": [
+            {
+                "ref": "data",
+                "actions": ["update"]
+            },
+            {
+                "ref": "password",
+                "actions": ["update"]
+            },
+            {
+                "ref": "profile_picture",
+                "actions": ["update"]
+            },
+            {
+                "ref": "authentication_token",
+                "actions": ["index", "create", "read", "update", "delete"]
+            }
+        ],
+        "widgets": [],
+        "reports": []
+    },
+    {
+        "ref": "auth",
+        "modules": [
+            {
+                "ref": "role",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
+                "ref": "user",
+                "actions": ["index", "create", "read", "update", "delete"]
+            }
+        ],
+        "widgets": [],
+        "reports": []
+    },
+    {
+        "ref": "log",
+        "modules": [
+            {
+                "ref": "authentication_log",
+                "actions": ["index", "read", "delete"]
+            },
+            {
+                "ref": "activity_log",
+                "actions": ["index", "read", "delete"]
+            }
+        ],
+        "widgets": [
+            { "ref": "latest_authentication_log" },
+            { "ref": "authentication_log_traffic" },
+            { "ref": "latest_activity_log" },
+            { "ref": "activity_log_traffic" }
+        ],
+        "reports": [
+            { "ref": "authentication_log" },
+            { "ref": "activity_log" }
+        ]
+    },
+    {
+        "ref": "accounting",
+        "modules": [],
+        "widgets": [],
+        "reports": []
+    },
+    {
+        "ref": "master",
+        "modules": [],
+        "widgets": [],
+        "reports": []
+    }
+]
