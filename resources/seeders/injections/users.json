@@ -1,10 +1,11 @@
 [
     {
         "id": 1,
-        "username": "superadmin@cheddarboss",
-        "password": "cheddarboss112233",
-        "full_name": "Cheddarboss Superadmin",
+        "username": "superadmin@bangsus",
+        "password": "bangsus112233",
+        "full_name": "Bangsus Superadmin",
         "role_id": 1,
+        "all_branches": true,
         "active": true,
         "locked": true,
         "hidden": true,
