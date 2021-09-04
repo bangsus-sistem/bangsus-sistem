@@ -1,3 +1,3 @@
 <template>
-    <h5>Selamat Datang di Cheddarboss</h5>
+    <h5>Selamat Datang di Bangsus Sistem</h5>
 </template>
