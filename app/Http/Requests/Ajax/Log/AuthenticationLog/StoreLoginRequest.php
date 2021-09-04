@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\Ajax\Log\AuthenticationLog;
 
-use Cheddarboss\Foundation\Http\FormRequest;
+use Bsb\Foundation\Http\FormRequest;
 
 class StoreLoginRequest extends FormRequest
 {
