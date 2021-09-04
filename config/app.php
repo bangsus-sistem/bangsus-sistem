@@ -165,6 +165,9 @@ return [
         /*
          * Package Service Providers...
          */
+        Bsb\Foundation\Providers\EloquentServiceProvider::class,
+        Bsb\Foundation\Providers\MacroServiceProvider::class,
+        // Bsb\Foundation\Providers\ObserverServiceProvider::class,
 
         /*
          * Application Service Providers...
