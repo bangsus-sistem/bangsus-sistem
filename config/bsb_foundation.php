@@ -36,4 +36,5 @@ return [
             \App\Models\Kernel::class
         ],
     ],
+    'log_activity' => env('BSB_LOG_ACTIVITY', true),
 ];
