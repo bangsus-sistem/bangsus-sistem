@@ -2,7 +2,7 @@
 
 namespace App\Macro\Blueprint\Booleans;
 
-use Cheddarboss\Foundation\Macro\BlueprintContract;
+use Bsb\Foundation\Macro\BlueprintContract;
 use Closure;
 
 class AllFeaturesBlueprint implements BlueprintContract

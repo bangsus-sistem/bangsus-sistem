@@ -2,7 +2,7 @@
 
 namespace App\Macro\Blueprint\Timestamp;
 
-use Cheddarboss\Foundation\Macro\BlueprintContract;
+use Bsb\Foundation\Macro\BlueprintContract;
 use Closure;
 
 class ExpiredAtBlueprint implements BlueprintContract

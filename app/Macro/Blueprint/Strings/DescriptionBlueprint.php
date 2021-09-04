@@ -2,7 +2,7 @@
 
 namespace App\Macro\Blueprint\Strings;
 
-use Cheddarboss\Foundation\Macro\BlueprintContract;
+use Bsb\Foundation\Macro\BlueprintContract;
 use Closure;
 
 class DescriptionBlueprint implements BlueprintContract
