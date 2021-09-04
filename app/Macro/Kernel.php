@@ -20,6 +20,8 @@ class Kernel
 
         // Foreign.
         'action' => Blueprint\Foreign\ActionBlueprint::class,
+        'branch' => Blueprint\Foreign\BranchBlueprint::class,
+        'branchType' => Blueprint\Foreign\BranchTypeBlueprint::class,
         'module' => Blueprint\Foreign\ModuleBlueprint::class,
         'package' => Blueprint\Foreign\PackageBlueprint::class,
         'role' => Blueprint\Foreign\RoleBlueprint::class,
