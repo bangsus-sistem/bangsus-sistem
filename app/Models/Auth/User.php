@@ -14,6 +14,7 @@ use App\Models\Concerns\{
     HiddenFlag,
     LockedFlag,
 };
+use App\Models\System\Branch;
 
 class User extends Authenticatable
 {
@@ -59,5 +60,13 @@ class User extends Authenticatable
     public function role()
     {
         return $this->belongsTo(Role::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function branches()
+    {
+        return $this->belongsToMany(User::class);
     }
 }
