@@ -13,7 +13,7 @@ use App\Http\Requests\Ajax\Log\AuthenticationLog\{
     RevealLatestRequest,
     RevealTrafficRequest,
 };
-use App\Tasks\Log\AuthenticationLog\DestroyTask;
+use App\Tasks\Log\AuthenticationLog\StoreTask;
 use App\Services\{
     SanctumLoginService,
     SanctumLogoutService,
