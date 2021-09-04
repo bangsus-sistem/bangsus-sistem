@@ -3,7 +3,7 @@
 namespace App\Models\Auth;
 
 use Illuminate\Database\Eloquent\Model;
-use Cheddarboss\Foundation\Database\Eloquent\AuthModel;
+use Bsb\Foundation\Database\Eloquent\AuthModel;
 use App\Models\Log\ActivityLog;
 
 class Widget extends Model implements AuthModel
