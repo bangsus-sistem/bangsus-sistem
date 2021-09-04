@@ -3,7 +3,7 @@
         widget-ref="latest_activity_log"
         class="col-md-12 col-lg-8 col-xl-6"
         :loading="state.widget.loading"
-        title="Log Autentikasi Terakhir"
+        title="Log Aktivitas Terakhir"
     >
         <div class="table-responsive">
             <table class="table table-hover table-sm">

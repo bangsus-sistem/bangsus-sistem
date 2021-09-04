@@ -3,7 +3,7 @@
         widget-ref="activity_log_traffic"
         class="col-12 col-lg-6 col-xl-4"
         :loading="state.widget.loading"
-        title="Traffic Login User"
+        title="Traffic Log Aktivitas"
     >
         <div class="form-group mt-4">
             <select class="form-control form-control-sm" v-model="query.timestamp" @change="reloadData">
