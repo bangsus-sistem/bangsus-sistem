@@ -34,7 +34,7 @@ class ActivityLogController extends Controller
     }
 
     /**
-     * @param  \App\Http\Requests\Ajax\Log\IndexRequest  $request
+     * @param  \App\Http\Requests\Ajax\Log\ActivityLog\IndexRequest  $request
      * @return \Illuminate\Http\JsonResponse
      */
     public function index(IndexRequest $request)
@@ -56,7 +56,7 @@ class ActivityLogController extends Controller
     }
 
     /**
-     * @param  \App\Http\Requests\Res\Log\ShowRequest  $request
+     * @param  \App\Http\Requests\Ajax\Log\ActivityLog\ShowRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\JsonResponse
      */
@@ -69,7 +69,7 @@ class ActivityLogController extends Controller
     }
 
     /**
-     * @param  \App\Http\Requests\Ajax\Log\DestroyRequest  $request
+     * @param  \App\Http\Requests\Ajax\Log\ActivityLog\DestroyRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function destroy(DestroyRequest $request)

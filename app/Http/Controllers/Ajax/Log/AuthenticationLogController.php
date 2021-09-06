@@ -62,7 +62,7 @@ class AuthenticationLogController extends Controller
     }
 
     /**
-     * @param  \App\Http\Requests\Res\Log\AuthenticationLog\ShowRequest  $request
+     * @param  \App\Http\Requests\Ajax\Log\AuthenticationLog\ShowRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\JsonResponse
      */
@@ -115,7 +115,7 @@ class AuthenticationLogController extends Controller
     }
 
     /**
-     * @param  \App\Http\Requests\Ajax\Log\DestroyRequest  $request
+     * @param  \App\Http\Requests\Ajax\Log\AuthenticationLog\DestroyRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function destroy(DestroyRequest $request)
