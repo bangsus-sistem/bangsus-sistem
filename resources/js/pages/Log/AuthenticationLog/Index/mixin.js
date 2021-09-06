@@ -34,7 +34,7 @@ export default {
                 .then(res => {
                     this.setQuery({
                         'user_id': ['*', ['*', ...lodash.map(this.resources['users'], (val) => val.id)]],
-                        'state': [true, ['*', true, false, 'true', 'false']],
+                        'state': ['*', ['*', true, false, 'true', 'false']],
                     })
                     this.getAndSetResult()
                 })
