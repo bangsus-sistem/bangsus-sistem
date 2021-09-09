@@ -46,7 +46,7 @@ class AmendRequest extends FeatureIdRequest
             ],
             'role_id' => [
                 'required',
-                'wbl_exists:'.Role::class,
+                'bsb_exists:'.Role::class,
             ],
             'description' => [
                 'nullable',
@@ -66,7 +66,7 @@ class AmendRequest extends FeatureIdRequest
             ],
             'branch_ids.*' => [
                 Rule::requiredIf( ! $this->boolean('all_branches')),
-                'wbl_exists:'.Branch::class,
+                'bsb_exists:'.Branch::class,
             ],
         ];
     }
