@@ -17,4 +17,14 @@ Route::middleware('auth:sanctum')->group(function () {
      * @package \Waffleboss\Library\Http\Controllers\Ajax\Log
      */
     Route::prefix('log')->namespace('Log')->group(__DIR__.'/log.php');
+    
+    /**
+     * @package \Waffleboss\Library\Http\Controllers\Ajax\Auth
+     */
+    Route::prefix('auth')->namespace('Auth')->group(__DIR__.'/auth.php');
+    
+    /**
+     * @package \Waffleboss\Library\Http\Controllers\Ajax\System
+     */
+    Route::prefix('system')->namespace('System')->group(__DIR__.'/system.php');
 });
