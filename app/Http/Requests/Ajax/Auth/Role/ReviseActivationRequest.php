@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Res\Auth\Role;
+namespace App\Http\Requests\Ajax\Auth\Role;
 
 use Bsb\Foundation\Http\FeatureIdRequest;
 use App\Models\Auth\Role;
