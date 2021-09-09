@@ -11,7 +11,7 @@ class DestroyRequest extends FeatureIdRequest
      * @var array
      */
     protected $refs = [
-        'module' => 'activity_log',
+        'module' => 'role',
         'action' => 'delete',
     ];
 
