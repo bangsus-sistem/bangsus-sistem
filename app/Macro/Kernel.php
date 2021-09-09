@@ -16,6 +16,7 @@ class Kernel
         'allWidgets' => Blueprint\Booleans\AllWidgetsBlueprint::class,
         'hidden' => Blueprint\Booleans\HiddenBlueprint::class,
         'locked' => Blueprint\Booleans\LockedBlueprint::class,
+        'required' => Blueprint\Booleans\RequiredBlueprint::class,
         'state' => Blueprint\Booleans\StateBlueprint::class,
 
         // Foreign.
@@ -40,6 +41,9 @@ class Kernel
         'password' => Blueprint\Strings\PasswordBlueprint::class,
         'ref' => Blueprint\Strings\RefBlueprint::class,
         'username' => Blueprint\Strings\UsernameBlueprint::class,
+
+        // Text
+        'storageDir' => Blueprint\Text\StorageDirBlueprint::class,
 
         // Timestamp.
         'expiredAt' => Blueprint\Timestamp\ExpiredAtBlueprint::class,
