@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tasks\Ajax\Auth\Role;
+namespace App\Tasks\Auth\Role;
 
 use Bsb\Foundation\Task;
 

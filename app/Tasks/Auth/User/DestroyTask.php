@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tasks\Res\Auth\User;
+namespace App\Tasks\Auth\User;
 
 use Bsb\Foundation\Task;
 use App\Models\Auth\User;

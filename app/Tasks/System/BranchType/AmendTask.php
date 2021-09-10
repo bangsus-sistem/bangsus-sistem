@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tasks\Ajax\System\BranchType;
+namespace App\Tasks\System\BranchType;
 
 use Bsb\Foundation\Task;
 
