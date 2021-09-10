@@ -14,8 +14,6 @@ class DestroyTask extends Task
     public function handle($request)
     {
         $role = Role::findOrFail($request->input('id'));
-        $this->transaction(
-            fn () => $role->delete()
-        );
+        $this->transaction(fn () => $role->delete());
     }
 }
