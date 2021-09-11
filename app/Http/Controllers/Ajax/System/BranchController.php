@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Ajax\System;
 
-use Waffleboss\Foundation\Http\Controller;
+use Bsb\Foundation\Http\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\Ajax\System\Branch\{
     IndexRequest,
