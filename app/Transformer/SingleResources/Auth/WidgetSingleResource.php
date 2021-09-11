@@ -15,6 +15,7 @@ class WidgetSingleResource extends SingleResource
         return [
             'id' => $this->id,
             'ref' => $this->ref,
+            'package_id' => $this->package_id,
         ];
     }
 }
