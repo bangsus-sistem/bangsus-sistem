@@ -3,6 +3,7 @@
 namespace App\Tasks\Auth\Role;
 
 use Bsb\Foundation\Task;
+use App\Models\Auth\Role;
 
 class ReviseActivationTask extends Task
 {
