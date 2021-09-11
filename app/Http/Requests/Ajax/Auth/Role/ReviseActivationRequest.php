@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\Ajax\Auth\Role;
 
-use Bsb\Foundation\Http\FeatureIdRequest;
+use App\Http\Requests\FeatureIdRequest;
 use App\Models\Auth\Role;
 
 class ReviseActivationRequest extends FeatureIdRequest

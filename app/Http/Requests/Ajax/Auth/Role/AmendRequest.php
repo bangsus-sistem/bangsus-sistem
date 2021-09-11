@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\Ajax\Auth\Role;
 
-use App\Http\FeatureIdRequest;
+use App\Http\Requests\FeatureIdRequest;
 use Illuminate\Validation\Rule;
 use App\Models\Auth\{
     Role,
