@@ -28,6 +28,7 @@ class Kernel
         'branch' => Blueprint\Foreign\BranchBlueprint::class,
         'bloodType' => Blueprint\Foreign\BloodTypeBlueprint::class,
         'branchType' => Blueprint\Foreign\BranchTypeBlueprint::class,
+        'division' => Blueprint\Foreign\DivisionBlueprint::class,
         'gender' => Blueprint\Foreign\GenderBlueprint::class,
         'jobTitle' => Blueprint\Foreign\JobTitleBlueprint::class,
         'module' => Blueprint\Foreign\ModuleBlueprint::class,
