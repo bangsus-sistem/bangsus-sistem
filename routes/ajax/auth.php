@@ -1,5 +1,31 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
+Route::prefix('package')->group(function () {
+    Route::get('all', 'PackageController@manifest');
+});
+
+Route::prefix('module')->group(function () {
+    Route::get('all', 'ModuleController@manifest');
+});
+
+Route::prefix('action')->group(function () {
+    Route::get('all', 'ActionController@manifest');
+});
+
+Route::prefix('feature')->group(function () {
+    Route::get('all', 'FeatureController@manifest');
+});
+
+Route::prefix('widget')->group(function () {
+    Route::get('all', 'WidgetController@manifest');
+});
+
+Route::prefix('report')->group(function () {
+    Route::get('all', 'ReportController@manifest');
+});
+
 Route::prefix('role')->group(function () {
     Route::get('all', 'RoleController@manifest');
     Route::get('', 'RoleController@index');
