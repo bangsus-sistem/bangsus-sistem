@@ -1,6 +1,6 @@
 
 export default {
-    prefix: 'cb',
+    prefix: 'bsb',
     components: {
         /**
          * Access
