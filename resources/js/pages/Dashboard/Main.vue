@@ -3,20 +3,20 @@
         <!-- Mobile -->
         <template v-slot:mobile>
             <h3>Dashboard</h3>
-            <cb-row class="mt-3">
+            <bsb-row class="mt-3">
 
-            </cb-row>
+            </bsb-row>
         </template>
         <!-- Desktop -->
         <template v-slot:desktop>
             <h3>Dashboard</h3>
             <h4 class="mt-4">Log</h4>
-            <cb-row>
+            <bsb-row>
                 <LatestAuthenticationLog class="my-3" />
                 <AuthenticationLogTraffic class="my-3" />
                 <LatestActivityLog class="my-3" />
                 <ActivityLogTraffic class="my-3" />
-            </cb-row>
+            </bsb-row>
         </template>
     </Layout>
 </template>

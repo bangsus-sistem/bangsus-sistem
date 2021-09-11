@@ -2,7 +2,7 @@
     <Layout>
         <!-- Mobile -->
         <template v-slot:mobile>
-            <cb-row class="justify-content-center">
+            <bsb-row class="justify-content-center">
                 <div class="col-12 col-md-10">
                     <Title />
                     <WelcomeMessage class="mt-5" />
@@ -14,15 +14,15 @@
                         @toggleMode="toggleLoginMode"
                     />
                 </div>
-            </cb-row>
+            </bsb-row>
         </template>
         <!-- Desktop -->
         <template v-slot:desktop>
             <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-4">
                     <Title />
-                    <cb-card class="mt-5">
-                        <cb-card-body class="p-5">
+                    <bsb-card class="mt-5">
+                        <bsb-card-body class="p-5">
                             <WelcomeMessage />
                             <Description />
                             <StandardForm v-show="pageMeta.standardLogin" />
@@ -31,8 +31,8 @@
                                 :standard-mode-val="pageMeta.standardLogin"
                                 @toggleMode="toggleLoginMode"
                             />
-                        </cb-card-body>
-                    </cb-card>
+                        </bsb-card-body>
+                    </bsb-card>
                 </div>
             </div>
         </template>

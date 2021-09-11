@@ -1,89 +1,89 @@
 <template>
-    <cb-screen>
+    <dbsb-screen>
         <template v-slot:desktop>
             <tr>
-                <cb-td>{{ num }}</cb-td>
-                <cb-td v-if="flWithUser">{{ item['user']['full_name'] }}</cb-td>
-                <cb-td justify="center">
+                <dbsb-td>{{ num }}</dbsb-td>
+                <dbsb-td v-if="flWithUser">{{ item['user']['full_name'] }}</dbsb-td>
+                <dbsb-td justify="center">
                     {{ standardDatetime(item['created_at']) }}
-                </cb-td>
-                <cb-td justify="center">
-                    <cb-badge>
+                </dbsb-td>
+                <dbsb-td justify="center">
+                    <dbsb-badge>
                         {{ translateActivityLogType(item['activity_log_type']) }}
-                    </cb-badge>
-                </cb-td>
-                <cb-td justify="center">
+                    </dbsb-badge>
+                </dbsb-td>
+                <dbsb-td justify="center">
                     <template v-if="item['activity_log_type'] == 'feature'">
-                        <cb-badge color="info">
+                        <dbsb-badge color="info">
                             {{ item['feature']['module']['ref'] }}
-                        </cb-badge>
-                        <cb-badge color="secondary">
+                        </dbsb-badge>
+                        <dbsb-badge color="secondary">
                             {{ item['feature']['action']['ref'] }}
-                        </cb-badge>
+                        </dbsb-badge>
                     </template>
                     <template v-else-if="item['activity_log_type'] == 'widget'">
-                        <cb-badge color="info">
+                        <dbsb-badge color="info">
                             {{ item['widget']['ref'] }}
-                        </cb-badge>
+                        </dbsb-badge>
                     </template>
                     <template v-else-if="item['activity_log_type'] == 'report'">
-                        <cb-badge color="info">
+                        <dbsb-badge color="info">
                             {{ item['report']['ref'] }}
-                        </cb-badge>
+                        </dbsb-badge>
                     </template>
-                </cb-td>
-                <cb-td justify="center">
-                    <cb-access-wrapper module-ref="activity_log" action-ref="read">
-                        <cb-button-router-link-read :to="{ name: 'log.activityLog.read', params: { id: item['id'] } }" />
-                    </cb-access-wrapper>
-                    <cb-access-wrapper module-ref="activity_log" action-ref="delete">
-                        <cb-button-delete @click="$emit('delete')" />
-                    </cb-access-wrapper>
-                </cb-td>
+                </dbsb-td>
+                <dbsb-td justify="center">
+                    <dbsb-access-wrapper module-ref="activity_log" action-ref="read">
+                        <dbsb-button-router-link-read :to="{ name: 'log.activityLog.read', params: { id: item['id'] } }" />
+                    </dbsb-access-wrapper>
+                    <dbsb-access-wrapper module-ref="activity_log" action-ref="delete">
+                        <dbsb-button-delete @click="$emit('delete')" />
+                    </dbsb-access-wrapper>
+                </dbsb-td>
             </tr>
         </template>
         <template v-slot:mobile>
-            <cb-list-group-item>
-                <cb-list-group-item-content>
+            <dbsb-list-group-item>
+                <dbsb-list-group-item-content>
                     <template v-slot:content>
                         <h6 class="m-0" v-if="flWithUser">{{ item['user']['full_name'] }}</h6>
                         <small>{{ standardDatetime(item['created_at']) }}</small>
                     </template>
                     <template v-slot:right>
-                        <cb-access-wrapper module-ref="activity_log" action-ref="read">
-                            <cb-button-router-link-read :to="{ name: 'log.activityLog.read', params: { id: item['id'] } }" />
-                        </cb-access-wrapper>
-                        <cb-access-wrapper module-ref="activity_log" action-ref="delete">
-                            <cb-button-delete @click="$emit('delete')" v-if="!item['locked']" />
-                        </cb-access-wrapper>
+                        <dbsb-access-wrapper module-ref="activity_log" action-ref="read">
+                            <dbsb-button-router-link-read :to="{ name: 'log.activityLog.read', params: { id: item['id'] } }" />
+                        </dbsb-access-wrapper>
+                        <dbsb-access-wrapper module-ref="activity_log" action-ref="delete">
+                            <dbsb-button-delete @click="$emit('delete')" v-if="!item['locked']" />
+                        </dbsb-access-wrapper>
                     </template>
                     <template v-slot:footer>
-                        <cb-badge>
+                        <dbsb-badge>
                             {{ translateActivityLogType(item['activity_log_type']) }}
-                        </cb-badge>
+                        </dbsb-badge>
                         <template v-if="item['activity_log_type'] == 'feature'">
-                            <cb-badge color="info">
+                            <dbsb-badge color="info">
                                 {{ item['feature']['module']['ref'] }}
-                            </cb-badge>
-                            <cb-badge color="secondary">
+                            </dbsb-badge>
+                            <dbsb-badge color="secondary">
                                 {{ item['feature']['action']['ref'] }}
-                            </cb-badge>
+                            </dbsb-badge>
                         </template>
                         <template v-else-if="item['activity_log_type'] == 'widget'">
-                            <cb-badge color="info">
+                            <dbsb-badge color="info">
                                 {{ item['widget']['ref'] }}
-                            </cb-badge>
+                            </dbsb-badge>
                         </template>
                         <template v-else-if="item['activity_log_type'] == 'report'">
-                            <cb-badge color="info">
+                            <dbsb-badge color="info">
                                 {{ item['report']['ref'] }}
-                            </cb-badge>
+                            </dbsb-badge>
                         </template>
                     </template>
-                </cb-list-group-item-content>
-            </cb-list-group-item>
+                </dbsb-list-group-item-content>
+            </dbsb-list-group-item>
         </template>
-    </cb-screen>
+    </dbsb-screen>
 </template>
 
 <script>

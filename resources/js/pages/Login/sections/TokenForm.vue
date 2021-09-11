@@ -5,11 +5,11 @@
     >
         <div class="form-group">
             <label>Masukkan Token 12 Digit</label>
-            <cb-input-errors type="text" v-model="form.data.token" :errors="form.errors.token" />
+            <bsb-input-errors type="text" v-model="form.data.token" :errors="form.errors.token" />
         </div>
-        <cb-button-spinner class="mt-4" color="primary" type="submit" :block="true" :loading="state.form.loading">
+        <bsb-button-spinner class="mt-4" color="primary" type="submit" :block="true" :loading="state.form.loading">
             Kirim Token
-        </cb-button-spinner>
+        </bsb-button-spinner>
     </form>
 </template>
 

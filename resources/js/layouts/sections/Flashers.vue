@@ -1,5 +1,5 @@
 <template>
-    <cb-flashers :flashers="flashers" @closed="closeFlasher($event)" />
+    <bsb-flashers :flashers="flashers" @closed="closeFlasher($event)" />
 </template>
 
 <script>

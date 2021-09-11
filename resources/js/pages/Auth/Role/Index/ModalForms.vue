@@ -1,7 +1,7 @@
 <template>
     <fragment>
-        <cb-access-wrapper module-ref="role" action-ref="update">
-            <cb-modal-form
+        <bsb-access-wrapper module-ref="role" action-ref="update">
+            <bsb-modal-form
                 title="Aktifkan Role"
                 message="Apakah anda yakin?"
                 ref="activate"
@@ -9,7 +9,7 @@
                 method="patch"
                 @success="$emit('success')"
             />
-            <cb-modal-form
+            <bsb-modal-form
                 title="Nonaktifkan Role"
                 message="Apakah anda yakin?"
                 ref="deactivate"
@@ -17,9 +17,9 @@
                 method="patch"
                 @success="$emit('success')"
             />
-        </cb-access-wrapper>
-        <cb-access-wrapper module-ref="role" action-ref="delete">
-            <cb-modal-form
+        </bsb-access-wrapper>
+        <bsb-access-wrapper module-ref="role" action-ref="delete">
+            <bsb-modal-form
                 title="Hapus Role"
                 message="Apakah anda yakin?"
                 ref="delete"
@@ -27,6 +27,6 @@
                 method="delete"
                 @success="$emit('success')"
             />
-        </cb-access-wrapper>
+        </bsb-access-wrapper>
     </fragment>
 </template>

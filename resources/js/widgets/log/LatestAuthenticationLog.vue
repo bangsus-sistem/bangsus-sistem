@@ -10,17 +10,17 @@
                 <thead>
                     <th>#</th>
                     <th>Nama Lengkap</th>
-                    <cb-th justify="center">Status</cb-th>
+                    <bsb-th justify="center">Status</bsb-th>
                     <th>Waktu</th>
                 </thead>
                 <tbody>
                     <tr v-for="(authenticationLog, i) in data" :key="i">
-                        <cb-td>{{ i + 1 }}</cb-td>
-                        <cb-td>{{ authenticationLog['user']['full_name'] }}</cb-td>
-                        <cb-td justify="center">
-                            <cb-switch-badge :condition="authenticationLog['state']" true-label="Login" false-label="Logout"/>
-                        </cb-td>
-                        <cb-td>{{ standardDatetime(authenticationLog['created_at']) }}</cb-td>
+                        <bsb-td>{{ i + 1 }}</bsb-td>
+                        <bsb-td>{{ authenticationLog['user']['full_name'] }}</bsb-td>
+                        <bsb-td justify="center">
+                            <bsb-switch-badge :condition="authenticationLog['state']" true-label="Login" false-label="Logout"/>
+                        </bsb-td>
+                        <bsb-td>{{ standardDatetime(authenticationLog['created_at']) }}</bsb-td>
                     </tr>
                 </tbody>
             </table>

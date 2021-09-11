@@ -1,7 +1,7 @@
 <template>
     <fragment>
-        <cb-access-wrapper module-ref="activity_log" action-ref="delete">
-            <cb-modal-form
+        <bsb-access-wrapper module-ref="activity_log" action-ref="delete">
+            <bsb-modal-form
                 title="Hapus Log Autentikasi"
                 message="Apakah anda yakin?"
                 ref="delete"
@@ -9,6 +9,6 @@
                 method="delete"
                 @success="$emit('success')"
             />
-        </cb-access-wrapper>
+        </bsb-access-wrapper>
     </fragment>
 </template>

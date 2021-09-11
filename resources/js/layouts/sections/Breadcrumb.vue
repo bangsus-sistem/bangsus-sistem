@@ -1,18 +1,18 @@
 <template>
-    <cb-row class="mx-2">
-        <cb-breadcrumb>
+    <bsb-row class="mx-2">
+        <bsb-breadcrumb>
             <template v-for="(breadcrumb, i) in breadcrumbs">
-                <cb-breadcrumb-item :key="i" v-if="breadcrumb.route">
+                <bsb-breadcrumb-item :key="i" v-if="breadcrumb.route">
                     <router-link :to="{name: breadcrumb.route}">
                         {{ breadcrumb.label }}
                     </router-link>
-                </cb-breadcrumb-item>
-                <cb-breadcrumb-item :key="i" v-else :active="true">
+                </bsb-breadcrumb-item>
+                <bsb-breadcrumb-item :key="i" v-else :active="true">
                     {{ breadcrumb.label }}
-                </cb-breadcrumb-item>
+                </bsb-breadcrumb-item>
             </template>
-        </cb-breadcrumb>
-    </cb-row>
+        </bsb-breadcrumb>
+    </bsb-row>
 </template>
 
 <script>

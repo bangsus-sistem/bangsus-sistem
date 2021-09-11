@@ -1,5 +1,5 @@
 <template>
-    <cb-navbar>
+    <bsb-navbar>
         
-    </cb-navbar>
+    </bsb-navbar>
 </template>

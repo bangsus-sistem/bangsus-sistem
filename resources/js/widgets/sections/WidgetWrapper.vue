@@ -1,16 +1,16 @@
 <template>
     <div v-if="state.widget.show">
-        <cb-card>
-            <cb-card-body>
+        <bsb-card>
+            <bsb-card-body>
                 <div class="text-center" v-if="loading">
-                    <cb-spinner/>
+                    <bsb-spinner/>
                 </div>
                 <div v-else>
                     <h5 class="card-title">{{ title }}</h5>
                     <slot/>
                 </div>
-            </cb-card-body>
-        </cb-card>
+            </bsb-card-body>
+        </bsb-card>
     </div>
 </template>
 

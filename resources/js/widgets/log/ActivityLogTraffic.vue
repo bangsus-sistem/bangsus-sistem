@@ -18,7 +18,7 @@
                 <option value="604800">1 minggu terakhir</option>
             </select>
         </div>
-        <cb-row>
+        <bsb-row>
             <div class="col text-center">
                 <h5 class="text-green-600">{{ data['users_count'] }}</h5>
                 <span class="text-green-600">Pengguna</span>
@@ -27,7 +27,7 @@
                 <h5 class="text-yellow-600">{{ data['count'] }}</h5>
                 <span class="text-yellow-600">Aktivitas</span>
             </div>
-        </cb-row>
+        </bsb-row>
     </WidgetWrapper>
 </template>
 

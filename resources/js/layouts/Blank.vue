@@ -1,19 +1,19 @@
 <template>
     <div>
-        <cb-screen>
+        <bsb-screen>
             <template v-slot:mobile>
-                <cb-container-fluid class="px-3">
+                <bsb-container-fluid class="px-3">
                     <slot name="mobile" />
-                </cb-container-fluid>
-                <cb-screen-mode-wrapper label="Mode Mobile" />
+                </bsb-container-fluid>
+                <bsb-screen-mode-wrapper label="Mode Mobile" />
             </template>
             <template v-slot:desktop>
-                <cb-container-fluid>
+                <bsb-container-fluid>
                     <slot name="desktop" />
-                </cb-container-fluid>
-                <cb-screen-mode-wrapper label="Mode Desktop" />
+                </bsb-container-fluid>
+                <bsb-screen-mode-wrapper label="Mode Desktop" />
             </template>
-        </cb-screen>
+        </bsb-screen>
         <Flashers />
     </div>
 </template>

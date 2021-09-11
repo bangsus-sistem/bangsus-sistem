@@ -5,15 +5,15 @@
     >
         <div class="form-group">
             <label>Username</label>
-            <cb-input-errors type="text" v-model="form.data.username" :errors="form.errors.username" />
+            <bsb-input-errors type="text" v-model="form.data.username" :errors="form.errors.username" />
         </div>
         <div class="form-group">
             <label>Password</label>
-            <cb-input-errors type="password" v-model="form.data.password" :errors="form.errors.password" />
+            <bsb-input-errors type="password" v-model="form.data.password" :errors="form.errors.password" />
         </div>
-        <cb-button-spinner class="mt-4" color="primary" type="submit" :block="true" :loading="state.form.loading">
+        <bsb-button-spinner class="mt-4" color="primary" type="submit" :block="true" :loading="state.form.loading">
             Login
-        </cb-button-spinner>
+        </bsb-button-spinner>
     </form>
 </template>
 

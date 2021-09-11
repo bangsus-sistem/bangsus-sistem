@@ -1,30 +1,30 @@
 <template>
     <div>
-        <cb-screen>
+        <bsb-screen>
             <!-- Mobile -->
             <template v-slot:mobile>
                 <SidebarMobile :active="active"/>
-                <cb-page-wrapper-mobile>
+                <bsb-page-wrapper-mobile>
                     <Breadcrumb :breadcrumbs="breadcrumbs" />
-                    <cb-container-fluid class="px-4 pt-2">
+                    <bsb-container-fluid class="px-4 pt-2">
                         <slot name="mobile" />
-                    </cb-container-fluid>
-                </cb-page-wrapper-mobile>
-                <cb-screen-mode-wrapper label="Mode Mobile" />
+                    </bsb-container-fluid>
+                </bsb-page-wrapper-mobile>
+                <bsb-screen-mode-wrapper label="Mode Mobile" />
             </template>
             <!-- Desktop -->
             <template v-slot:desktop>
                 <Sidebar :active="active" />
-                <cb-page-wrapper>
+                <bsb-page-wrapper>
                     <Navbar />
                     <Breadcrumb :breadcrumbs="breadcrumbs" />
-                    <cb-container-fluid class="px-4 pt-4">
+                    <bsb-container-fluid class="px-4 pt-4">
                         <slot name="desktop" />
-                    </cb-container-fluid>
-                </cb-page-wrapper>
-                <cb-screen-mode-wrapper label="Mode Desktop" />
+                    </bsb-container-fluid>
+                </bsb-page-wrapper>
+                <bsb-screen-mode-wrapper label="Mode Desktop" />
             </template>
-        </cb-screen>
+        </bsb-screen>
         <Flashers />
     </div>
 </template>

@@ -1,28 +1,28 @@
 <template>
     <Layout>
         <template v-slot:mobile>
-            <cb-row>
+            <bsb-row>
                 <div class="col text-center mt-5">
                     <div class="spinner-border text-gray-600" role="status"/>
                 </div>
-            </cb-row>
-            <cb-row>
+            </bsb-row>
+            <bsb-row>
                 <div class="col text-center mt-2 text-gray-600">
                     <h5>Loading</h5>
                 </div>
-            </cb-row>
+            </bsb-row>
         </template>
         <template v-slot:desktop>
-            <cb-row>
+            <bsb-row>
                 <div class="col text-center mt-5">
                     <div class="spinner-border text-gray-600" role="status"/>
                 </div>
-            </cb-row>
-            <cb-row>
+            </bsb-row>
+            <bsb-row>
                 <div class="col text-center mt-2 text-gray-600">
                     <h5>Loading</h5>
                 </div>
-            </cb-row>
+            </bsb-row>
         </template>
     </Layout>
 </template>

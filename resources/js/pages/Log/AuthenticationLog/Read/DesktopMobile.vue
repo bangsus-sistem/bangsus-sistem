@@ -1,8 +1,8 @@
 <template>
     <fragment>
         <h3>Log Autentikasi</h3>
-        <cb-card class="mt-3">
-            <cb-card-body-spinner-error-back
+        <bsb-card class="mt-3">
+            <bsb-card-body-spinner-error-back
                 :loading="state.page.loading"
                 :error="state.page.error"
                 :error-message="state.page.message"
@@ -12,23 +12,23 @@
                     class="mt-5"
                     @submit.prevent=""
                 >
-                    <cb-form-group>
+                    <bsb-form-group>
                         <label>User</label>
-                        <cb-input :value="form.data['user']['full_name']" readonly />
-                    </cb-form-group>
-                    <cb-form-group>
+                        <bsb-input :value="form.data['user']['full_name']" readonly />
+                    </bsb-form-group>
+                    <bsb-form-group>
                         <label>Waktu</label>
-                        <cb-input :value="standardDatetime(form.data['created_at'])" readonly />
-                    </cb-form-group>
-                    <cb-form-group>
+                        <bsb-input :value="standardDatetime(form.data['created_at'])" readonly />
+                    </bsb-form-group>
+                    <bsb-form-group>
                         <label>Status</label>
                         <div>
-                            <cb-switch-badge :condition="form.data['state']" true-label="Login" false-label="Logout"/>
+                            <bsb-switch-badge :condition="form.data['state']" true-label="Login" false-label="Logout"/>
                         </div>
-                    </cb-form-group>
+                    </bsb-form-group>
                 </form>
-            </cb-card-body-spinner-error-back>
-        </cb-card>
+            </bsb-card-body-spinner-error-back>
+        </bsb-card>
     </fragment>
 </template>
 
