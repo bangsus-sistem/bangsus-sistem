@@ -1,12 +1,12 @@
 <?php
 
-namespace Waffleboss\Library\Models\System;
+namespace App\Models\System;
 
 use Illuminate\Database\Eloquent\{
     Model,
     SoftDeletes,
 };
-use Waffleboss\Library\Models\Concerns\{
+use App\Models\Concerns\{
     HasUserTimestamps,
     HasUserDelete,
     ActiveFlag,
