@@ -28,7 +28,7 @@ class RoleRelatedResource extends RelatedResource
             'all_features' => (bool) $this->all_features,
             'all_widgets' => (bool) $this->all_widgets,
             'all_reports' => (bool) $this->all_reports,
-            'features' => new FeatureRelatedCollection($this->features),
+            'features' => new FeatureSingleCollection($this->features),
             'widgets' => new WidgetSingleCollection($this->widgets),
             'reports' => new ReportSingleCollection($this->reports),
             'description' => $this->description,
