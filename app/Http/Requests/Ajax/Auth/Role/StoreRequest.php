@@ -4,6 +4,11 @@ namespace App\Http\Requests\Ajax\Auth\Role;
 
 use App\Http\Requests\FeatureRequest;
 use Illuminate\Validation\Rule;
+use App\Models\Auth\{
+    Feature,
+    Widget,
+    Report,
+};
 
 class StoreRequest extends FeatureRequest
 {

@@ -4,7 +4,12 @@ namespace App\Http\Requests\Ajax\Auth\Role;
 
 use App\Http\FeatureIdRequest;
 use Illuminate\Validation\Rule;
-use App\Models\Auth\Role;
+use App\Models\Auth\{
+    Role,
+    Feature,
+    Widget,
+    Report,
+};
 
 class AmendRequest extends FeatureIdRequest
 {
