@@ -8,7 +8,7 @@ class Kernel
      * @var array
      */
     public static $blueprints = [
-        // Booleans.
+        // Booleans
         'active' => Blueprint\Booleans\ActiveBlueprint::class,
         'allBranches' => Blueprint\Booleans\AllBranchesBlueprint::class,
         'allFeatures' => Blueprint\Booleans\AllFeaturesBlueprint::class,
@@ -19,11 +19,11 @@ class Kernel
         'required' => Blueprint\Booleans\RequiredBlueprint::class,
         'state' => Blueprint\Booleans\StateBlueprint::class,
 
-        // Date.
+        // Date
         'birthDate' => Blueprint\Date\BirthDateBlueprint::class,
         'startDate' => Blueprint\Date\StartDateBlueprint::class,
 
-        // Foreign.
+        // Foreign
         'action' => Blueprint\Foreign\ActionBlueprint::class,
         'branch' => Blueprint\Foreign\BranchBlueprint::class,
         'bloodType' => Blueprint\Foreign\BloodTypeBlueprint::class,
@@ -41,7 +41,7 @@ class Kernel
         'userTimestamps' => Blueprint\Foreign\UserTimestampsBlueprint::class,
         'userUpdate' => Blueprint\Foreign\UserUpdateBlueprint::class,
 
-        // Strings.
+        // Strings
         'birthPlace' => Blueprint\Strings\BirthPlaceBlueprint::class,
         'code' => Blueprint\Strings\CodeBlueprint::class,
         'description' => Blueprint\Strings\DescriptionBlueprint::class,
@@ -56,7 +56,7 @@ class Kernel
         // Text
         'storageDir' => Blueprint\Text\StorageDirBlueprint::class,
 
-        // Timestamp.
+        // Timestamp
         'admittedAt' => Blueprint\Timestamp\AdmittedAtBlueprint::class,
         'expiredAt' => Blueprint\Timestamp\ExpiredAtBlueprint::class,
     ];
@@ -65,6 +65,7 @@ class Kernel
      * @var array
      */
     public static $rules = [
-
+        // Database
+        'exists' => Rule\Database\ExistsRule::class,
     ];
 }
