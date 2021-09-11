@@ -61,12 +61,6 @@
         ]
     },
     {
-        "ref": "accounting",
-        "modules": [],
-        "widgets": [],
-        "reports": []
-    },
-    {
         "ref": "master",
         "modules": [],
         "widgets": [],
