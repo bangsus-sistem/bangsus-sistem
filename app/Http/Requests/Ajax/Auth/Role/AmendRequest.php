@@ -57,7 +57,7 @@ class AmendRequest extends FeatureIdRequest
             ],
             'feature_ids.*' => [
                 Rule::requiredIf( ! $this->boolean('all_features')),
-                'wbl_exists:'.Feature::class,
+                'bsb_exists:'.Feature::class,
             ],
             'all_widgets' => [
                 'required',
@@ -69,7 +69,7 @@ class AmendRequest extends FeatureIdRequest
             ],
             'widget_ids.*' => [
                 Rule::requiredIf( ! $this->boolean('all_widgets')),
-                'wbl_exists:'.Widget::class,
+                'bsb_exists:'.Widget::class,
             ],
             'all_reports' => [
                 'required',
@@ -81,7 +81,7 @@ class AmendRequest extends FeatureIdRequest
             ],
             'report_ids.*' => [
                 Rule::requiredIf( ! $this->boolean('all_reports')),
-                'wbl_exists:'.Report::class,
+                'bsb_exists:'.Report::class,
             ],
         ];
     }
