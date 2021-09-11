@@ -2,25 +2,23 @@
     <Layout :breadcrumbs="msc.breadcrumbs" active="auth.role">
         <!-- Mobile -->
         <template v-slot:mobile>
-            <Mobile />
+            <DesktopMobile />
         </template>
         <!-- Desktop -->
         <template v-slot:desktop>
-            <Desktop />
+            <DesktopMobile />
         </template>
     </Layout>
 </template>
 
 <script>
 import Layout from '../../../../layouts/Application'
-import Desktop from './Desktop'
-import Mobile from './Mobile'
+import DesktopMobile from './DesktopMobile'
 
 export default {
     components: {
         Layout,
-        Desktop,
-        Mobile,
+        DesktopMobile,
     },
     data() {
         return {
