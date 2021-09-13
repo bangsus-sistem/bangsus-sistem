@@ -27,4 +27,10 @@ export default [
         component: page('Auth/User/Update'),
         beforeEnter: middleware(appMiddleware),
     },
+    {
+        path: 'user/change_password/:id',
+        name: 'auth.user.changePassword',
+        component: page('Auth/User/ChangePassword'),
+        beforeEnter: middleware(appMiddleware),
+    },
 ]
