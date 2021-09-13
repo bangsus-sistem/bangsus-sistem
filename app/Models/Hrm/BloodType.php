@@ -15,6 +15,7 @@ use App\Models\Concerns\{
 
 class BloodType extends Model
 {
-    use SoftDeletes, HasUserTimestamps, HasUserDelete, ActiveFlag,
-        HasManyEmployee;
+    use SoftDeletes, HasUserTimestamps, HasUserDelete, ActiveFlag;
+    // use SoftDeletes, HasUserTimestamps, HasUserDelete, ActiveFlag,
+    //     HasManyEmployee;
 }
