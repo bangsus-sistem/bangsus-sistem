@@ -13,7 +13,7 @@ class StoreTask extends Task
      */
     public function handle($request)
     {
-        $division = Division;
+        $division = new Division;
         $this->transaction(
             function () use ($request, $division) {
                 $division->code = $request->input('code');

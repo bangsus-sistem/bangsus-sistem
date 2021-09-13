@@ -13,7 +13,7 @@ class StoreTask extends Task
      */
     public function handle($request)
     {
-        $attendanceType = AttendanceType;
+        $attendanceType = new AttendanceType;
         $this->transaction(
             function () use ($request, $attendanceType) {
                 $attendanceType->code = $request->input('code');

@@ -13,7 +13,7 @@ class StoreTask extends Task
      */
     public function handle($request)
     {
-        $gender = Gender;
+        $gender = new Gender;
         $this->transaction(
             function () use ($request, $gender) {
                 $gender->code = $request->input('code');

@@ -13,7 +13,7 @@ class StoreTask extends Task
      */
     public function handle($request)
     {
-        $contactType = ContactType;
+        $contactType = new ContactType;
         $this->transaction(
             function () use ($request, $contactType) {
                 $contactType->code = $request->input('code');

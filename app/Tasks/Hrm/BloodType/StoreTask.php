@@ -13,7 +13,7 @@ class StoreTask extends Task
      */
     public function handle($request)
     {
-        $bloodType = BloodType;
+        $bloodType = new BloodType;
         $this->transaction(
             function () use ($request, $bloodType) {
                 $bloodType->code = $request->input('code');

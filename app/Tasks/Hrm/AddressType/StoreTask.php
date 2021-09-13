@@ -13,7 +13,7 @@ class StoreTask extends Task
      */
     public function handle($request)
     {
-        $addressType = AddressType;
+        $addressType = new AddressType;
         $this->transaction(
             function () use ($request, $addressType) {
                 $addressType->code = $request->input('code');

@@ -13,7 +13,7 @@ class StoreTask extends Task
      */
     public function handle($request)
     {
-        $jobTitle = JobTitle;
+        $jobTitle = new JobTitle;
         $this->transaction(
             function () use ($request, $jobTitle) {
                 $jobTitle->code = $request->input('code');
