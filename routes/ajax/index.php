@@ -27,4 +27,9 @@ Route::middleware('auth:sanctum')->group(function () {
      * @package \Waffleboss\Library\Http\Controllers\Ajax\System
      */
     Route::prefix('system')->namespace('System')->group(__DIR__.'/system.php');
+    
+    /**
+     * @package \Waffleboss\Library\Http\Controllers\Ajax\Hrm
+     */
+    Route::prefix('hrm')->namespace('Hrm')->group(__DIR__.'/hrm.php');
 });
