@@ -2,7 +2,7 @@
 
 namespace App\Transformer\RelatedResources\Hrm;
 
-use Bsb\Transformer\RelatedResource;
+use Bsb\Foundation\Transformer\RelatedResource;
 use App\Transformer\SingleResources\Auth\UserSingleResource;
 
 class ContactTypeRelatedResource extends RelatedResource
