@@ -1,8 +1,10 @@
 import page from './page'
 import middleware from './middleware'
 
-import log from './modules/log'
 import auth from './modules/auth'
+import log from './modules/log'
+// import system from './modules/system'
+import hrm from './modules/hrm'
 
 const appMiddleware = ['authenticated', 'versionCheck']
 const blankComponent = { template: '<router-view></router-view>' }
@@ -27,13 +29,23 @@ export default [
         beforeEnter: middleware(appMiddleware),
     },
     {
+        path: '/auth',
+        component: blankComponent,
+        children: auth,
+    },
+    {
         path: '/log',
         component: blankComponent,
         children: log,
     },
+    // {
+    //     path: '/system',
+    //     component: blankComponent,
+    //     children: system,
+    // },
     {
-        path: '/auth',
+        path: '/hrm',
         component: blankComponent,
-        children: auth,
+        children: hrm,
     },
 ]
