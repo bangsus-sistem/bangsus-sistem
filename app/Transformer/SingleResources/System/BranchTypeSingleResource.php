@@ -4,7 +4,7 @@ namespace App\Transformer\SingleResources\System;
 
 use Bsb\Foundation\Transformer\SingleResource;
 
-class BranchSingleResource extends SingleResource
+class BranchTypeSingleResource extends SingleResource
 {
     /**
      * @param  \Illuminate\Http\Request  $request
@@ -16,7 +16,6 @@ class BranchSingleResource extends SingleResource
             'id' => $this->id,
             'code' => $this->code,
             'name' => $this->name,
-            'branch_type' => new BranchTypeSingleResource($this->branchType),
             'active' => (bool) $this->active,
             'locked' => (bool) $this->locked,
             'hidden' => (bool) $this->hidden,
