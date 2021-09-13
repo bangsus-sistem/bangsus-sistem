@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Res\Auth\User;
+namespace App\Http\Requests\Ajax\Auth\User;
 
 use Bsb\Foundation\Http\AuthIdRequest;
 use App\Models\Auth\User;
