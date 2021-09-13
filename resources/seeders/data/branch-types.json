@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "code": "10",
+        "name": "Pusat"
+    },
+    {
+        "id": 2,
+        "code": "11",
+        "name": "Geprek Bangsus"
+    },
+    {
+        "id": 3,
+        "code": "12",
+        "name": "Bangsus Lucky Duck"
+    },
+    {
+        "id": 4,
+        "code": "13",
+        "name": "Saladetox"
+    },
+    {
+        "id": 5,
+        "code": "14",
+        "name": "Bangsus Sayur"
+    },
+    {
+        "id": 6,
+        "code": "15",
+        "name": "Udonkobe"
+    },
+    {
+        "id": 7,
+        "code": "16",
+        "name": "Garangasem"
+    }
+]
