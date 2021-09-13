@@ -11,6 +11,6 @@ class ContactTypePaginatedCollection extends PaginatedCollection
      */
     protected function collects()
     {
-        return \App\Transformer\PaginatedResources\ContactTypePaginatedResource::class;
+        return \App\Transformer\PaginatedResources\Hrm\ContactTypePaginatedResource::class;
     }
 }

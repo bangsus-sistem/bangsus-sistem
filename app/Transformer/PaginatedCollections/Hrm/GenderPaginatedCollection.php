@@ -11,6 +11,6 @@ class GenderPaginatedCollection extends PaginatedCollection
      */
     protected function collects()
     {
-        return \App\Transformer\PaginatedResources\GenderPaginatedResource::class;
+        return \App\Transformer\PaginatedResources\Hrm\GenderPaginatedResource::class;
     }
 }

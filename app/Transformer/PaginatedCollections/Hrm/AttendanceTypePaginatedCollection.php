@@ -11,6 +11,6 @@ class AttendanceTypePaginatedCollection extends PaginatedCollection
      */
     protected function collects()
     {
-        return \App\Transformer\PaginatedResources\AttendanceTypePaginatedResource::class;
+        return \App\Transformer\PaginatedResources\Hrm\AttendanceTypePaginatedResource::class;
     }
 }

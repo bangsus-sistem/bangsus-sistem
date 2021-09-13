@@ -11,6 +11,6 @@ class AddressTypePaginatedCollection extends PaginatedCollection
      */
     protected function collects()
     {
-        return \App\Transformer\PaginatedResources\AddressTypePaginatedResource::class;
+        return \App\Transformer\PaginatedResources\Hrm\AddressTypePaginatedResource::class;
     }
 }

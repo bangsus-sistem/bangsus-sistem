@@ -11,6 +11,6 @@ class EmployeeMutationPaginatedCollection extends PaginatedCollection
      */
     protected function collects()
     {
-        return \App\Transformer\PaginatedResources\EmployeeMutationPaginatedResource::class;
+        return \App\Transformer\PaginatedResources\Hrm\EmployeeMutationPaginatedResource::class;
     }
 }

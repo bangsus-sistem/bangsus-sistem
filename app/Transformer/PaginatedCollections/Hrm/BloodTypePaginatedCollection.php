@@ -11,6 +11,6 @@ class BloodTypePaginatedCollection extends PaginatedCollection
      */
     protected function collects()
     {
-        return \App\Transformer\PaginatedResources\BloodTypePaginatedResource::class;
+        return \App\Transformer\PaginatedResources\Hrm\BloodTypePaginatedResource::class;
     }
 }

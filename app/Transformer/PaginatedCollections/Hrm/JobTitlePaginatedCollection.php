@@ -11,6 +11,6 @@ class JobTitlePaginatedCollection extends PaginatedCollection
      */
     protected function collects()
     {
-        return \App\Transformer\PaginatedResources\JobTitlePaginatedResource::class;
+        return \App\Transformer\PaginatedResources\Hrm\JobTitlePaginatedResource::class;
     }
 }

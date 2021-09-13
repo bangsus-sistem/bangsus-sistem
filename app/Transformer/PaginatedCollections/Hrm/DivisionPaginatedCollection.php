@@ -11,6 +11,6 @@ class DivisionPaginatedCollection extends PaginatedCollection
      */
     protected function collects()
     {
-        return \App\Transformer\PaginatedResources\DivisionPaginatedResource::class;
+        return \App\Transformer\PaginatedResources\Hrm\DivisionPaginatedResource::class;
     }
 }

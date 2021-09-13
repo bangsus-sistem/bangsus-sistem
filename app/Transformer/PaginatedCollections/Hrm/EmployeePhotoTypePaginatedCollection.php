@@ -11,6 +11,6 @@ class EmployeePhotoTypePaginatedCollection extends PaginatedCollection
      */
     protected function collects()
     {
-        return \App\Transformer\PaginatedResources\EmployeePhotoTypePaginatedResource::class;
+        return \App\Transformer\PaginatedResources\Hrm\EmployeePhotoTypePaginatedResource::class;
     }
 }
