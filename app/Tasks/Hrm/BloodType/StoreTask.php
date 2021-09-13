@@ -16,7 +16,6 @@ class StoreTask extends Task
         $bloodType = new BloodType;
         $this->transaction(
             function () use ($request, $bloodType) {
-                $bloodType->code = $request->input('code');
                 $bloodType->name = $request->input('name');
                 $bloodType->active = true;
                 $bloodType->description = $request->input('description');

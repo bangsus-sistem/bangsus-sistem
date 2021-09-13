@@ -43,7 +43,6 @@ class BloodTypeController extends Controller
                 BloodType::where(
                     $this->buildWhere($request)
                         ->with($request)
-                        ->index('code')->mode('string')
                         ->index('name')->mode('string')
                         ->index('active')->mode('boolean')
                         ->index('required')->mode('boolean')

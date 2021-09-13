@@ -4,7 +4,6 @@ namespace App\Http\Requests\Ajax\Hrm\BloodType;
 
 use App\Http\Requests\FeatureRequest;
 use Illuminate\Validation\Rule;
-use App\Models\Hrm\BloodType;
 
 class StoreRequest extends FeatureRequest
 {
@@ -22,11 +21,6 @@ class StoreRequest extends FeatureRequest
     public function rules()
     {
         return [
-            'code' => [
-                'required',
-                'max:200',
-                'unique:'.BloodType::class,
-            ],
             'name' => [
                 'required',
                 'max:200',

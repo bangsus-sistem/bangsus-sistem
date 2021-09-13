@@ -30,12 +30,6 @@ class AmendRequest extends FeatureIdRequest
     public function additionalRules()
     {
         return [
-            'code' => [
-                'required',
-                'max:200',
-                Rule::unique(BloodType::class, 'code')
-                    ->ignore($this->input('id')),
-            ],
             'name' => [
                 'required',
                 'max:200',

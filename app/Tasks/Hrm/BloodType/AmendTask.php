@@ -16,7 +16,6 @@ class AmendTask extends Task
         $bloodType = BloodType::findOrFail($request->input('id'));
         $this->transaction(
             function () use ($request, $bloodType) {
-                $bloodType->code = $request->input('code');
                 $bloodType->name = $request->input('name');
                 $bloodType->description = $request->input('description');
                 $bloodType->note = $request->input('note');
