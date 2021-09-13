@@ -61,8 +61,53 @@
         ]
     },
     {
-        "ref": "master",
-        "modules": [],
+        "ref": "hrm",
+        "modules": [
+            {
+                "ref": "contact_type",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
+                "ref": "address_type",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
+                "ref": "employee_photo_type",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
+                "ref": "gender",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
+                "ref": "division",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
+                "ref": "job_title",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
+                "ref": "attendance_type",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
+                "ref": "blood_type",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
+                "ref": "employee",
+                "actions": ["index", "create", "read", "update", "delete", "admit"]
+            },
+            {
+                "ref": "employee_assignment",
+                "actions": ["index", "create", "read", "update", "delete", "admit"]
+            },
+            {
+                "ref": "employee_mutation",
+                "actions": ["index", "create", "read", "update", "delete", "admit"]
+            }
+        ],
         "widgets": [],
         "reports": []
     }

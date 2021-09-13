@@ -65,6 +65,85 @@ export default {
                     ],
                     collapse: false,
                 },
+                {
+                    title: 'HRM',
+                    icon: 'users',
+                    children: [
+                        {
+                            title: 'Tipe Kontak',
+                            route: { name: 'hrm.contactType' },
+                            access: {
+                                moduleRef: 'contact_type',
+                                actionRef: 'index',
+                            },
+                        },
+                        {
+                            title: 'Tipe Alamat',
+                            route: { name: 'hrm.addressType' },
+                            access: {
+                                moduleRef: 'address_type',
+                                actionRef: 'index',
+                            },
+                        },
+                        {
+                            title: 'Tipe Foto Karyawan',
+                            route: { name: 'hrm.employeePhotoType' },
+                            access: {
+                                moduleRef: 'employee_photo_type',
+                                actionRef: 'index',
+                            },
+                        },
+                        {
+                            title: 'Jenis Kelamin',
+                            route: { name: 'hrm.gender' },
+                            access: {
+                                moduleRef: 'gender',
+                                actionRef: 'index',
+                            },
+                        },
+                        {
+                            title: 'Golongan Darah',
+                            route: { name: 'hrm.bloodType' },
+                            access: {
+                                moduleRef: 'blood_type',
+                                actionRef: 'index',
+                            },
+                        },
+                        {
+                            title: 'Divisi',
+                            route: { name: 'hrm.division' },
+                            access: {
+                                moduleRef: 'division',
+                                actionRef: 'index',
+                            },
+                        },
+                        {
+                            title: 'Jabatan',
+                            route: { name: 'hrm.jobTitle' },
+                            access: {
+                                moduleRef: 'job_title',
+                                actionRef: 'index',
+                            },
+                        },
+                        {
+                            title: 'Tipe Absensi',
+                            route: { name: 'hrm.attendanceType' },
+                            access: {
+                                moduleRef: 'attendance_type',
+                                actionRef: 'index',
+                            },
+                        },
+                        {
+                            title: 'Karyawan',
+                            route: { name: 'hrm.employee' },
+                            access: {
+                                moduleRef: 'employee',
+                                actionRef: 'index',
+                            },
+                        },
+                    ],
+                    collapse: false,
+                },
             ],
             collapsedIndex: null,
         }
