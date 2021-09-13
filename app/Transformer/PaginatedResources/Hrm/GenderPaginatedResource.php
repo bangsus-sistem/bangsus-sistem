@@ -4,7 +4,7 @@ namespace App\Transformer\PaginatedResources\Hrm;
 
 use Bsb\Foundation\Transformer\PaginatedResource;
 
-class GenderTypePaginatedResource extends PaginatedResource
+class GenderPaginatedResource extends PaginatedResource
 {
     /**
      * @param  \Illuminate\Http\Request  $request
