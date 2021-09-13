@@ -19,7 +19,6 @@ export default {
     components: {
         Layout,
         DesktopMobile,
-        Mobile,
     },
     data() {
         return {
