@@ -2,7 +2,7 @@
 
 namespace App\Tasks\Auth\User;
 
-use Waffleboss\Foundation\Task;
+use Bsb\Foundation\Task;
 use App\Models\Auth\User;
 use Illuminate\Support\Facades\Hash;
 
