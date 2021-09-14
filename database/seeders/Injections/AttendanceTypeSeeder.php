@@ -6,7 +6,7 @@ use Bsb\Foundation\Database\ResourceSeeder;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Hash;
 
-class RoleUserSeeder extends ResourceSeeder
+class AttendanceTypeSeeder extends ResourceSeeder
 {
     /**
      * @var array
