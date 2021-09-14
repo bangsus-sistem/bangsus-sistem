@@ -15,15 +15,7 @@ class CreateAttendanceTypes extends Migration
     {
         Schema::create('attendance_types', function (Blueprint $table) {
             $table->id();
-            $table->code();
-            $table->name();
-            $table->active();
-            $table->description();
-            $table->note();
-            $table->userTimestamps();
-            $table->userDelete();
-            $table->timestamps();
-            $table->softDeletes();
+            $table->ref();
         });
     }
 

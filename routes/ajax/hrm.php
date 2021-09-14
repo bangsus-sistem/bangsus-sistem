@@ -35,17 +35,6 @@ Route::prefix('employee_photo_type')->group(function () {
     Route::delete('', 'EmployeePhotoTypeController@destroy');
 });
 
-Route::prefix('attendance_type')->group(function () {
-    Route::get('all', 'AttendanceTypeController@manifest');
-    Route::get('', 'AttendanceTypeController@index');
-    Route::get('{id}', 'AttendanceTypeController@show');
-    Route::post('', 'AttendanceTypeController@store');
-    Route::put('', 'AttendanceTypeController@amend');
-    Route::patch('activate', 'AttendanceTypeController@reviseActivate');
-    Route::patch('deactivate', 'AttendanceTypeController@reviseDeactivate');
-    Route::delete('', 'AttendanceTypeController@destroy');
-});
-
 Route::prefix('division')->group(function () {
     Route::get('all', 'DivisionController@manifest');
     Route::get('', 'DivisionController@index');
