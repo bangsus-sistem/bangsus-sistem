@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "code": "CLU",
+        "name": "Foto Close Up",
+        "required": true
+    },
+    {
+        "id": 1,
+        "code": "FBD",
+        "name": "Foto Full Body",
+        "required": true
+    }
+]

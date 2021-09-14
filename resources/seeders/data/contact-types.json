@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "code": "HPW",
+        "name": "No. Handphone / WhatsApp",
+        "required": true
+    },
+    {
+        "id": 2,
+        "code": "RMH",
+        "name": "No. Rumah"
+    }
+]
