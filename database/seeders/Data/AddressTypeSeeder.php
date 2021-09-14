@@ -31,6 +31,7 @@ class AddressTypeSeeder extends ResourceSeeder
      */
     public function parseData($addressTypes)
     {
+        $return = [];
         foreach ($addressTypes as $addressType)
         {
             $return[] = [

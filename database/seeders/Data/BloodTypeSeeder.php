@@ -31,6 +31,7 @@ class BloodTypeSeeder extends ResourceSeeder
      */
     public function parseData($bloodTypes)
     {
+        $return = [];
         foreach ($bloodTypes as $bloodType)
         {
             $return[] = [

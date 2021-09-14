@@ -31,6 +31,7 @@ class EmployeePhotoTypeSeeder extends ResourceSeeder
      */
     public function parseData($employeePhotoTypes)
     {
+        $return = [];
         foreach ($employeePhotoTypes as $employeePhotoType)
         {
             $return[] = [

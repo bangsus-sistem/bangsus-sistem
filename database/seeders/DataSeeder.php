@@ -22,6 +22,8 @@ class DataSeeder extends Seeder
                 Data\EmployeePhotoTypeSeeder::class,
                 Data\BloodTypeSeeder::class,
                 Data\GenderSeeder::class,
+                Data\DivisionSeeder::class,
+                Data\JobTitleSeeder::class,
             ]);
         });
     }

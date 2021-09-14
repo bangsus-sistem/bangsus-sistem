@@ -31,6 +31,7 @@ class ContactTypeSeeder extends ResourceSeeder
      */
     public function parseData($contactTypes)
     {
+        $return = [];
         foreach ($contactTypes as $contactType)
         {
             $return[] = [

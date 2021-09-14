@@ -31,6 +31,7 @@ class GenderSeeder extends ResourceSeeder
      */
     public function parseData($genders)
     {
+        $return = [];
         foreach ($genders as $gender)
         {
             $return[] = [
