@@ -5,7 +5,6 @@ import bloodType from './hrm/blood-type';
 import gender from './hrm/gender.js';
 import division from './hrm/division';
 import jobTitle from './hrm/job-title';
-import attendanceType from './hrm/attendance-type';
 // import employee from './hrm/employee';
 // import employeeAssignment from './hrm/employee-assignment';
 // import employeeMutation from './hrm/employee-mutation';
@@ -18,7 +17,6 @@ export default [
     ...gender,
     ...division,
     ...jobTitle,
-    ...attendanceType,
     // ...employee,
     // ...employeeAssignment,
     // ...employeeMutation,

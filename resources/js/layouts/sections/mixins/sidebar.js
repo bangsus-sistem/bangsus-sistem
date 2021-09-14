@@ -126,14 +126,6 @@ export default {
                             },
                         },
                         {
-                            title: 'Tipe Absensi',
-                            route: { name: 'hrm.attendanceType' },
-                            access: {
-                                moduleRef: 'attendance_type',
-                                actionRef: 'index',
-                            },
-                        },
-                        {
                             title: 'Karyawan',
                             route: { name: 'hrm.employee' },
                             access: {
