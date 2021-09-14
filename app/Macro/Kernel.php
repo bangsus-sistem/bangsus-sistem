@@ -21,15 +21,22 @@ class Kernel
 
         // Date
         'birthDate' => Blueprint\Date\BirthDateBlueprint::class,
+        'endDate' => Blueprint\Date\EndDateBlueprint::class,
         'startDate' => Blueprint\Date\StartDateBlueprint::class,
 
         // Foreign
         'action' => Blueprint\Foreign\ActionBlueprint::class,
+        'addressType' => Blueprint\Foreign\AddressTypeBlueprint::class,
         'branch' => Blueprint\Foreign\BranchBlueprint::class,
         'bloodType' => Blueprint\Foreign\BloodTypeBlueprint::class,
         'branchType' => Blueprint\Foreign\BranchTypeBlueprint::class,
+        'contactType' => Blueprint\Foreign\ContactTypeBlueprint::class,
         'division' => Blueprint\Foreign\DivisionBlueprint::class,
+        'employeeAssignment' => Blueprint\Foreign\EmployeeAssignmentBlueprint::class,
+        'employee' => Blueprint\Foreign\EmployeeBlueprint::class,
+        'employeePhotoType' => Blueprint\Foreign\EmployeePhotoTypeBlueprint::class,
         'gender' => Blueprint\Foreign\GenderBlueprint::class,
+        'image' => Blueprint\Foreign\ImageBlueprint::class,
         'jobTitle' => Blueprint\Foreign\JobTitleBlueprint::class,
         'module' => Blueprint\Foreign\ModuleBlueprint::class,
         'package' => Blueprint\Foreign\PackageBlueprint::class,
@@ -42,8 +49,10 @@ class Kernel
         'userUpdate' => Blueprint\Foreign\UserUpdateBlueprint::class,
 
         // Strings
+        'address' => Blueprint\Strings\AddressBlueprint::class,
         'birthPlace' => Blueprint\Strings\BirthPlaceBlueprint::class,
         'code' => Blueprint\Strings\CodeBlueprint::class,
+        'contact' => Blueprint\Strings\ContactBlueprint::class,
         'description' => Blueprint\Strings\DescriptionBlueprint::class,
         'fullName' => Blueprint\Strings\FullNameBlueprint::class,
         'name' => Blueprint\Strings\NameBlueprint::class,
