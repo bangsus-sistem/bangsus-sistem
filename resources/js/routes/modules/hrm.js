@@ -5,9 +5,9 @@ import bloodType from './hrm/blood-type';
 import gender from './hrm/gender.js';
 import division from './hrm/division';
 import jobTitle from './hrm/job-title';
-// import employee from './hrm/employee';
-// import employeeAssignment from './hrm/employee-assignment';
-// import employeeMutation from './hrm/employee-mutation';
+import employee from './hrm/employee';
+import employeeAssignment from './hrm/employee-assignment';
+import employeeMutation from './hrm/employee-mutation';
 
 export default [
     ...contactType,
@@ -17,7 +17,7 @@ export default [
     ...gender,
     ...division,
     ...jobTitle,
-    // ...employee,
-    // ...employeeAssignment,
-    // ...employeeMutation,
+    ...employee,
+    ...employeeAssignment,
+    ...employeeMutation,
 ];
