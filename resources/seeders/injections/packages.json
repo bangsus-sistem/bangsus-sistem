@@ -88,10 +88,6 @@
                 "actions": ["index", "create", "read", "update", "delete"]
             },
             {
-                "ref": "attendance_type",
-                "actions": ["index", "create", "read", "update", "delete"]
-            },
-            {
                 "ref": "blood_type",
                 "actions": ["index", "create", "read", "update", "delete"]
             },
