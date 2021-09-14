@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "code": "L",
+        "name": "Laki-laki"
+    },
+    {
+        "id": 2,
+        "code": "P",
+        "name": "Perempuan"
+    }
+]

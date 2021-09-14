@@ -20,6 +20,8 @@ class DataSeeder extends Seeder
                 Data\AddressTypeSeeder::class,
                 Data\ContactTypeSeeder::class,
                 Data\EmployeePhotoTypeSeeder::class,
+                Data\BloodTypeSeeder::class,
+                Data\GenderSeeder::class,
             ]);
         });
     }
