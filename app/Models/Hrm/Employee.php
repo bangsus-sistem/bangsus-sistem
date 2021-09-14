@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\{
     SoftDeletes,
 };
 use Illuminate\Support\Str;
-use Waffleboss\Foundation\Database\Eloquent\Extent;
+use Bsb\Foundation\Database\Eloquent\Extent;
 use App\Models\Concerns\{
     HasUserTimestamps,
     HasUserAdmit,
