@@ -78,3 +78,33 @@ Route::prefix('blood_type')->group(function () {
     Route::patch('deactivate', 'BloodTypeController@reviseDeactivate');
     Route::delete('', 'BloodTypeController@destroy');
 });
+
+Route::prefix('employee')->group(function () {
+    Route::get('all', 'EmployeeController@manifest');
+    Route::get('', 'EmployeeController@index');
+    Route::get('{id}', 'EmployeeController@show');
+    Route::post('', 'EmployeeController@store');
+    Route::put('', 'EmployeeController@amend');
+    Route::patch('admit', 'EmployeeController@reviseAdmit');
+    Route::delete('', 'EmployeeController@destroy');
+});
+
+Route::prefix('employee_assignment')->group(function () {
+    Route::get('all', 'EmployeeAssignmentController@manifest');
+    Route::get('', 'EmployeeAssignmentController@index');
+    Route::get('{id}', 'EmployeeAssignmentController@show');
+    Route::post('', 'EmployeeAssignmentController@store');
+    Route::put('', 'EmployeeAssignmentController@amend');
+    Route::patch('admit', 'EmployeeAssignmentController@reviseAdmit');
+    Route::delete('', 'EmployeeAssignmentController@destroy');
+});
+
+Route::prefix('employee_mutation')->group(function () {
+    Route::get('all', 'EmployeeMutationController@manifest');
+    Route::get('', 'EmployeeMutationController@index');
+    Route::get('{id}', 'EmployeeMutationController@show');
+    Route::post('', 'EmployeeMutationController@store');
+    Route::put('', 'EmployeeMutationController@amend');
+    Route::patch('admit', 'EmployeeMutationController@reviseAdmit');
+    Route::delete('', 'EmployeeMutationController@destroy');
+});
