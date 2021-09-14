@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "code": "OP",
+        "name": "Operasional"
+    },
+    {
+        "id": 2,
+        "code": "FC",
+        "name": "Keuangan"
+    },
+    {
+        "id": 3,
+        "code": "PU",
+        "name": "Pembelian"
+    },
+    {
+        "id": 4,
+        "code": "AC",
+        "name": "Akuntansi"
+    },
+    {
+        "id": 5,
+        "code": "IT",
+        "name": "IT"
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "code": "LDR",
+        "name": "Leader",
+        "division_id": 1
+    },
+    {
+        "id": 2,
+        "code": "CRW",
+        "name": "Crew",
+        "division_id": 1
+    },
+    {
+        "id": 3,
+        "code": "STF",
+        "name": "Staff Keuangan",
+        "division_id": 2
+    },
+    {
+        "id": 4,
+        "code": "STF",
+        "name": "Staff Pembelian",
+        "division_id": 3
+    },
+    {
+        "id": 5,
+        "code": "STF",
+        "name": "Staff Akuntansi",
+        "division_id": 4
+    },
+    {
+        "id": 4,
+        "code": "STF",
+        "name": "Staff IT",
+        "division_id": 5
+    }
+]
