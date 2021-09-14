@@ -17,6 +17,7 @@ class InjectionSeeder extends Seeder
             $this->call([
                 Injections\AuthorizationSeeder::class,
                 Injections\RoleUserSeeder::class,
+                Injections\AttendanceTypeSeeder::class,
             ]);
         });
     }
