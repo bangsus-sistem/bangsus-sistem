@@ -17,6 +17,9 @@ class DataSeeder extends Seeder
             $this->call([
                 Data\BranchTypeSeeder::class,
                 Data\BranchSeeder::class,
+                Data\AddressTypeSeeder::class,
+                Data\ContactTypeSeeder::class,
+                Data\EmployeePhotoTypeSeeder::class,
             ]);
         });
     }
