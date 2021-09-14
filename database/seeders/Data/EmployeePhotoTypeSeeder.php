@@ -4,7 +4,7 @@ namespace Database\Seeders\Data;
 
 use Bsb\Foundation\Database\ResourceSeeder;
 
-class ContactTypeSeeder extends ResourceSeeder
+class EmployeePhotoTypeSeeder extends ResourceSeeder
 {
     /**
      * @var array
