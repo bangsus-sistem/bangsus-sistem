@@ -9,6 +9,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Bsb\Foundation\Database\{
     BuildWhere,
     BuildExtent,
+    Transaction,
 };
 use Bsb\Foundation\{
     ManageService,
@@ -20,5 +21,6 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    use BuildWhere, BuildExtent, ManageService, TransmitTask, RevealWidget;
+    use BuildWhere, BuildExtent, ManageService, TransmitTask, RevealWidget,
+        Transaction;
 }
