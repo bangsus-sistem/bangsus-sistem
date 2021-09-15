@@ -9,7 +9,7 @@ use App\Transformer\SingleResources\Hrm\{
     JobTitleSingleResource,
 };
 use App\Transformer\SingleResources\System\BranchSingleResource;
-use App\Transformer\SingleResources\System\UserSingleResource;
+use App\Transformer\SingleResources\Auth\UserSingleResource;
 use App\Transformer\SingleCollections\Hrm\{
     EmployeeAddressSingleCollection,
     EmployeeContactSingleCollection,
