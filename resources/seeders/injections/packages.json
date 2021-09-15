@@ -102,6 +102,14 @@
             {
                 "ref": "employee_mutation",
                 "actions": ["index", "create", "read", "update", "delete", "admit"]
+            },
+            {
+                "ref": "schedule_submission",
+                "actions": ["index", "create", "read", "update", "delete", "admit"]
+            },
+            {
+                "ref": "attendance",
+                "actions": ["index", "create", "read", "update", "delete", "admit", "attendance"]
             }
         ],
         "widgets": [],

@@ -16,5 +16,8 @@
     },
     {
         "ref": "admit"
+    },
+    {
+        "ref": "attendance"
     }
 ]
