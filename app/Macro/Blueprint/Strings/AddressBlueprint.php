@@ -14,7 +14,7 @@ class AddressBlueprint implements BlueprintContract
     {
         return (
             function () {
-                return $this->string('address', 1000);
+                return $this->string('address', 1000)->nullable();
             }
         );
     }

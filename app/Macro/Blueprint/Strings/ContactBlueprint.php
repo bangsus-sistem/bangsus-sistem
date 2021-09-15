@@ -14,7 +14,7 @@ class ContactBlueprint implements BlueprintContract
     {
         return (
             function () {
-                return $this->string('contact', 1000);
+                return $this->string('contact', 1000)->nullable();
             }
         );
     }
