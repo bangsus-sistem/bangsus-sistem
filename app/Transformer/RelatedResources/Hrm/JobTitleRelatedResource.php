@@ -3,6 +3,7 @@
 namespace App\Transformer\RelatedResources\Hrm;
 
 use Bsb\Foundation\Transformer\RelatedResource;
+use App\Transformer\SingleResources\Hrm\DivisionSingleResource;
 use App\Transformer\SingleResources\Auth\UserSingleResource;
 
 class JobTitleRelatedResource extends RelatedResource

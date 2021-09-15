@@ -3,6 +3,7 @@
 namespace App\Tasks\Hrm\EmployeeAssignment;
 
 use Bsb\Foundation\Task;
+use App\Models\Hrm\EmployeeAssignment;
 
 class StoreTask extends Task
 {
