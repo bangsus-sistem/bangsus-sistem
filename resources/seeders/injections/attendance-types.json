@@ -1,14 +1,8 @@
 [
     {
-        "ref": "S-IN"
+        "ref": "STD"
     },
     {
-        "ref": "S-OUT"
-    },
-    {
-        "ref": "O-IN"
-    },
-    {
-        "ref": "O-OUT"
+        "ref": "OVR"
     }
 ]
