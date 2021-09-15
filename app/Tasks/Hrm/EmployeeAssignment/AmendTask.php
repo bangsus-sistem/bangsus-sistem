@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tasks\Ajax\Hrm\EmployeeAssignment;
+namespace App\Tasks\Hrm\EmployeeAssignment;
 
 use Bsb\Foundation\Task;
 

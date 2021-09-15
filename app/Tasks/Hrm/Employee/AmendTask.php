@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tasks\Ajax\Hrm\Employee;
+namespace App\Tasks\Hrm\Employee;
 
 use Bsb\Foundation\Task;
 use App\Models\Hrm\{

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tasks\Ajax\Hrm\EmployeeMutation;
+namespace App\Tasks\Hrm\EmployeeMutation;
 
 use Bsb\Foundation\Task;
 
