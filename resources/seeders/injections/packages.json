@@ -109,7 +109,7 @@
             },
             {
                 "ref": "attendance",
-                "actions": ["index", "create", "read", "update", "delete", "admit", "attendance"]
+                "actions": ["index", "create", "read", "update", "delete", "attendance"]
             }
         ],
         "widgets": [],
