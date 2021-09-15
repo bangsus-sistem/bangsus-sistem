@@ -23,8 +23,8 @@ class AmendTask extends Task
             function () use ($request, $employee) {
                 $employee->nik = $request->input('nik');
                 $employee->full_name = $request->input('full_name');
-                $employee->place_of_birth = $request->input('place_of_birth');
-                $employee->date_of_birth = $request->input('date_of_birth');
+                $employee->birth_place = $request->input('birth_place');
+                $employee->birth_date = $request->input('birth_date');
                 $employee->blood_type_id = $request->input('blood_type_id');
                 $employee->gender_id = $request->input('gender_id');
                 if ($employee->hasntBeenAdmitted()) {
@@ -45,7 +45,7 @@ class AmendTask extends Task
                     $employeeAddressInput = (object) $employeeAddressInput;
                     $employeeAddress = is_null($employeeAddressInput->id ?? null)
                         ?   new EmployeeAddress
-                        :   EmployeeAdress::findOrFail(
+                        :   EmployeeAddress::findOrFail(
                                 $employeeAddressInput->id
                             );
                     $employeeAddress->employee_id = $employee->id;
