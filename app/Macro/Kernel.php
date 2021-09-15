@@ -27,6 +27,7 @@ class Kernel
         // Foreign
         'action' => Blueprint\Foreign\ActionBlueprint::class,
         'addressType' => Blueprint\Foreign\AddressTypeBlueprint::class,
+        'attendanceType' => Blueprint\Foreign\AttendanceTypeBlueprint::class,
         'branch' => Blueprint\Foreign\BranchBlueprint::class,
         'bloodType' => Blueprint\Foreign\BloodTypeBlueprint::class,
         'branchType' => Blueprint\Foreign\BranchTypeBlueprint::class,
