@@ -33,11 +33,11 @@
                     </bsb-form-group>
                     <bsb-form-group>
                         <label>Tempat Lahir</label>
-                        <bsb-input v-model="form.data['place_of_birth']" :readonly="true" />
+                        <bsb-input v-model="form.data['birth_place']" :readonly="true" />
                     </bsb-form-group>
                     <bsb-form-group>
                         <label>Tanggal Lahir</label>
-                        <bsb-input v-model="form.data['date_of_birth']" :readonly="true" type="date" />
+                        <bsb-input v-model="form.data['birth_date']" :readonly="true" type="date" />
                     </bsb-form-group>
                     <bsb-form-group>
                         <label>Golongan Darah</label>

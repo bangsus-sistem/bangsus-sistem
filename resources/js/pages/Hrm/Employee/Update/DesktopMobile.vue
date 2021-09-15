@@ -38,11 +38,11 @@
                     </bsb-form-group>
                     <bsb-form-group>
                         <label>Tempat Lahir</label>
-                        <bsb-input-errors v-model="form.data['place_of_birth']" :errors="form.errors['place_of_birth']" />
+                        <bsb-input-errors v-model="form.data['birth_place']" :errors="form.errors['birth_place']" />
                     </bsb-form-group>
                     <bsb-form-group>
                         <label>Tanggal Lahir</label>
-                        <bsb-input-errors v-model="form.data['date_of_birth']" :errors="form.errors['date_of_birth']" type="date" />
+                        <bsb-input-errors v-model="form.data['birth_date']" :errors="form.errors['birth_date']" type="date" />
                     </bsb-form-group>
                     <bsb-form-group>
                         <label>Golongan Darah</label>
