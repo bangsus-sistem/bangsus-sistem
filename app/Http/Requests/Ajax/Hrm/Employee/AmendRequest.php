@@ -50,11 +50,11 @@ class AmendRequest extends FeatureIdRequest
                 'required',
                 'max:400',
             ],
-            'place_of_birth' => [
+            'birth_place' => [
                 'required',
                 'max:200',
             ],
-            'date_of_birth' => [
+            'birth_date' => [
                 'required',
                 'date',
                 'date_format:Y-m-d',

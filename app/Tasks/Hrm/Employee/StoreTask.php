@@ -18,8 +18,8 @@ class StoreTask extends Task
             function () use ($request, $employee) {
                 $employee->nik = $request->input('nik');
                 $employee->full_name = $request->input('full_name');
-                $employee->place_of_birth = $request->input('place_of_birth');
-                $employee->date_of_birth = $request->input('date_of_birth');
+                $employee->birth_place = $request->input('birth_place');
+                $employee->birth_date = $request->input('birth_date');
                 $employee->blood_type_id = $request->input('blood_type_id');
                 $employee->gender_id = $request->input('gender_id');
                 $employee->first_branch_id = $request->input('first_branch_id');
