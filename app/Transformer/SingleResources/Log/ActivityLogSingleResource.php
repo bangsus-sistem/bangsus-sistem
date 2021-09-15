@@ -4,7 +4,7 @@ namespace App\Transformer\SingleResources\Log;
 
 use Bsb\Foundation\Transformer\SingleResource;
 
-class AuthenticationLogSingleResource extends SingleResource
+class ActivityLogSingleResource extends SingleResource
 {
     /**
      * @param  \Illuminate\Http\Request  $request

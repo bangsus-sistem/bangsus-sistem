@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Auth\User;
+namespace App\Http\Requests\Ajax\Auth\User;
 
 use App\Http\Requesst\FeatureIdRequest;
 use Illuminate\Validation\Rule;
