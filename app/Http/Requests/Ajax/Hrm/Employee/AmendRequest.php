@@ -113,7 +113,7 @@ class AmendRequest extends FeatureIdRequest
     {
         $employeeAddresses = [];
         foreach ($this->input('employee_addresses') as $employeeAddress) {
-            if (strlen($employeeAddress['address']) > 0) {
+            if (strlen($employeeAddress['address'] ?? '') > 0) {
                 $employeeAddresses[] = $employeeAddress;
             }
         }
@@ -121,7 +121,7 @@ class AmendRequest extends FeatureIdRequest
 
         $employeeContacts = [];
         foreach ($this->input('employee_contacts') as $employeeContact) {
-            if (strlen($employeeContact['contact']) > 0) {
+            if (strlen($employeeContact['contact'] ?? '') > 0) {
                 $employeeContacts[] = $employeeContact;
             }
         }
