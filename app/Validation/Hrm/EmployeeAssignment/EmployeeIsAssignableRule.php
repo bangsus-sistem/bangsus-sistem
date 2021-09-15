@@ -1,8 +1,8 @@
 <?php
 
-namespace Waffleboss\Library\Validation\Hrm\EmployeeAssignment;
+namespace App\Validation\Hrm\EmployeeAssignment;
 
-use Waffleboss\Foundation\Validation\RequestRule;
+use Bsb\Foundation\Validation\RequestRule;
 use Illuminate\Contracts\Validation\Rule;
 use App\Models\Hrm\Employee;
 
