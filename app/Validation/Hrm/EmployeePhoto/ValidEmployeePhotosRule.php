@@ -5,6 +5,7 @@ namespace App\Validation\Hrm\EmployeePhoto;
 use Bsb\Foundation\Validation\RequestRule;
 use Illuminate\Contracts\Validation\Rule;
 use App\Models\Hrm\EmployeePhotoType;
+use App\Models\Storage\Image;
 
 class ValidEmployeePhotosRule extends RequestRule implements Rule
 {
@@ -25,7 +26,7 @@ class ValidEmployeePhotosRule extends RequestRule implements Rule
                 $this->setMessage('Foto tidak boleh kosong.');
                 return false;
                 break;
-            case ! wbcm_model('storage.image')::find($value['image_id'])->exists() :
+            case ! Image::find($value['image_id'])->exists() :
                 $this->setMessage('Foto tidak ditemukan.');
                 return false;
                 break;
