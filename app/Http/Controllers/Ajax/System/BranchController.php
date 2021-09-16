@@ -34,8 +34,8 @@ class BranchController extends Controller
         return response()->json(
             new BranchSingleCollection(
                 $request->boolean('authorized', true)
-                    ?   Branch::all()
-                    :   Branch::userAuthorized()->get()
+                    ?   Branch::userAuthorized()->get()
+                    :   Branch::all()
             ),
             200
         );
