@@ -3,9 +3,12 @@
 namespace Bsb\Foundation\Validation;
 
 use Illuminate\Http\Request;
+use Bsb\Foundation\Database\BuildWhere;
 
 abstract class RequestRule
 {
+    use BuildWhere;
+
     /**
      * @var \Illuminate\Http\Request
      */
