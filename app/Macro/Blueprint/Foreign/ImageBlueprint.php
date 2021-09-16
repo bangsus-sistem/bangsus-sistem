@@ -13,7 +13,7 @@ class ImageBlueprint implements BlueprintContract
     public static function register() : Closure
     {
         return (
-            function ($fieldName = 'image_id', $nullable = false) {
+            function ($fieldName = 'image_id', $nullable = true) {
                 $table = $this->foreignId($fieldName);
                 if ($nullable) $table->nullable();
                 return $table->constrained('images')->onUpdate('cascade');
