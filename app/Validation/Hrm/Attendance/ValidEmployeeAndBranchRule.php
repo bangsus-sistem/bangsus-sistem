@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Validation\Hrm\EmployeeAddress;
+namespace App\Validation\Hrm\Attendance;
 
 use Bsb\Foundation\Validation\RequestRule;
 use Illuminate\Contracts\Validation\Rule;
@@ -24,7 +24,7 @@ class ValidEmployeeAndBranchRule extends RequestRule implements Rule
                 ->done()
         )->first();
 
-        if (is_null($employeeAssignment)) {
+        if ( ! is_null($employeeAssignment)) {
             $this->setMessage('Karyawan dan Cabang tidak valid.');
             return false;
         }

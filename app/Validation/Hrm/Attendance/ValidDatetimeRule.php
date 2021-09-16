@@ -29,7 +29,7 @@ class ValidDatetimeRule extends RequestRule implements Rule
             ->whereNotNull('attendance_out_datetime')
             ->first();
 
-        if (is_null($attendance)) {
+        if ( ! is_null($attendance)) {
             $this->setMessage('Anda sudah selesai bekerja hari ini.');
             return false;
         }

@@ -28,7 +28,7 @@ class ValidScheduleInDatetimeRule extends RequestRule implements Rule
             ->whereDate('schedule_in_datetime', (new Carbon($value))->format('Y-m-d'))
             ->first();
 
-        if (is_null($attendance)) {
+        if ( ! is_null($attendance)) {
             $this->setMessage('Jadwal untuk tanggal '.(new Carbon($value))->format('Y-m-d').' sudah ada.');
             return false;
         }
