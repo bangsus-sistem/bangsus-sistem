@@ -33,6 +33,22 @@ class EmployeeController extends Controller
     }
 
     /**
+     * @param  \Illuminate\Http\Request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function manifestByBranchAssignment(Request $request)
+    {
+        return response()->json(
+            new EmployeeSingleCollection(
+                Employee::whereHas('employeeAssignments', function ($query) use ($request) {
+                    return $query->where('branch_id', $request->query('branch_id'));
+                })->get()
+            ), 
+            200
+        );
+    }
+
+    /**
      * @param  \App\Http\Requests\Ajax\Hrm\Employee\IndexRequest  $request
      * @return \Illuminate\Http\JsonResponse
      */
