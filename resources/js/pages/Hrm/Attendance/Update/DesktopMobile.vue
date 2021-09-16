@@ -72,19 +72,19 @@
                     </bsb-form-group>
                     <bsb-form-group>
                         <label>Jadwal Masuk</label>
-                        <bsb-input-errors type="datetime-local" v-model="form.data['schedule_in_datetime']" :errors="form.errors['schedule_in_datetime']" />
+                        <bsb-input-errors type="datetime-local" step="1" v-model="form.data['schedule_in_datetime']" :errors="form.errors['schedule_in_datetime']" />
                     </bsb-form-group>
                     <bsb-form-group>
                         <label>Jadwal Keluar</label>
-                        <bsb-input-errors type="datetime-local" v-model="form.data['schedule_out_datetime']" :errors="form.errors['schedule_out_datetime']" />
+                        <bsb-input-errors type="datetime-local" step="1" v-model="form.data['schedule_out_datetime']" :errors="form.errors['schedule_out_datetime']" />
                     </bsb-form-group>
                     <bsb-form-group>
                         <label>Absensi Masuk</label>
-                        <bsb-input-errors type="datetime-local" v-model="form.data['attendance_in_datetime']" :errors="form.errors['attendance_in_datetime']" />
+                        <bsb-input-errors type="datetime-local" step="1" v-model="form.data['attendance_in_datetime']" :errors="form.errors['attendance_in_datetime']" />
                     </bsb-form-group>
                     <bsb-form-group>
                         <label>Absensi Masuk</label>
-                        <bsb-input-errors type="datetime-local" v-model="form.data['attendance_out_datetime']" :errors="form.errors['attendance_out_datetime']" />
+                        <bsb-input-errors type="datetime-local" step="1" v-model="form.data['attendance_out_datetime']" :errors="form.errors['attendance_out_datetime']" />
                     </bsb-form-group>
                     <bsb-button-spinner type="submit" :loading="state.form.loading">
                         Submit
