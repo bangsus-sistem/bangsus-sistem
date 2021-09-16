@@ -201,6 +201,34 @@ class WhereBuilder
     }
 
     /**
+     * @return void
+     */
+    public function dateMode()
+    {
+        $queueIndex = $this->queueIndex;
+        $queueColumns = $this->queueColumn;
+        $request = $this->request;
+        $value = $this->request->query($queueIndex);
+
+        $this->wheres[] = [
+            (
+                function ($query) use ($queueIndex, $queueColumns, $request, $value)
+                {
+                    foreach ($queueColumns as $i => $queueColumn) {
+                        if ($i == 0) {
+                            $query->whereDate($queueColumn, $value);
+                        } else {
+                            $query->orWhereDate($queueColumn, $value);
+                        }
+                    }
+
+                    return $query;
+                }
+            )
+        ];
+    }
+
+    /**
      * Get the wheres collection.
      * 
      * @return array
