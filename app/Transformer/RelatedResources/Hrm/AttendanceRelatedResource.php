@@ -3,6 +3,12 @@
 namespace App\Transformer\RelatedResources\Hrm;
 
 use Bsb\Foundation\Transformer\RelatedResource;
+use App\Transformer\SingleResources\Hrm\{
+    EmployeeSingleResource,
+    AttendanceTypeSingleResource,
+};
+use App\Transformer\SingleResources\System\BranchSingleResource;
+use App\Transformer\SingleResources\Storage\ImageSingleResource;
 use App\Transformer\SingleResources\Auth\UserSingleResource;
 
 class AttendanceRelatedResource extends RelatedResource
