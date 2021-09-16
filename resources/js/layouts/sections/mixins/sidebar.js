@@ -133,6 +133,14 @@ export default {
                                 actionRef: 'index',
                             },
                         },
+                        {
+                            title: 'Absensi',
+                            route: { name: 'hrm.attendance' },
+                            access: {
+                                moduleRef: 'attendance',
+                                actionRef: 'index',
+                            },
+                        },
                     ],
                     collapse: false,
                 },

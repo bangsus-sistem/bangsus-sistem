@@ -8,6 +8,7 @@ import jobTitle from './hrm/job-title';
 import employee from './hrm/employee';
 import employeeAssignment from './hrm/employee-assignment';
 import employeeMutation from './hrm/employee-mutation';
+import attendance from './hrm/attendance';
 
 export default [
     ...contactType,
@@ -20,4 +21,5 @@ export default [
     ...employee,
     ...employeeAssignment,
     ...employeeMutation,
+    ...attendance,
 ];

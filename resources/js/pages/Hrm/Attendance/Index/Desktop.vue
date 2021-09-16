@@ -11,6 +11,11 @@
                 <bsb-access-wrapper module-ref="attendance" action-ref="create">
                     <bsb-button-router-link-create :to="{ name: 'hrm.attendance.create' }" />
                 </bsb-access-wrapper>
+                <bsb-access-wrapper module-ref="attendance" action-ref="attendance">
+                    <bsb-button-router-link :to="{ name: 'hrm.attendance.attendance' }" color="info" size="sm">
+                        Absen
+                    </bsb-button-router-link>
+                </bsb-access-wrapper>
                 <bsb-table-responsive class="p-1 mt-3">
                     <bsb-table :hover="true">
                         <thead class="thead-light">
