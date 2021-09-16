@@ -81,6 +81,7 @@ Route::prefix('blood_type')->group(function () {
 
 Route::prefix('employee')->group(function () {
     Route::get('all', 'EmployeeController@manifest');
+    Route::get('all_by_branch_assignment', 'EmployeeController@manifestByBranchAssignment');
     Route::get('', 'EmployeeController@index');
     Route::get('{id}', 'EmployeeController@show');
     Route::post('', 'EmployeeController@store');
@@ -107,6 +108,10 @@ Route::prefix('employee_mutation')->group(function () {
     Route::put('', 'EmployeeMutationController@amend');
     Route::patch('admit', 'EmployeeMutationController@reviseAdmit');
     Route::delete('', 'EmployeeMutationController@destroy');
+});
+
+Route::prefix('attendance_type')->group(function () {
+    Route::get('all', 'AttendanceTypeController@manifest');
 });
 
 Route::prefix('attendance')->group(function () {
