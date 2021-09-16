@@ -46,21 +46,17 @@ class StoreRequest extends FeatureRequest
             ],
             'schedule_in_datetime' => [
                 'nullable',
-                'date_format:Y-m-d H:i',
                 new ValidScheduleInDatetimeRule($this),
             ],
             'schedule_out_datetime' => [
                 'nullable',
-                'date_format:Y-m-d H:i',
                 'after:schedule_in_datetime',
             ],
             'attendance_in_datetime' => [
                 'nullable',
-                'date_format:Y-m-d H:i',
             ],
             'attendance_out_datetime' => [
                 'nullable',
-                'date_format:Y-m-d H:i',
                 'after:attendance_in_datetime',
             ],
         ];

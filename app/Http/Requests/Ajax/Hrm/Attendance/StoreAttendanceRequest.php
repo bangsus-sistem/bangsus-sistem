@@ -46,7 +46,6 @@ class StoreRequest extends FeatureRequest
             ],
             'datetime' => [
                 'nullable',
-                'date_format:Y-m-d H:i:s',
                 new ValidDatetimeRule($this),
             ],
         ];
