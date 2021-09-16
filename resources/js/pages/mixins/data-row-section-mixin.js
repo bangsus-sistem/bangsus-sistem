@@ -15,5 +15,9 @@ export default {
             moment.locale('id')
             return datetime == null ? '-' : moment(datetime).format('dddd, Do MMMM YYYY H:mm:ss')
         },
+        standardDate(datetime = null) {
+            moment.locale('id')
+            return datetime == null ? '-' : moment(datetime).format('dddd, Do MMMM YYYY')
+        },
     }
 }
