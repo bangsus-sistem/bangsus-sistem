@@ -28,6 +28,13 @@ class WhereBuilder
     private $request;
 
     /**
+     * Request usage.
+     * 
+     * @var string
+     */
+    private $requestUsage = 'query';
+
+    /**
      * Store the wheres.
      * 
      * @var array
@@ -38,7 +45,7 @@ class WhereBuilder
      * Set the request.
      * 
      * @param  \Illuminate\Http\Request  $request
-     * @return \Bsb\Foundation\Database
+     * @return \Bsb\Foundation\Database\WhereBuilder
      */
     public function with($request)
     {
@@ -51,7 +58,7 @@ class WhereBuilder
      * Set the index to be built.
      * 
      * @param  string  $index
-     * @return \Bsb\Foundation\Database
+     * @return \Bsb\Foundation\Database\WhereBuilder
      */
     public function index($index)
     {
@@ -65,7 +72,7 @@ class WhereBuilder
      * Set the column to be built
      * 
      * @param  string  $column
-     * @return \Bsb\Foundation\Database
+     * @return \Bsb\Foundation\Database\WhereBuilder
      */
     public function column($column)
     {
@@ -75,11 +82,22 @@ class WhereBuilder
     }
 
     /**
+     * Set the request usage.
+     * 
+     * @param  string  $requestUsage
+     * @return \Bsb\Foundation\Database\WhereBuilder
+     */
+    public function usage($requestUsage)
+    {
+        $this->requestUsage = $requestUsage;
+    }
+
+    /**
      * Execute the mode.
      * 
      * @param  string  $mode
      * @param  array   $args
-     * @return \Bsb\Foundation\Database
+     * @return \Bsb\Foundation\Database\WhereBuilder
      */
     public function mode($mode, $args = [])
     {
@@ -117,7 +135,7 @@ class WhereBuilder
         $request = $this->request;
 
         $this->wheres[] = [
-            $queueColumn, 'like', $leftWildcard . $request->query($queueIndex, '') . $rightWildCard
+            $queueColumn, 'like', $leftWildcard . $this->value('') . $rightWildCard
         ];
     }
 
@@ -129,7 +147,7 @@ class WhereBuilder
         $queueIndex = $this->queueIndex;
         $queueColumn = $this->queueColumn;
         $request = $this->request;
-        $value = $request->query($queueIndex, '*');
+        $value = $this->value('*');
 
         if ($value !== '*') {
             $this->wheres[] = [
@@ -158,7 +176,7 @@ class WhereBuilder
                 return $query->where(
                     $queueColumn,
                     'like', 
-                    $leftWildcard.$request->query($queueIndex, '').$rightWildCard
+                    $leftWildcard.$this->value('').$rightWildCard
                 )->orWhereNull($queueColumn);
             }
         ];
@@ -172,7 +190,7 @@ class WhereBuilder
         $queueIndex = $this->queueIndex;
         $queueColumn = $this->queueColumn;
         $request = $this->request;
-        $value = $request->query($queueIndex, '*');
+        $value = $this->value('*');
 
         if ($value !== '*') {
             $this->wheres[] = [
@@ -190,7 +208,7 @@ class WhereBuilder
         $queueColumn = $this->queueColumn;
         $request = $this->request;
         
-        if ($request->query($queueIndex, '*') !== '*') {
+        if ($this->value('*') !== '*') {
             $value = $request->boolean($queueIndex);
             $this->wheres[] = [
                 $value
@@ -208,7 +226,7 @@ class WhereBuilder
         $queueIndex = $this->queueIndex;
         $queueColumns = $this->queueColumn;
         $request = $this->request;
-        $value = $this->request->query($queueIndex);
+        $value = $this->value(date('Y-m-d'));
 
         $this->wheres[] = [
             (
@@ -246,5 +264,16 @@ class WhereBuilder
     public function done()
     {
         return $this->toArray();
+    }
+
+    /**
+     * Get the value dynamically based on the request usage.
+     * 
+     * @param  mixed  $default
+     * @return mixed
+     */
+    private function value($default)
+    {
+        return $this->{$this->requestUsage}($this->index, $default);
     }
 }
