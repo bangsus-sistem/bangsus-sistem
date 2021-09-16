@@ -136,7 +136,7 @@ class WhereBuilder
         $request = $this->request;
 
         $this->wheres[] = [
-            $queueColumn, 'like', $leftWildcard . $this->value('') . $rightWildCard
+            $queueColumn, 'like', $leftWildcard . $this->value($queueIndex, '') . $rightWildCard
         ];
     }
 
@@ -148,7 +148,7 @@ class WhereBuilder
         $queueIndex = $this->queueIndex;
         $queueColumn = $this->queueColumn;
         $request = $this->request;
-        $value = $this->value('*');
+        $value = $this->value($queueIndex, '*');
 
         if ($value !== '*') {
             $this->wheres[] = [
@@ -177,7 +177,7 @@ class WhereBuilder
                 return $query->where(
                     $queueColumn,
                     'like', 
-                    $leftWildcard.$this->value('').$rightWildCard
+                    $leftWildcard.$this->value($queueIndex, '').$rightWildCard
                 )->orWhereNull($queueColumn);
             }
         ];
@@ -191,7 +191,7 @@ class WhereBuilder
         $queueIndex = $this->queueIndex;
         $queueColumn = $this->queueColumn;
         $request = $this->request;
-        $value = $this->value('*');
+        $value = $this->value($queueIndex, '*');
 
         if ($value !== '*') {
             $this->wheres[] = [
@@ -209,7 +209,7 @@ class WhereBuilder
         $queueColumn = $this->queueColumn;
         $request = $this->request;
         
-        if ($this->value('*') !== '*') {
+        if ($this->value($queueIndex, '*') !== '*') {
             $value = $request->boolean($queueIndex);
             $this->wheres[] = [
                 $value
@@ -227,7 +227,7 @@ class WhereBuilder
         $queueIndex = $this->queueIndex;
         $queueColumns = $this->queueColumn;
         $request = $this->request;
-        $value = $this->value(date('Y-m-d'));
+        $value = $this->value($queueIndex, date('Y-m-d'));
 
         $this->wheres[] = [
             (
@@ -270,11 +270,12 @@ class WhereBuilder
     /**
      * Get the value dynamically based on the request usage.
      * 
+     * @param  string  $queueIndex
      * @param  mixed  $default
      * @return mixed
      */
-    private function value($default)
+    private function value($queueIndex, $default)
     {
-        return $this->request->{$this->requestUsage}($this->queueIndex, $default);
+        return $this->request->{$this->requestUsage}($queueIndex, $default);
     }
 }
