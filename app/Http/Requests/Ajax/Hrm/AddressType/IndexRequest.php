@@ -10,7 +10,7 @@ class IndexRequest extends FeatureRequest
      * @var array
      */
     protected $refs = [
-        'module' => 'employee_photo_type',
+        'module' => 'address_type',
         'action' => 'index',
     ];
 }
