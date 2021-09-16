@@ -24,7 +24,7 @@ class ValidEmployeeAndBranchRule extends RequestRule implements Rule
                 ->done()
         )->first();
 
-        if ( ! is_null($employeeAssignment)) {
+        if (is_null($employeeAssignment)) {
             $this->setMessage('Karyawan dan Cabang tidak valid.');
             return false;
         }
