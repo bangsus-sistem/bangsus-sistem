@@ -8,8 +8,8 @@ use App\Models\System\Branch;
 use App\Models\Hrm\AttendanceType;
 use App\Models\Storage\Image;
 use App\Validation\Hrm\Attendance\{
-    ValidEmployeeAndBranchForAttendance,
-    ValidScheduleInDatetime,
+    ValidEmployeeAndBranchRule,
+    ValidScheduleInDatetimeRule,
 };
 
 class StoreRequest extends FeatureRequest
@@ -30,7 +30,7 @@ class StoreRequest extends FeatureRequest
         return [
             'employee_id' => [
                 'required',
-                new ValidEmployeeAndBranchForAttendance($this),
+                new ValidEmployeeAndBranchRule($this),
             ],
             'branch_id' => [
                 'required',
@@ -47,7 +47,7 @@ class StoreRequest extends FeatureRequest
             'schedule_in_datetime' => [
                 'nullable',
                 'date_format:Y-m-d H:i:s',
-                new ValidScheduleInDatetime($this),
+                new ValidScheduleInDatetimeRule($this),
             ],
             'schedule_out_datetime' => [
                 'nullable',

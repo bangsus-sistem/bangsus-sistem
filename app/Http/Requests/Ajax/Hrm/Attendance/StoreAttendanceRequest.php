@@ -7,6 +7,10 @@ use Illuminate\Validation\Rule;
 use App\Models\System\Branch;
 use App\Models\Hrm\AttendanceType;
 use App\Models\Storage\Image;
+use App\Validation\Hrm\Attendance\{
+    ValidEmployeeAndBranchRule,
+    ValidDatetimeRule,
+};
 
 class StoreRequest extends FeatureRequest
 {
@@ -26,7 +30,7 @@ class StoreRequest extends FeatureRequest
         return [
             'employee_id' => [
                 'required',
-                new ValidEmployeeAndBranchForAttendance($this),
+                new ValidEmployeeAndBranchRule($this),
             ],
             'branch_id' => [
                 'required',
@@ -43,7 +47,7 @@ class StoreRequest extends FeatureRequest
             'datetime' => [
                 'nullable',
                 'date_format:Y-m-d H:i:s',
-                new ValidDatetimeForAttendance($this),
+                new ValidDatetimeRule($this),
             ],
         ];
     }

@@ -11,8 +11,8 @@ use App\Models\Hrm\{
 use App\Models\System\Branch;
 use App\Models\Storage\Image;
 use App\Validation\Hrm\Attendance\{
-    ValidEmployeeAndBranchForAttendance,
-    ValidScheduleInDatetime,
+    ValidEmployeeAndBranchRule,
+    ValidScheduleInDatetimeRule,
 };
 
 class AmendRequest extends FeatureIdRequest
@@ -41,7 +41,7 @@ class AmendRequest extends FeatureIdRequest
         return [
             'employee_id' => [
                 'required',
-                new ValidEmployeeAndBranchForAttendance($this),
+                new ValidEmployeeAndBranchRule($this),
             ],
             'branch_id' => [
                 'required',
@@ -58,7 +58,7 @@ class AmendRequest extends FeatureIdRequest
             'schedule_in_datetime' => [
                 'nullable',
                 'date_format:Y-m-d H:i:s',
-                new ValidScheduleInDatetime($this),
+                new ValidScheduleInDatetimeRule($this),
             ],
             'schedule_out_datetime' => [
                 'nullable',
