@@ -14,7 +14,7 @@ class AttendanceTypeSingleResource extends SingleResource
     {
         return [
             'id' => $this->id,
-            'hrm' => $this->hrm,
+            'ref' => $this->ref,
         ];
     }
 }
