@@ -90,6 +90,7 @@ class WhereBuilder
     public function usage($requestUsage)
     {
         $this->requestUsage = $requestUsage;
+        return $this;
     }
 
     /**
@@ -274,6 +275,6 @@ class WhereBuilder
      */
     private function value($default)
     {
-        return $this->{$this->requestUsage}($this->index, $default);
+        return $this->request->{$this->requestUsage}($this->queueIndex, $default);
     }
 }
