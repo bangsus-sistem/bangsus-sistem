@@ -9,7 +9,7 @@ trait HasImage
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function file()
+    public function image()
     {
         return $this->belongsTo(Image::class);
     }

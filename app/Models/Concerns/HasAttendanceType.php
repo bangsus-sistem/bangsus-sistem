@@ -9,7 +9,7 @@ trait HasAttendanceType
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function branch()
+    public function attendanceType()
     {
         return $this->belongsTo(AttendanceType::class);
     }
