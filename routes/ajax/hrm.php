@@ -108,3 +108,13 @@ Route::prefix('employee_mutation')->group(function () {
     Route::patch('admit', 'EmployeeMutationController@reviseAdmit');
     Route::delete('', 'EmployeeMutationController@destroy');
 });
+
+Route::prefix('attendance')->group(function () {
+    Route::get('all', 'AttendanceController@manifest');
+    Route::get('', 'AttendanceController@index');
+    Route::get('{id}', 'AttendanceController@show');
+    Route::post('', 'AttendanceController@store');
+    Route::post('attendance', 'AttendanceController@storeAttendance');
+    Route::put('', 'AttendanceController@amend');
+    Route::delete('', 'AttendanceController@destroy');
+});
