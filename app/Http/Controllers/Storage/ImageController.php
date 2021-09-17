@@ -48,6 +48,24 @@ class ImageController extends Controller
     }
 
     /**
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function storeBase64(Request $request)
+    {
+        $name = uniqid().uniqid().uniqid().uniqid().'.jpeg';
+        Storage::disk('image')
+            ->put($name, base64_decode(explode(',', explode(';', $request->input('image'))[1])[1]));
+
+        $image = new Image;
+        $image->name = $name;
+        $image->storage_dir = $name;
+        $image->save();
+
+        return response()->json($image);
+    }
+
+    /**
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
