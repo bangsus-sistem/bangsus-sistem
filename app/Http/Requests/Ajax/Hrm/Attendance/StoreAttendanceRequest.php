@@ -12,7 +12,7 @@ use App\Validation\Hrm\Attendance\{
     ValidDatetimeRule,
 };
 
-class StoreRequest extends FeatureRequest
+class StoreAttendanceRequest extends FeatureRequest
 {
     /**
      * @var array
@@ -49,5 +49,12 @@ class StoreRequest extends FeatureRequest
                 new ValidDatetimeRule($this),
             ],
         ];
+    }
+
+    protected function prepareForValidation()
+    {
+        $this->merge([
+            'datetime' => date('Y-m-d H:i:s')
+        ]);
     }
 }
