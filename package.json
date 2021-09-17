@@ -35,6 +35,7 @@
         "vue-mobile-detection": "^1.0.0",
         "vue-router": "^3.5.2",
         "vue-router-multiguard": "^1.0.3",
+        "vue-web-cam": "^1.9.0",
         "vuex": "^3.6.2"
     }
 }
