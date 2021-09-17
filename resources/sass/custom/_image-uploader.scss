@@ -52,6 +52,23 @@
         z-index: 1000000000000000000000000000000000000000000000000000000000;
     }
 
+    .btn-image-large-viewer-capture {
+        position: fixed;
+        bottom: 10px;
+        right: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translateX(-50%);
+        font-size: 30px;
+        color: $light;
+        z-index: 1000000000000000000000000000000000000000000000000000000000;
+        text-align: center;
+
+        .btn {
+            font-size: 30px;
+        }
+    }
+
     .image-uploaded-large-viewer {
         max-height: 70%;
         max-width: 70%;
