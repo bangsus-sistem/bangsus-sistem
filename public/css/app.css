@@ -27225,6 +27225,21 @@ readers do not read off random characters that represent icons */
   color: #f3f4f6;
   z-index: 1000000000000000000000000000000000000000000000000000000000;
 }
+.image-large-viewer-wrapper .btn-image-large-viewer-capture {
+  position: fixed;
+  bottom: 10px;
+  right: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  color: #f3f4f6;
+  z-index: 1000000000000000000000000000000000000000000000000000000000;
+  text-align: center;
+}
+.image-large-viewer-wrapper .btn-image-large-viewer-capture .btn {
+  font-size: 30px;
+}
 .image-large-viewer-wrapper .image-uploaded-large-viewer {
   max-height: 70%;
   max-width: 70%;
