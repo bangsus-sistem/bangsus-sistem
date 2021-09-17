@@ -196,6 +196,7 @@ export default {
          */
         'col': require('./utils/Col').default,
         'container-fluid': require('./utils/ContainerFluid').default,
+        'image-capturer': require('./utils/ImageCapturer.vue').default,
         'image-uploader': require('./utils/ImageUploader.vue').default,
         'image-viewer': require('./utils/ImageViewer.vue').default,
         'page-wrapper': require('./utils/PageWrapper').default,
