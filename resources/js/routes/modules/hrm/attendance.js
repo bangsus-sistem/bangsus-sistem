@@ -27,4 +27,10 @@ export default [
         component: page('Hrm/Attendance/Update'),
         beforeEnter: middleware(appMiddleware),
     },
+    {
+        path: 'attendance/attendance',
+        name: 'hrm.attendance.attendance',
+        component: page('Hrm/Attendance/Attendance'),
+        beforeEnter: middleware(appMiddleware),
+    },
 ]
