@@ -57,6 +57,7 @@ class EmployeeAssignmentController extends Controller
                             ->index('admitted')->mode('boolean')
                             ->done()
                     )
+                    ->userAuthorized()
                     ->orderBy($request->input('sort'), $request->input('order'))
                     ->paginate($request->input('count'))
             ),
@@ -73,7 +74,7 @@ class EmployeeAssignmentController extends Controller
     {
         return response()->json(
             new EmployeeAssignmentRelatedResource(
-                EmployeeAssignment::findOrFail($id)
+                EmployeeAssignment::userAuthorized()->findOrFail($id)
             ),
             200
         );

@@ -56,6 +56,7 @@ class EmployeeMutationController extends Controller
                             ->index('admitted')->mode('boolean')
                             ->done()
                     )
+                    ->userAuthorized()
                     ->orderBy($request->input('sort'), $request->input('order'))
                     ->paginate($request->input('count'))
             ),
@@ -72,7 +73,7 @@ class EmployeeMutationController extends Controller
     {
         return response()->json(
             new EmployeeMutationRelatedResource(
-                EmployeeMutation::findOrFail($id)
+                EmployeeMutation::userAuthorized()->findOrFail($id)
             ),
             200
         );

@@ -55,15 +55,7 @@ class AttendanceController extends Controller
                         ->index('attendance_type_id')->mode('id')
                         ->done()
                 )
-                    ->whereHas('employee', function ($query) use ($request) {
-                        return $query->where(
-                            $this->buildWhere($request)
-                                ->with($request)
-                                ->index('code')->mode('string')
-                                ->index('full_name')->mode('string')
-                                ->done()
-                        );
-                    })
+                    ->userAuthorized()
                     ->paginate(100000000000000)
             ),
             200
@@ -78,7 +70,8 @@ class AttendanceController extends Controller
     public function show(ShowRequest $request, $id)
     {
         return response()->json(
-            new AttendanceRelatedResource(Attendance::findOrFail($id)),
+            new AttendanceRelatedResource(
+                Attendance::userAuthorized()->findOrFail($id)),
             200
         );
     }

@@ -65,6 +65,7 @@ class EmployeeController extends Controller
                         ->index('gender_id')->mode('id')
                         ->done()
                 )
+                    ->userAuthorized()
                     ->orderBy($request->input('sort'), $request->input('order'))
                     ->paginate($request->input('count'))
             ),
@@ -80,7 +81,9 @@ class EmployeeController extends Controller
     public function show(ShowRequest $request, $id)
     {
         return response()->json(
-            new EmployeeRelatedResource(Employee::findOrFail($id)),
+            new EmployeeRelatedResource(
+                Employee::userAuthorized()->findOrFail($id)
+            ),
             200
         );
     }
