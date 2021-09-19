@@ -124,7 +124,7 @@ class Employee extends Model
      */
     public function scopeUserAuthorized($query)
     {
-        return $query->whereHas('employeeAssignment',
+        return $query->whereHas('employeeAssignments',
             fn ($query) => $query->userAuthorized()
         );
     }

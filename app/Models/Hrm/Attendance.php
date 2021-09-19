@@ -42,4 +42,15 @@ class Attendance extends Model
             ?   $this->schedule_in_datetime->format('Y-m-d')
             :   $this->attendance_in_datetime->format('Y-m-d');
     }
+
+    /**
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeUserAuthorized($query)
+    {
+        return $query->whereHas('branch',
+            fn ($query) => $query->userAuthorized()
+        );
+    }
 }
