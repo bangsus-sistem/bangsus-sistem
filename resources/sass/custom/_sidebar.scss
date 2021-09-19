@@ -1,10 +1,16 @@
 .sidebar {
     width: 250px;
-    height: 100%;
+    top: 0;
+    bottom: 0;
     position: fixed;
     left: 0;
     padding: 20px;
     z-index: 99999999999999;
+    overflow-y: auto;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar { width: 0 !important }
 
     .sidebar-items {
         padding-top: 20px;
@@ -100,11 +106,17 @@
 
 .sidebar-mobile {
     width: 250px;
-    height: 100%;
+    top: 0;
+    bottom: 0;
     position: fixed;
     left: 0;
     padding: 20px;
     z-index: 99999999999999;
+    overflow-y: auto;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar { width: 0 !important }
 
     .sidebar-items {
         padding-top: 20px;
