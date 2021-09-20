@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\{
     SoftDeletes,
 };
 use App\Models\Concerns\{
+    Geometry,
     HasEmployee,
     HasBranch,
     HasAttendanceType,
@@ -17,8 +18,8 @@ use App\Models\Concerns\{
 
 class Attendance extends Model
 {
-    use SoftDeletes, HasEmployee, HasBranch, HasAttendanceType, HasImage,
-        HasUserTimestamps, HasUserDelete;
+    use SoftDeletes, Geometry, HasEmployee, HasBranch, HasAttendanceType,
+        HasImage, HasUserTimestamps, HasUserDelete;
 
     /**
      * List of geometry fields.

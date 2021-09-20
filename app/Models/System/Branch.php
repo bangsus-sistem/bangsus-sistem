@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\{
     SoftDeletes,
 };
 use App\Models\Concerns\{
+    Geometry,
     HasUserTimestamps,
     HasUserDelete,
     ActiveFlag,
@@ -18,8 +19,8 @@ use App\Models\Auth\User;
 
 class Branch extends Model
 {
-    use SoftDeletes, HasUserTimestamps, HasUserDelete, ActiveFlag, HiddenFlag,
-        LockedFlag;
+    use SoftDeletes, Geometry, HasUserTimestamps, HasUserDelete, ActiveFlag,
+        HiddenFlag, LockedFlag;
 
     /**
      * List of geometry fields.
