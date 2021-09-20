@@ -18,6 +18,7 @@ class CreateBranches extends Migration
             $table->code();
             $table->name();
             $table->branchType();
+            $table->point('position')->nullable();
             $table->active();
             $table->locked();
             $table->hidden();

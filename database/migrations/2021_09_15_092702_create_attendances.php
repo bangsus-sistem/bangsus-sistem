@@ -23,6 +23,7 @@ class CreateAttendances extends Migration
             $table->timestamp('schedule_out_datetime')->nullable();
             $table->timestamp('attendance_in_datetime')->nullable();
             $table->timestamp('attendance_out_datetime')->nullable();
+            $table->point('position')->nullable();
             $table->userTimestamps();
             $table->userDelete();
             $table->timestamps();
