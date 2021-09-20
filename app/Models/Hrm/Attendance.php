@@ -14,6 +14,7 @@ use App\Models\Concerns\{
     HasUserTimestamps,
     HasUserDelete,
 };
+use App\Models\Storage\Image;
 
 class Attendance extends Model
 {
@@ -49,7 +50,7 @@ class Attendance extends Model
      */
     public function imageIn()
     {
-        return $this->belongsTo(Image::class);
+        return $this->belongsTo(Image::class, 'image_in_id', 'id');
     }
 
     /**
@@ -57,7 +58,7 @@ class Attendance extends Model
      */
     public function imageOut()
     {
-        return $this->belongsTo(Image::class);
+        return $this->belongsTo(Image::class, 'image_out_id', 'id');
     }
 
     /**
