@@ -32,12 +32,6 @@
                         <bsb-input :value="form.data['attendance_type']['ref']" :readonly="true" />
                     </bsb-form-group>
                     <bsb-form-group>
-                        <label>Gambar</label>
-                        <bsb-image-viewer :id="form.data['image_id']" />
-                        <bsb-image-uploader v-model="form.data['image_id']" />
-                        <bsb-errors-wrapper :errors="form.errors['image_id']" />
-                    </bsb-form-group>
-                    <bsb-form-group>
                         <label>Jadwal Masuk</label>
                         <bsb-input type="text" :value="standardDatetime(form.data['schedule_in_datetime'])" :readonly="true" />
                     </bsb-form-group>
@@ -50,8 +44,16 @@
                         <bsb-input type="text" :value="standardDatetime(form.data['attendance_in_datetime'])" :readonly="true" />
                     </bsb-form-group>
                     <bsb-form-group>
-                        <label>Absensi Masuk</label>
+                        <label>Absensi Keluar</label>
                         <bsb-input type="text" :value="standardDatetime(form.data['attendance_out_datetime'])" :readonly="true"  />
+                    </bsb-form-group>
+                    <bsb-form-group>
+                        <label>Gambar Masuk</label>
+                        <bsb-image-viewer :id="form.data['image_in_id']" />
+                    </bsb-form-group>
+                    <bsb-form-group>
+                        <label>Gambar Keluar</label>
+                        <bsb-image-viewer :id="form.data['image_out_id']" />
                     </bsb-form-group>
                 </form>
             </bsb-card-body-spinner-error-back>

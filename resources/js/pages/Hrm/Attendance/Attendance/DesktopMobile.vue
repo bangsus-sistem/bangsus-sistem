@@ -12,10 +12,7 @@
                 <form
                     class="mt-5"
                     @submit.prevent="
-                        submitForm('/ajax/hrm/attendance/attendance', 'post', {
-                            resolve: true,
-                            reject: false
-                        }).then(() => $router.push({ name: 'hrm.attendance' }))
+                        submit
                     "
                 >
                     <bsb-form-group>
@@ -64,7 +61,13 @@
                         <bsb-image-capturer v-model="form.data['image_id']" />
                         <bsb-errors-wrapper :errors="form.errors['image_id']" />
                     </bsb-form-group>
-                    <bsb-button-spinner type="submit" :loading="state.form.loading">
+                    <bsb-form-group>
+                        <bsb-errors-wrapper :errors="form.errors['position']" />
+                    </bsb-form-group>
+                    <bsb-form-group>
+                        <bsb-errors-wrapper :errors="form.errors['datetime']" />
+                    </bsb-form-group>
+                    <bsb-button-spinner type="submit" :loading="state.form.loading" :disabled="!state.form.submittable">
                         Submit
                     </bsb-button-spinner>
                 </form>

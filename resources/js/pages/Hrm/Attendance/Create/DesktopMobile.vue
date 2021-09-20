@@ -59,12 +59,6 @@
                         </bsb-select-errors>
                     </bsb-form-group>
                     <bsb-form-group>
-                        <label>Gambar</label>
-                        <bsb-image-viewer :id="form.data['image_id']" />
-                        <bsb-image-uploader v-model="form.data['image_id']" />
-                        <bsb-errors-wrapper :errors="form.errors['image_id']" />
-                    </bsb-form-group>
-                    <bsb-form-group>
                         <label>Jadwal Masuk</label>
                         <bsb-input-errors type="datetime-local" step="1" v-model="form.data['schedule_in_datetime']" :errors="form.errors['schedule_in_datetime']" />
                     </bsb-form-group>
@@ -77,8 +71,20 @@
                         <bsb-input-errors type="datetime-local" step="1" v-model="form.data['attendance_in_datetime']" :errors="form.errors['attendance_in_datetime']" />
                     </bsb-form-group>
                     <bsb-form-group>
-                        <label>Absensi Masuk</label>
+                        <label>Absensi Keluar</label>
                         <bsb-input-errors type="datetime-local" step="1" v-model="form.data['attendance_out_datetime']" :errors="form.errors['attendance_out_datetime']" />
+                    </bsb-form-group>
+                    <bsb-form-group>
+                        <label>Gambar Masuk</label>
+                        <bsb-image-viewer :id="form.data['image_in_id']" />
+                        <bsb-image-uploader v-model="form.data['image_in_id']" />
+                        <bsb-errors-wrapper :errors="form.errors['image_in_id']" />
+                    </bsb-form-group>
+                    <bsb-form-group>
+                        <label>Gambar Keluar</label>
+                        <bsb-image-viewer :id="form.data['image_out_id']" />
+                        <bsb-image-uploader v-model="form.data['image_out_id']" />
+                        <bsb-errors-wrapper :errors="form.errors['image_out_id']" />
                     </bsb-form-group>
                     <bsb-button-spinner type="submit" :loading="state.form.loading">
                         Submit

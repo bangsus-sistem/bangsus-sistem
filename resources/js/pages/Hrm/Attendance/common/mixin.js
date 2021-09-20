@@ -10,22 +10,32 @@ export default {
                     'branch_id': '',
                     'attendance_type_id': '',
                     'image_id': '',
+                    'image_in_id': '',
+                    'image_out_id': '',
                     'schedule_in_datetime': '',
                     'schedule_out_datetime': '',
                     'attendance_in_datetime': '',
                     'attendance_out_datetime': '',
                     'datetime': '',
+                    'position': {
+                        'latitude': '',
+                        'longitude': '',
+                    },
 
                     'employee': [],
                     'branch': [],
                     'attendance_type': [],
-                    'image': [],
+                    'image_in': [],
+                    'image_out': [],
                 },
                 errors: {
                     'employee_id': [],
                     'branch_id': [],
                     'attendance_type_id': [],
                     'image_id': [],
+                    'image_in_id': [],
+                    'image_out_id': [],
+                    'position': [],
                     'schedule_in_datetime': [],
                     'schedule_out_datetime': [],
                     'attendance_in_datetime': [],
@@ -40,7 +50,10 @@ export default {
                     message: null,
                 },
                 result: { loading: false },
-                form: { loading: false },
+                form: {
+                    loading: false,
+                    submittable: false,
+                },
             },
             resources: {
                 'branches': [],
@@ -58,6 +71,8 @@ export default {
                     'branch_id': data['branch']['id'],
                     'attendance_type_id': data['attendance_type']['id'],
                     'image_id': data['image'] != null ? data['image']['id'] : null,
+                    'image_in_id': data['image_in'] != null ? data['image_in']['id'] : null,
+                    'image_out_id': data['image_out'] != null ? data['image_out']['id'] : null,
                     'schedule_in_datetime': data['schedule_in_datetime'],
                     'schedule_out_datetime': data['schedule_out_datetime'],
                     'attendance_in_datetime': data['attendance_in_datetime'],
@@ -68,6 +83,8 @@ export default {
                     'branch': data['branch'],
                     'attendance_type': data['attendance_type'],
                     'image': data['image'],
+                    'image_in': data['image_in'],
+                    'image_out': data['image_out'],
                 }
             }
         }

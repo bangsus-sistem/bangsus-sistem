@@ -57,6 +57,7 @@ export default {
             mode: {
                 environment: true
             },
+            id: null,
         }
     },
     methods: {
@@ -131,9 +132,6 @@ export default {
     props: {
         link: {
             default: null,
-        },
-        id: {
-            required: true,
         },
     },
 }

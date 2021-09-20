@@ -13,8 +13,13 @@
                 <bsb-td justify="center">{{ standardDatetime(item['schedule_out_datetime']) }}</bsb-td>
                 <bsb-td justify="center">{{ standardDatetime(item['attendance_out_datetime']) }}</bsb-td>
                 <bsb-td justify="center">
-                    <template v-if="item['image'] != null">
-                        <bsb-image-viewer mode="link" :id="item['image']['id']" />
+                    <template v-if="item['image_in'] != null">
+                        <bsb-image-viewer mode="link" :id="item['image_in']['id']" />
+                    </template>
+                </bsb-td>
+                <bsb-td justify="center">
+                    <template v-if="item['image_out'] != null">
+                        <bsb-image-viewer mode="link" :id="item['image_out']['id']" />
                     </template>
                 </bsb-td>
                 <bsb-td justify="center">

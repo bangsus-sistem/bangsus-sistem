@@ -22,7 +22,8 @@ export default {
                     { index: 'attendance_in_datetime', title: 'Absensi Masuk' },
                     { index: 'schedule_out_datetime', title: 'Jadwal Keluar' },
                     { index: 'attendance_out_datetime', title: 'Absensi Keluar' },
-                    { index: 'image', title: 'Gambar', sortable: false },
+                    { index: 'image', title: 'Gambar Masuk', sortable: false },
+                    { index: 'image', title: 'Gambar Keluar', sortable: false },
                 ],
             },
             resources: {
