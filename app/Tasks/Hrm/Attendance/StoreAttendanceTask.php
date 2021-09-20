@@ -84,6 +84,19 @@ class StoreAttendanceTask extends Task
                 'mode' => $mode,
             ];
         }
+
+        // Check if hanging attendance_in_datetime exists.
+        $attendance = Attendance::where($wheres)
+            ->orderBy('attendance_in_datetime', 'desc')
+            ->where('attendance_out_datetime', null)
+            ->first();
+        if ( ! is_null($attendance)) {
+            $mode = 'out';
+            return (object) [
+                'attendance' => $attendance,
+                'mode' => $mode,
+            ];
+        }
         
         // Check if the schedule on the related day exists.
         $attendance = Attendance::where($wheres)
