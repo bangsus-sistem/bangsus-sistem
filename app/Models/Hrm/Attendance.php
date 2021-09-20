@@ -11,7 +11,6 @@ use App\Models\Concerns\{
     HasEmployee,
     HasBranch,
     HasAttendanceType,
-    HasImage,
     HasUserTimestamps,
     HasUserDelete,
 };
@@ -19,14 +18,14 @@ use App\Models\Concerns\{
 class Attendance extends Model
 {
     use SoftDeletes, Geometry, HasEmployee, HasBranch, HasAttendanceType,
-        HasImage, HasUserTimestamps, HasUserDelete;
+        HasUserTimestamps, HasUserDelete;
 
     /**
      * List of geometry fields.
      * 
      * @var array
      */
-    protected $geometry = ['position'];
+    protected $geometry = ['position_in', 'position_out'];
 
     /**
      * Select geometrical attributes as text from database.
@@ -44,6 +43,22 @@ class Attendance extends Model
         'attendance_in_datetime' => 'datetime:Y-m-d H:i:s',
         'attendance_out_datetime' => 'datetime:Y-m-d H:i:s',
     ];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function imageIn()
+    {
+        return $this->belongsTo(Image::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function imageOut()
+    {
+        return $this->belongsTo(Image::class);
+    }
 
     /**
      * Make a flexible attendance date attribute based on either the schedule
