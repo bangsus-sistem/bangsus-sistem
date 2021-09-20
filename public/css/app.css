@@ -27260,11 +27260,18 @@ readers do not read off random characters that represent icons */
 
 .sidebar {
   width: 250px;
-  height: 100%;
+  top: 0;
+  bottom: 0;
   position: fixed;
   left: 0;
   padding: 20px;
   z-index: 99999999999999;
+  overflow-y: auto;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+.sidebar::-webkit-scrollbar {
+  width: 0 !important;
 }
 .sidebar .sidebar-items {
   padding-top: 20px;
@@ -27343,11 +27350,18 @@ readers do not read off random characters that represent icons */
 
 .sidebar-mobile {
   width: 250px;
-  height: 100%;
+  top: 0;
+  bottom: 0;
   position: fixed;
   left: 0;
   padding: 20px;
   z-index: 99999999999999;
+  overflow-y: auto;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+.sidebar-mobile::-webkit-scrollbar {
+  width: 0 !important;
 }
 .sidebar-mobile .sidebar-items {
   padding-top: 20px;
