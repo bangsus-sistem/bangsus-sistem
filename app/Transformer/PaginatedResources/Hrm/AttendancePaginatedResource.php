@@ -20,6 +20,7 @@ class AttendancePaginatedResource extends PaginatedResource
             'branch' => new BranchPaginatedResource($this->branch),
             'attendance_type' => new AttendanceTypePaginatedResource($this->attendanceType),
             'image' => new ImageSingleResource($this->image),
+            'position' => $this->position,
             'attendance_date' => $this->attendance_date,
             'schedule_in_datetime' => $this->schedule_in_datetime,
             'attendance_in_datetime' => $this->attendance_in_datetime,
