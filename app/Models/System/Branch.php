@@ -22,6 +22,20 @@ class Branch extends Model
         LockedFlag;
 
     /**
+     * List of geometry fields.
+     * 
+     * @var array
+     */
+    protected $geometry = ['position'];
+
+    /**
+     * Select geometrical attributes as text from database.
+     *
+     * @var bool
+     */
+    protected $geometryAsText = true;
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function branchType()

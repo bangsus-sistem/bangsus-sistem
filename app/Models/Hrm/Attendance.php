@@ -21,6 +21,20 @@ class Attendance extends Model
         HasUserTimestamps, HasUserDelete;
 
     /**
+     * List of geometry fields.
+     * 
+     * @var array
+     */
+    protected $geometry = ['position'];
+
+    /**
+     * Select geometrical attributes as text from database.
+     *
+     * @var bool
+     */
+    protected $geometryAsText = true;
+
+    /**
      * @var array
      */
     protected $casts = [
