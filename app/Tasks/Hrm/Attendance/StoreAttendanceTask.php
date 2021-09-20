@@ -23,17 +23,21 @@ class StoreAttendanceTask extends Task
                 $attendance->employee_id = $request->input('employee_id');
                 $attendance->branch_id = $request->input('branch_id');
                 $attendance->attendance_type_id = $request->input('attendance_type_id');
-                $attendance->image_id = $request->input('image_id');
-                $attendance->position = \DB::raw(
-                    "GeomFromText('POINT({$request->input('position.latitude')} {$request->input('position.longitude')})')"
-                );
                 $datetime = $request->input('datetime');
                 switch ($mode) {
                     case 'in' :
+                        $attendance->image_in_id = $request->input('image_id');
                         $attendance->attendance_in_datetime = $datetime;
+                        $attendance->position_in = \DB::raw(
+                            "GeomFromText('POINT({$request->input('position.latitude')} {$request->input('position.longitude')})')"
+                        );
                         break;
                     case 'out' :
+                        $attendance->image_out_id = $request->input('image_id');
                         $attendance->attendance_out_datetime = $datetime;
+                        $attendance->position_out = \DB::raw(
+                            "GeomFromText('POINT({$request->input('position.latitude')} {$request->input('position.longitude')})')"
+                        );
                         break;
                 }
 

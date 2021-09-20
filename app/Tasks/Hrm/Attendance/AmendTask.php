@@ -19,7 +19,8 @@ class AmendTask extends Task
                 $attendance->employee_id = $request->input('employee_id');
                 $attendance->branch_id = $request->input('branch_id');
                 $attendance->attendance_type_id = $request->input('attendance_type_id');
-                $attendance->image_id = $request->input('image_id');
+                $attendance->image_in_id = $request->input('image_in_id');
+                $attendance->image_out_id = $request->input('image_out_id');
                 $attendance->schedule_in_datetime = $request->input('schedule_in_datetime');
                 $attendance->schedule_out_datetime = $request->input('schedule_out_datetime');
                 $attendance->attendance_in_datetime = $request->input('attendance_in_datetime');
