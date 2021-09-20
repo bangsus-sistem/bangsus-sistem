@@ -53,12 +53,21 @@ export default {
                 form: {
                     loading: false,
                     submittable: false,
+                    submitted: false,
                 },
             },
             resources: {
                 'branches': [],
                 'employees': [],
                 'attendance_types': [],
+                'attendance': {
+                    'branch': {
+                        'code': '',
+                        'name': '',
+                    },
+                    'employee': {},
+                    'attendance_type': {},
+                },
             },
         }
     },
