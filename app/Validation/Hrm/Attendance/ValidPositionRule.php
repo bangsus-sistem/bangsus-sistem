@@ -17,6 +17,9 @@ class ValidPositionRule extends RequestRule implements Rule
     public function passes($attribute, $value)
     {
         $branch = Branch::findOrFail($this->request->input('branch_id'));
+
+        if (is_null($branch->position)) return true;
+
         $position = $branch::pointToArray($branch->position);
 
         $distance = Haversini::calculate(
