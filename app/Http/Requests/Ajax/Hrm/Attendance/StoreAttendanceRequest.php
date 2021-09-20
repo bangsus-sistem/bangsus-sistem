@@ -10,6 +10,7 @@ use App\Models\Storage\Image;
 use App\Validation\Hrm\Attendance\{
     ValidEmployeeAndBranchRule,
     ValidDatetimeRule,
+    ValidPositionRule,
 };
 
 class StoreAttendanceRequest extends FeatureRequest

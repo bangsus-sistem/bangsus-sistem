@@ -51,7 +51,11 @@ class AmendRequest extends FeatureIdRequest
                 'required',
                 'bsb_exists:'.AttendanceType::class,
             ],
-            'image_id' => [
+            'image_in_id' => [
+                'nullable',
+                'bsb_exists:'.Image::class,
+            ],
+            'image_out_id' => [
                 'nullable',
                 'bsb_exists:'.Image::class,
             ],
