@@ -48,6 +48,10 @@ class StoreAttendanceRequest extends FeatureRequest
                 'nullable',
                 new ValidDatetimeRule($this),
             ],
+            'position' => [
+                'required',
+                new ValidPositionRule($this),
+            ]
         ];
     }
 
