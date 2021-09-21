@@ -3,6 +3,7 @@
 namespace App\Tasks\System\Branch;
 
 use Bsb\Foundation\Task;
+use App\Models\System\Branch;
 
 class StoreTask extends Task
 {
