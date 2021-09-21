@@ -11,10 +11,10 @@
                 </bsb-td>
                 <bsb-td justify="center">
                     <bsb-access-wrapper module-ref="branch" action-ref="read">
-                        <bsb-button-router-link-read :to="{ name: 'hrm.branch.read', params: { id: item['id'] } }" />
+                        <bsb-button-router-link-read :to="{ name: 'system.branch.read', params: { id: item['id'] } }" />
                     </bsb-access-wrapper>
                     <bsb-access-wrapper module-ref="branch" action-ref="update">
-                        <bsb-button-router-link-update :to="{ name: 'hrm.branch.update', params: { id: item['id'] } }" />
+                        <bsb-button-router-link-update :to="{ name: 'system.branch.update', params: { id: item['id'] } }" />
                         <bsb-button-activate v-if="!item['active']" @click="$emit('activate')" />
                         <bsb-button-deactivate v-else @click="$emit('deactivate')" />
                     </bsb-access-wrapper>
@@ -34,10 +34,10 @@
                     </template>
                     <template v-slot:right>
                         <bsb-access-wrapper module-ref="branch" action-ref="read">
-                            <bsb-button-router-link-read :to="{ name: 'hrm.branch.read', params: { id: item['id'] } }" />
+                            <bsb-button-router-link-read :to="{ name: 'system.branch.read', params: { id: item['id'] } }" />
                         </bsb-access-wrapper>
                         <bsb-access-wrapper module-ref="branch" action-ref="update">
-                            <bsb-button-router-link-update :to="{ name: 'hrm.branch.update', params: { id: item['id'] } }" />
+                            <bsb-button-router-link-update :to="{ name: 'system.branch.update', params: { id: item['id'] } }" />
                             <bsb-button-activate v-if="!item['active']" @click="$emit('activate')" />
                             <bsb-button-deactivate v-else @click="$emit('deactivate')" />
                         </bsb-access-wrapper>
@@ -60,7 +60,7 @@ import mixin from '../../../mixins/data-row-section-mixin'
 export default {
     mixins: [mixin],
     props: {
-        flWithBranch: {
+        flWithBranchType: {
             type: Boolean,
             default: true,
         }

@@ -14,7 +14,7 @@ export default {
                 sortOrders: [
                     { index: 'code', title: 'Kode' },
                     { index: 'name', title: 'Nama' },
-                    { index: 'branch_type_id', title: 'Divisi' },
+                    { index: 'branch_type_id', title: 'Tipe Cabang' },
                     { index: 'active', title: 'Status' },
                 ],
             },
@@ -30,7 +30,7 @@ export default {
         prepare() {
             this.fetchAndSetMultipleResources(
                 {
-                    'branch_types': '/ajax/hrm/branch_type/all'
+                    'branch_types': '/ajax/system/branch_type/all'
                 },
                 { resolve: true, reject: false },
                 { startLoading: true, stopLoading: false }

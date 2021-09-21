@@ -9,7 +9,7 @@
             >
                 <h5 class="mb-3">Daftar Cabang</h5>
                 <bsb-access-wrapper module-ref="branch" action-ref="create">
-                    <bsb-button-router-link-create :to="{ name: 'hrm.branch.create' }" />
+                    <bsb-button-router-link-create :to="{ name: 'system.branch.create' }" />
                 </bsb-access-wrapper>
                 <bsb-table-responsive class="p-1 mt-3">
                     <bsb-table-responsive-header>
@@ -21,6 +21,7 @@
                                 :loading="state.result.loading"
                                 @search="search"
                                 v-model="query"
+                                :resources="resources"
                             />
                             <bsb-tr-sort
                                 :sort-orders="meta.sortOrders"

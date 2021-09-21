@@ -9,7 +9,7 @@
         >
             <h5 class="mb-3">Daftar Cabang</h5>
             <bsb-access-wrapper module-ref="branch" action-ref="create">
-                <bsb-button-router-link-create :to="{ name: 'hrm.branch.create' }" />
+                <bsb-button-router-link-create :to="{ name: 'system.branch.create' }" />
             </bsb-access-wrapper>
             <BranchDataQuery
                 :loading="state.result.loading"

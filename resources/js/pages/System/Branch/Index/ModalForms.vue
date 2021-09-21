@@ -5,7 +5,7 @@
                 title="Aktifkan Cabang"
                 message="Apakah anda yakin?"
                 ref="activate"
-                link="/ajax/hrm/branch/activate"
+                link="/ajax/system/branch/activate"
                 method="patch"
                 @success="$emit('success')"
             />
@@ -13,7 +13,7 @@
                 title="Nonaktifkan Cabang"
                 message="Apakah anda yakin?"
                 ref="deactivate"
-                link="/ajax/hrm/branch/deactivate"
+                link="/ajax/system/branch/deactivate"
                 method="patch"
                 @success="$emit('success')"
             />
@@ -23,7 +23,7 @@
                 title="Hapus Cabang"
                 message="Apakah anda yakin?"
                 ref="delete"
-                link="/ajax/hrm/branch"
+                link="/ajax/system/branch"
                 method="delete"
                 @success="$emit('success')"
             />

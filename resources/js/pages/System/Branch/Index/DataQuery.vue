@@ -81,5 +81,11 @@ import mixin from '../../../mixins/data-query-section-mixin'
 
 export default {
     mixins: [mixin],
+    props: {
+        flWithBranchType: {
+            type: Boolean,
+            default: true,
+        }
+    }
 }
 </script>
