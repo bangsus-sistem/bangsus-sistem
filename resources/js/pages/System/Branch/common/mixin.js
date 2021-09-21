@@ -29,6 +29,9 @@ export default {
                 result: { loading: false },
                 form: { loading: false },
             },
+            resources: {
+                'branch_types': [],
+            },
         }
     },
     methods: {

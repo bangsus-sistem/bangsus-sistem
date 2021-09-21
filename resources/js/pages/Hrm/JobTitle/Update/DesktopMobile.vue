@@ -36,14 +36,14 @@
                         <label>Divisi</label>
                         <bsb-select-errors v-model="form.data['division_id']" :errors="form.errors['division_id']">
                             <option :value="null">-- Pilih Divisi --</option>
-                            <option-active
+                            <bsb-option-active
                                 v-for="(division, i) in resources['divisions']"
                                 :key="i"
                                 :value="division['id']"
                                 :item="division"
                             >
                                 {{ division['code'] }} - {{ division['name'] }}
-                            </option-active>
+                            </bsb-option-active>
                         </bsb-select-errors>
                     </bsb-form-group>
                     <bsb-form-group>
