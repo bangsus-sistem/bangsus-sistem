@@ -6,7 +6,7 @@
                 :loading="state.page.loading"
                 :error="state.page.error"
                 :error-message="state.page.message"
-                :default-back="{ name: 'hrm.branchType' }"
+                :default-back="{ name: 'system.branchType' }"
             >
                 <h5 class="mb-3">Ubah Tipe Alamat</h5>
                 <bsb-user-timestamps
@@ -18,10 +18,10 @@
                 <form
                     class="mt-5"
                     @submit.prevent="
-                        submitForm('/ajax/hrm/branch_type', 'put', {
+                        submitForm('/ajax/system/branch_type', 'put', {
                             resolve: true,
                             reject: false
-                        }).then(() => $router.push({ name: 'hrm.branchType' }))
+                        }).then(() => $router.push({ name: 'system.branchType' }))
                     "
                 >
                     <bsb-form-group>
@@ -31,13 +31,6 @@
                     <bsb-form-group>
                         <label>Nama</label>
                         <bsb-input-errors v-model="form.data['name']" :errors="form.errors['name']" />
-                    </bsb-form-group>
-                    <bsb-form-group>
-                        <label>Req</label>
-                        <bsb-form-radios
-                            :options="[{val: true, label: 'Harus Diisi'}, {val: false, label: 'Tidak Harus Diisi'}]"
-                            v-model="form.data['required']"
-                        />
                     </bsb-form-group>
                     <bsb-form-group>
                         <label>Deskripsi</label>

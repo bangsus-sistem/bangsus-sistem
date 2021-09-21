@@ -6,16 +6,16 @@
                 :loading="state.page.loading"
                 :error="state.page.error"
                 :error-message="state.page.message"
-                :default-back="{ name: 'hrm.branchType' }"
+                :default-back="{ name: 'system.branchType' }"
             >
                 <h5 class="mb-3">Tambah Tipe Cabang</h5>
                 <form
                     class="mt-5"
                     @submit.prevent="
-                        submitForm('/ajax/hrm/branch_type', 'post', {
+                        submitForm('/ajax/system/branch_type', 'post', {
                             resolve: true,
                             reject: false
-                        }).then(() => $router.push({ name: 'hrm.branchType' }))
+                        }).then(() => $router.push({ name: 'system.branchType' }))
                     "
                 >
                     <bsb-form-group>

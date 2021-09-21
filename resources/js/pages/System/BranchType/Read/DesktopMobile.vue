@@ -6,7 +6,7 @@
                 :loading="state.page.loading"
                 :error="state.page.error"
                 :error-message="state.page.message"
-                :default-back="{ name: 'hrm.addressType' }"
+                :default-back="{ name: 'system.addressType' }"
             >
                 <h5 class="mb-3">Lihat Tipe Cabang</h5>
                 <bsb-user-timestamps

@@ -1,5 +1,5 @@
 <template>
-    <Layout :breadcrumbs="msc.breadcrumbs" active="hrm.addressType">
+    <Layout :breadcrumbs="msc.breadcrumbs" active="system.branchType">
         <!-- Mobile -->
         <template v-slot:mobile>
             <DesktopMobile />

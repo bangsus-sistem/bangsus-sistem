@@ -35,7 +35,7 @@ export default {
             this.getAndSetResult(true, 'result')
         },
         fetchResult() {
-            return axios.get('/ajax/hrm/branch_type', { params: this.query })
+            return axios.get('/ajax/system/branch_type', { params: this.query })
         },
     }
 }

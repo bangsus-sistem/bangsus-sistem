@@ -10,10 +10,10 @@
                 </bsb-td>
                 <bsb-td justify="center">
                     <bsb-access-wrapper module-ref="branch_type" action-ref="read">
-                        <bsb-button-router-link-read :to="{ name: 'hrm.branchType.read', params: { id: item['id'] } }" />
+                        <bsb-button-router-link-read :to="{ name: 'system.branchType.read', params: { id: item['id'] } }" />
                     </bsb-access-wrapper>
                     <bsb-access-wrapper module-ref="branch_type" action-ref="update">
-                        <bsb-button-router-link-update :to="{ name: 'hrm.branchType.update', params: { id: item['id'] } }" />
+                        <bsb-button-router-link-update :to="{ name: 'system.branchType.update', params: { id: item['id'] } }" />
                         <bsb-button-activate v-if="!item['active']" @click="$emit('activate')" />
                         <bsb-button-deactivate v-else @click="$emit('deactivate')" />
                     </bsb-access-wrapper>
@@ -32,10 +32,10 @@
                     </template>
                     <template v-slot:right>
                         <bsb-access-wrapper module-ref="branch_type" action-ref="read">
-                            <bsb-button-router-link-read :to="{ name: 'hrm.branchType.read', params: { id: item['id'] } }" />
+                            <bsb-button-router-link-read :to="{ name: 'system.branchType.read', params: { id: item['id'] } }" />
                         </bsb-access-wrapper>
                         <bsb-access-wrapper module-ref="branch_type" action-ref="update">
-                            <bsb-button-router-link-update :to="{ name: 'hrm.branchType.update', params: { id: item['id'] } }" />
+                            <bsb-button-router-link-update :to="{ name: 'system.branchType.update', params: { id: item['id'] } }" />
                             <bsb-button-activate v-if="!item['active']" @click="$emit('activate')" />
                             <bsb-button-deactivate v-else @click="$emit('deactivate')" />
                         </bsb-access-wrapper>
