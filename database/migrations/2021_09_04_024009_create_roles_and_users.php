@@ -60,7 +60,9 @@ class CreateRolesAndUsers extends Migration
      */
     public function down()
     {
-        \DB::table('roles')->update(['user_create_id' => null, 'user_update_id' => null, 'user_delete_id' => null]);
+        Schema::table('roles', function (Blueprint $table) {
+            $table->dropForeign(['user_create_id', 'user_update_id', 'user_delete_id']);
+        });
         Schema::dropIfExists('users');
         Schema::dropIfExists('roles');
     }
