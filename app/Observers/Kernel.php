@@ -10,6 +10,7 @@ class Kernel
     public static function observers()
     {
         return [
+            \App\Models\System\Branch::class => System\BranchObserver::class,
             \App\Models\Hrm\Employee::class => Hrm\EmployeeObserver::class,
             \App\Models\Hrm\EmployeeAssignment::class => Hrm\EmployeeAssignmentObserver::class,
         ];
