@@ -61,6 +61,21 @@
         ]
     },
     {
+        "ref": "system",
+        "modules": [
+            {
+                "ref": "branch_type",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
+                "ref": "branch",
+                "actions": ["index", "create", "read", "update", "delete"]
+            }
+        ],
+        "widgets": [],
+        "reports": []
+    },
+    {
         "ref": "hrm",
         "modules": [
             {
