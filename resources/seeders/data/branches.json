@@ -2,17 +2,29 @@
     {
         "code": "100",
         "name": "Kantor Pusat",
-        "branch_type_id": 1
+        "branch_type_id": 1,
+        "position": {
+            "latitude": -7.300793511739821,
+            "longitude": 112.77563313846238
+        }
     },
     {
         "code": "100",
         "name": "Geprek Bangsus Pusat",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "position": {
+            "latitude": -7.300793511739821,
+            "longitude": 112.77563313846238
+        }
     },
     {
         "code": "101",
         "name": "Geprek Bangsus Semolowaru",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "position": {
+            "latitude": -7.300793511739821,
+            "longitude": 112.77563313846238
+        }
     },
     {
         "code": "102",

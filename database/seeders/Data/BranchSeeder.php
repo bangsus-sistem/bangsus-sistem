@@ -40,6 +40,7 @@ class BranchSeeder extends ResourceSeeder
                 'code' => $branchType->code . $branch['code'],
                 'name' => $branch['name'],
                 'branch_type_id' => $branchType->id,
+                'position' => isset($branch['position']) ? \DB::raw("GeomFromText('POINT({$branch['position']['latitude']} {$branch['position']['longitude']})')") : null,
                 'active' => $branch['active'] ?? true,
                 'locked' => false,
                 'hidden' => false,
