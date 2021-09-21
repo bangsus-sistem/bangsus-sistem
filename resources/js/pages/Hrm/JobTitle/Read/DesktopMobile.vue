@@ -29,16 +29,7 @@
                     </bsb-form-group>
                     <bsb-form-group>
                         <label>Divisi</label>
-                        <bsb-select v-model="form.data['division_id']" :disabled="true">
-                            <option :value="null">-- Pilih Divisi --</option>
-                            <option
-                                v-for="(division, i) in resources['divisions']"
-                                :key="i"
-                                :value="division['id']"
-                            >
-                                {{ division['code'] }} - {{ division['name'] }}
-                            </option>
-                        </bsb-select>
+                        <bsb-input :value="form.data['division']['code'] + ' - ' + form.data['division']['name']" :readonly="true" />
                     </bsb-form-group>
                     <bsb-form-group>
                         <label>Status</label>
