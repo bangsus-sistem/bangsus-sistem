@@ -3,7 +3,7 @@ import middleware from './middleware'
 
 import auth from './modules/auth'
 import log from './modules/log'
-// import system from './modules/system'
+import system from './modules/system'
 import hrm from './modules/hrm'
 
 const appMiddleware = ['authenticated', 'versionCheck']
@@ -38,11 +38,11 @@ export default [
         component: blankComponent,
         children: log,
     },
-    // {
-    //     path: '/system',
-    //     component: blankComponent,
-    //     children: system,
-    // },
+    {
+        path: '/system',
+        component: blankComponent,
+        children: system,
+    },
     {
         path: '/hrm',
         component: blankComponent,

@@ -66,6 +66,31 @@ export default {
                     collapse: false,
                 },
                 {
+                    title: 'Sistem',
+                    icon: 'tool',
+                    children: [
+                        {
+                            title: 'Tipe Cabang',
+                            route: { name: 'system.branchType' },
+                            access: {
+                                moduleRef: 'branch_type',
+                                actionRef: 'index',
+                            },
+                            active: false,
+                        },
+                        {
+                            title: 'Cabang',
+                            route: { name: 'system.branch' },
+                            access: {
+                                moduleRef: 'branch',
+                                actionRef: 'index',
+                            },
+                            active: false,
+                        },
+                    ],
+                    collapse: false,
+                },
+                {
                     title: 'HRM',
                     icon: 'users',
                     children: [
