@@ -37,6 +37,10 @@ trait Geometry
      */
     public static function pointToArray(string $point) : array
     {
-        return explode(' ', explode(')', explode('POINT(', $point)[1])[0]);
+        $position = explode(' ', explode(')', explode('POINT(', $point)[1])[0]);
+        return [
+            'latitude' => $position[0],
+            'longitude' => $position[1],
+        ];
     }
 }
