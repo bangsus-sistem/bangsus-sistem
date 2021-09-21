@@ -45,7 +45,7 @@ class AmendRequest extends FeatureIdRequest
             ],
             'branch_type_id' => [
                 'required',
-                'wbl_exists:'.BranchType::class,
+                'bsb_exists:'.BranchType::class,
             ],
             'description' => [
                 'nullable',
