@@ -60,6 +60,8 @@ class CreateRolesAndUsers extends Migration
      */
     public function down()
     {
+        \DB::table('roles')->update(['user_create_id' => null, 'user_update_id' => null, 'user_delete_id' => null]);
+        Schema::dropIfExists('users');
         Schema::dropIfExists('roles');
     }
 }
