@@ -16,6 +16,7 @@ class JobTitlePaginatedResource extends PaginatedResource
             'id' => $this->id,
             'code' => $this->code,
             'name' => $this->name,
+            'division' => new DivisionPaginatedResource($this->division),
             'active' => (bool) $this->active,
             'required' => (bool) $this->required,
         ];
