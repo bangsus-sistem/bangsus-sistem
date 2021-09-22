@@ -5,12 +5,9 @@ export default {
     created() {
         this.fetchAndSetFormData(
             '/ajax/hrm/attendance/' + this.$route.params.id,
-            { resolve: true, reject: false },
+            { resolve: false, reject: false },
             { startLoading: true, stopLoading: true },
             this.getFormDataCallback()
         )
-            .then(res => {
-                console.log(res)
-            })
     },
 }

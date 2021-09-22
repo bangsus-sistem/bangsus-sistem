@@ -14,6 +14,10 @@ export default {
                     'branches': '/ajax/system/branch/all',
                     'attendance_types': '/ajax/hrm/attendance_type/all',
                 }, { resolve: false, reject: false })
+                this.form.data['schedule_in_datetime'] = this.isoDatetime(this.form.data['schedule_in_datetime'])
+                this.form.data['schedule_out_datetime'] = this.isoDatetime(this.form.data['schedule_out_datetime'])
+                this.form.data['attendance_in_datetime'] = this.isoDatetime(this.form.data['attendance_in_datetime'])
+                this.form.data['attendance_out_datetime'] = this.isoDatetime(this.form.data['attendance_out_datetime'])
             })
     },
 }
