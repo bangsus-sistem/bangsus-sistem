@@ -1,6 +1,6 @@
 <template>
     <fragment>
-        <h3>Tipe Alamat</h3>
+        <h3>Absensi</h3>
         <bsb-card class="my-3">
             <bsb-card-body-spinner-error-back
                 :loading="state.page.loading"
@@ -8,7 +8,7 @@
                 :error-message="state.page.message"
                 :default-back="{ name: 'hrm.attendance' }"
             >
-                <h5 class="mb-3">Ubah Tipe Alamat</h5>
+                <h5 class="mb-3">Ubah Absensi</h5>
                 <bsb-user-timestamps
                     :user-create="form.data['user_create']"
                     :created-at="form.data['created_at']"
