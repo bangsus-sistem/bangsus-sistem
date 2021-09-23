@@ -283,6 +283,8 @@ const queryMethods = {
     refreshRouteWithQuery() {
         // Push the router, and we catch the error without doing anything to prevent
         // the Vue Router console logging the duplicate navigation error.
+        this.$store.dispatch('utils/history/addPlain', { name: this.$route.name, query: this.query })
+        this.$store.dispatch('utils/history/addDeep', { name: this.$route.name, query: this.query })
         this.$router.push({ name: this.$route.name, query: this.query }).catch(() => {})
     },
 

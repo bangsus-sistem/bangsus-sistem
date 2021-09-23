@@ -17,12 +17,14 @@
 import Card from './Card'
 import CardBody from './CardBody'
 import Icon from '../icons/Icon'
+import Col from '../utils/Col'
 
 export default {
     components: {
         Card,
         CardBody,
         Icon,
+        Col,
     },
     data() {
         return {

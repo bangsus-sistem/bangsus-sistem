@@ -22,10 +22,10 @@ export default {
     },
     methods: {
         click() {
-            const route = this.$store.getters['utils/history/latestBeforePlain']
+            const route = this.$store.getters['utils/history/latestBeforeDeep']
             if (route != null) {
                 this.$store.dispatch('utils/history/deleteLatest')
-                this.$router.replace({ path: route.path })
+                this.$router.replace({ name: route.name, query: route.query })
             } else {
                 this.$router.replace(this.defaultBack)
             }
