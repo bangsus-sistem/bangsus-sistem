@@ -15,6 +15,7 @@ class AttendanceTypePaginatedResource extends PaginatedResource
         return [
             'id' => $this->id,
             'ref' => $this->ref,
+            'name' => $this->name,
         ];
     }
 }

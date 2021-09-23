@@ -16,6 +16,7 @@ class CreateAttendanceTypes extends Migration
         Schema::create('attendance_types', function (Blueprint $table) {
             $table->id();
             $table->ref();
+            $table->name();
         });
     }
 

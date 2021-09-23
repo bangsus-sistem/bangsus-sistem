@@ -16,6 +16,7 @@ class AttendanceTypeRelatedResource extends RelatedResource
         return [
             'id' => $this->id,
             'ref' => $this->ref,
+            'name' => $this->name,
         ];
     }
 }

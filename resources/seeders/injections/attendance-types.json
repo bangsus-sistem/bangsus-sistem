@@ -1,8 +1,10 @@
 [
     {
-        "ref": "STD"
+        "ref": "STD",
+        "name": "Standard"
     },
     {
-        "ref": "OVR"
+        "ref": "OVR",
+        "name": "Lembur"
     }
 ]
