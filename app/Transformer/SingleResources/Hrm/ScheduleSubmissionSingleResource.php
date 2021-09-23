@@ -21,6 +21,7 @@ class AttendanceSingleResource extends SingleResource
             'schedule_in_datetime' => $this->schedule_in_datetime == null ? null : $this->schedule_in_datetime->toRfc3339String(),
             'schedule_out_datetime' => $this->schedule_out_datetime == null ? null : $this->schedule_out_datetime->toRfc3339String(),
             'admitted' => (bool) $this->admitted,
+            'monthly' => (bool) $this->monthly,
             'user_create_id' => $this->user_create_id,
             'user_update_id' => $this->user_update_id,
             'user_delete_id' => $this->user_delete_id,

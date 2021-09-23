@@ -22,6 +22,7 @@ class ScheduleSubmissionPaginatedResource extends PaginatedResource
             'schedule_in_datetime' => $this->schedule_in_datetime,
             'schedule_out_datetime' => $this->schedule_out_datetime,
             'admitted' => (bool) $this->admitted,
+            'monthly' => (bool) $this->monthly,
         ];
     }
 }
