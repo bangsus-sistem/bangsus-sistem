@@ -5,7 +5,7 @@ export default {
     data() {
         return {
             query: {
-                'nip': '',
+                'code': '',
                 'full_name': '',
                 'branch_id': '',
                 'attendance_date': '',
@@ -13,7 +13,7 @@ export default {
             },
             meta: {
                 sortOrders: [
-                    { index: 'nip', title: 'NIP' },
+                    { index: 'code', title: 'NIP' },
                     { index: 'full_name', title: 'Nama Karyawan' },
                     { index: 'branch_id', title: 'Cabang' },
                     { index: 'attendance_date', title: 'Tanggal Absensi', sortable: false },
