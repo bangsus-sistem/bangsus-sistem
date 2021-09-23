@@ -20,4 +20,12 @@ class ScheduleSubmission extends Model
 {
     use SoftDeletes, HasEmployee, HasBranch, HasAttendanceType,
         HasUserTimestamps, HasUserDelete, AdmittedTimestamp;
+
+    /**
+     * @var array
+     */
+    protected $casts = [
+        'schedule_in_datetime' => 'datetime:Y-m-d H:i:s',
+        'schedule_out_datetime' => 'datetime:Y-m-d H:i:s',
+    ];
 }
