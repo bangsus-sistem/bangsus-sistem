@@ -8,7 +8,7 @@ export default {
                 'nip': '',
                 'full_name': '',
                 'branch_id': '',
-                'attendance_date': '',
+                'schedule_date': '',
                 'attendance_type_id': '',
                 'admitted': '',
             },
@@ -17,7 +17,7 @@ export default {
                     { index: 'nip', title: 'NIP' },
                     { index: 'full_name', title: 'Nama Karyawan' },
                     { index: 'branch_id', title: 'Cabang' },
-                    { index: 'attendance_date', title: 'Tanggal Absensi', sortable: false },
+                    { index: 'schedule_date', title: 'Tanggal Absensi', sortable: false },
                     { index: 'attendance_type_id', title: 'Tipe Absensi' },
                     { index: 'schedule_in_datetime', title: 'Jadwal Masuk' },
                     { index: 'schedule_out_datetime', title: 'Jadwal Keluar' },
@@ -41,7 +41,7 @@ export default {
             }, { resolve: true, reject: false }, { startLoading: true, stopLoading: false })
             this.setQuery({
                 'branch_id': ['*', ['*', ...lodash.map(this.resources['branches'], (val) => val.id)]],
-                'attendance_date': [moment().format('YYYY-MM-DD'), '*', (val) => moment(val).format('YYYY-MM-DD')],
+                'schedule_date': [moment().format('YYYY-MM-DD'), '*', (val) => moment(val).format('YYYY-MM-DD')],
                 'attendance_type_id': ['*', ['*', ...lodash.map(this.resources['attendance_types'], (val) => val.id)]],
                 'admitted': ['*', ['*', true, false, 'true', 'false']],
             })

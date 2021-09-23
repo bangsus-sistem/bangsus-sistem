@@ -20,7 +20,7 @@
                     </bsb-select>
                 </bsb-th-query>
                 <bsb-th-query>
-                    <bsb-input size="sm" type="date" v-model="query['attendance_date']" />
+                    <bsb-input size="sm" type="date" v-model="query['schedule_date']" />
                 </bsb-th-query>
                 <bsb-th-query>
                     <bsb-select size="sm"
@@ -65,7 +65,7 @@
                 </bsb-form-group>
                 <bsb-form-group>
                     <label>Tanggal Absensi</label>
-                    <bsb-input size="sm" type="date" v-model="query['attendance_date']" />
+                    <bsb-input size="sm" type="date" v-model="query['schedule_date']" />
                 </bsb-form-group>
                 <bsb-form-group>
                     <label>Tipe Absensi</label>

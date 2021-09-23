@@ -6,7 +6,7 @@
                 <bsb-td justify="center">{{ item['employee']['code'] }}</bsb-td>
                 <bsb-td justify="center">{{ item['employee']['full_name'] }}</bsb-td>
                 <bsb-td justify="center">{{ item['branch']['code'] }} - {{ item['branch']['name'] }}</bsb-td>
-                <bsb-td justify="center">{{ standardDate(item['attendance_date']) }}</bsb-td>
+                <bsb-td justify="center">{{ standardDate(item['schedule_date']) }}</bsb-td>
                 <bsb-td justify="center">{{ item['attendance_type']['ref'] }} - {{ item['attendance_type']['name'] }}</bsb-td>
                 <bsb-td justify="center">{{ standardDatetime(item['schedule_in_datetime']) }}</bsb-td>
                 <bsb-td justify="center">{{ standardDatetime(item['schedule_out_datetime']) }}</bsb-td>
@@ -47,7 +47,7 @@
                         </bsb-access-wrapper>
                     </template>
                     <template v-slot:footer>
-                        {{ standardDate(item['attendance_date']) }}<br>
+                        {{ standardDate(item['schedule_date']) }}<br>
                         <small>Jadwal Masuk: <b>{{ standardDatetime(item['schedule_in_datetime']) }}</b></small><br>
                         <small>Jadwal Keluar: <b>{{ standardDatetime(item['schedule_out_datetime']) }}</b></small><br>
                     </template>
