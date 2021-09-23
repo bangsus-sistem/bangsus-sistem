@@ -123,3 +123,13 @@ Route::prefix('attendance')->group(function () {
     Route::put('', 'AttendanceController@amend');
     Route::delete('', 'AttendanceController@destroy');
 });
+
+Route::prefix('schedule_submission')->group(function () {
+    Route::get('all', 'ScheduleSubmissionController@manifest');
+    Route::get('', 'ScheduleSubmissionController@index');
+    Route::get('{id}', 'ScheduleSubmissionController@show');
+    Route::post('', 'ScheduleSubmissionController@store');
+    Route::put('', 'ScheduleSubmissionController@amend');
+    Route::patch('admit', 'ScheduleSubmissionController@reviseAdmit');
+    Route::delete('', 'ScheduleSubmissionController@destroy');
+});
