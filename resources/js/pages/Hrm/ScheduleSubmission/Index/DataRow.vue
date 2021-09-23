@@ -20,6 +20,9 @@
                     <bsb-access-wrapper module-ref="schedule_submission" action-ref="update">
                         <bsb-button-router-link-update :to="{ name: 'hrm.scheduleSubmission.update', params: { id: item['id'] } }" />
                     </bsb-access-wrapper>
+                    <bsb-access-wrapper module-ref="schedule_submission" action-ref="admit">
+                        <bsb-button-admit @click="$emit('admit')" v-if="!item['admitted']" />
+                    </bsb-access-wrapper>
                     <bsb-access-wrapper module-ref="schedule_submission" action-ref="delete">
                         <bsb-button-delete @click="$emit('delete')" />
                     </bsb-access-wrapper>
@@ -41,6 +44,9 @@
                         </bsb-access-wrapper>
                         <bsb-access-wrapper module-ref="schedule_submission" action-ref="update">
                             <bsb-button-router-link-update :to="{ name: 'hrm.scheduleSubmission.update', params: { id: item['id'] } }" />
+                        </bsb-access-wrapper>
+                        <bsb-access-wrapper module-ref="schedule_submission" action-ref="admit">
+                            <bsb-button-admit @click="$emit('admit')" v-if="!item['admitted']" />
                         </bsb-access-wrapper>
                         <bsb-access-wrapper module-ref="schedule_submission" action-ref="delete">
                             <bsb-button-delete @click="$emit('delete')" />

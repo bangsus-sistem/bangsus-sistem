@@ -22,6 +22,7 @@
                     :key="i"
                     :num="i + 1"
                     :item="item"
+                    @admit="showModalForm('scheduleSubmission', 'admit', { id: item['id'] })"
                     @delete="showModalForm('scheduleSubmission', 'delete', { id: item['id'] })"
                 />
             </bsb-list-group-empty>

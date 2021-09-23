@@ -5,7 +5,7 @@ export default {
     data() {
         return {
             query: {
-                'nip': '',
+                'code': '',
                 'full_name': '',
                 'branch_id': '',
                 'schedule_date': '',
@@ -14,7 +14,7 @@ export default {
             },
             meta: {
                 sortOrders: [
-                    { index: 'nip', title: 'NIP' },
+                    { index: 'code', title: 'NIP' },
                     { index: 'full_name', title: 'Nama Karyawan' },
                     { index: 'branch_id', title: 'Cabang' },
                     { index: 'schedule_date', title: 'Tanggal Absensi', sortable: false },
@@ -52,7 +52,7 @@ export default {
             this.getAndSetResult(true, 'result')
         },
         fetchResult() {
-            return axios.get('/ajax/hrm/attendance', { params: this.query })
+            return axios.get('/ajax/hrm/schedule_submission', { params: this.query })
         },
     }
 }
