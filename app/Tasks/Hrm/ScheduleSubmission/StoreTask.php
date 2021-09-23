@@ -19,6 +19,7 @@ class StoreTask extends Task
                 $scheduleSubmission->employee_id = $request->input('employee_id');
                 $scheduleSubmission->branch_id = $request->input('branch_id');
                 $scheduleSubmission->attendance_type_id = $request->input('attendance_type_id');
+                $scheduleSubmission->monthly = false;
                 $scheduleSubmission->schedule_in_datetime = $request->input('schedule_in_datetime');
                 $scheduleSubmission->schedule_out_datetime = $request->input('schedule_out_datetime');
                 $scheduleSubmission->save();
