@@ -159,6 +159,14 @@ export default {
                             },
                         },
                         {
+                            title: 'Pengajuan Jadwal',
+                            route: { name: 'hrm.scheduleSubmission' },
+                            access: {
+                                moduleRef: 'schedule_submission',
+                                actionRef: 'index',
+                            },
+                        },
+                        {
                             title: 'Absensi',
                             route: { name: 'hrm.attendance' },
                             access: {
@@ -168,6 +176,12 @@ export default {
                         },
                     ],
                     collapse: false,
+                },
+                {
+                    title: 'Laporan',
+                    icon: 'file-text',
+                    route: { name: 'report' },
+                    active: false,
                 },
             ],
             collapsedIndex: null,
