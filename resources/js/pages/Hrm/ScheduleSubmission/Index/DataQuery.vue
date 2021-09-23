@@ -33,6 +33,8 @@
                     </bsb-select>
                 </bsb-th-query>
                 <bsb-th-query></bsb-th-query>
+                <bsb-th-query></bsb-th-query>
+                <bsb-th-query></bsb-th-query>
                 <bsb-th-query>
                     <bsb-button-spinner color="primary" size="sm" @click="$emit('search')" :loading="loading">
                         Cari

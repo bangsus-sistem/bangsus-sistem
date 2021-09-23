@@ -11,6 +11,9 @@
                 <bsb-td justify="center">{{ standardDatetime(item['schedule_in_datetime']) }}</bsb-td>
                 <bsb-td justify="center">{{ standardDatetime(item['schedule_out_datetime']) }}</bsb-td>
                 <bsb-td justify="center">
+                    <bsb-switch-badge :condition="item['admitted']" true-label="Disetujui" false-label="Menunggu Persetujuan"/>
+                </bsb-td>
+                <bsb-td justify="center">
                     <bsb-access-wrapper module-ref="schedule_submission" action-ref="read">
                         <bsb-button-router-link-read :to="{ name: 'hrm.scheduleSubmission.read', params: { id: item['id'] } }" />
                     </bsb-access-wrapper>
