@@ -53,6 +53,15 @@ class AttendanceController extends Controller
                         ->index('attendance_type_id')->mode('id')
                         ->done()
                 )
+                    ->whereHas('employee', function ($query) use ($request) {
+                        return $query->where(
+                            $this->buildWhere()
+                                ->with($request)
+                                ->index('code')->mode('string')
+                                ->index('full_name')->mode('string')
+                                ->done()
+                        );
+                    })
                     ->userAuthorized()
                     ->paginate(100000000000000)
             ),
