@@ -62,6 +62,12 @@ class ScheduleSubmissionController extends Controller
                                 ->done()
                         );
                     })
+                    ->extent(
+                        $this->buildExtent()
+                            ->with($request)
+                            ->index('admitted')->mode('boolean')
+                            ->done()
+                    )
                     ->userAuthorized()
                     ->paginate(100000000000000)
             ),

@@ -65,6 +65,12 @@ class EmployeeController extends Controller
                         ->index('gender_id')->mode('id')
                         ->done()
                 )
+                    ->extent(
+                        $this->buildExtent()
+                            ->with($request)
+                            ->index('admitted')->mode('boolean')
+                            ->done()
+                    )
                     ->userAuthorized()
                     ->orderBy($request->input('sort'), $request->input('order'))
                     ->paginate($request->input('count'))
