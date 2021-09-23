@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\{
     Model,
     SoftDeletes,
 };
+use Bsb\Foundation\Database\Eloquent\Extent;
 use App\Models\Concerns\{
     HasEmployee,
     HasBranch,
@@ -18,6 +19,7 @@ use App\Models\Concerns\{
 
 class ScheduleSubmission extends Model
 {
+    use Extent;
     use SoftDeletes, HasEmployee, HasBranch, HasAttendanceType,
         HasUserTimestamps, HasUserDelete, AdmittedTimestamp;
 
@@ -37,5 +39,16 @@ class ScheduleSubmission extends Model
     public function getScheduleDateAttribute()
     {
         return $this->schedule_in_datetime->format('Y-m-d');
+    }
+
+    /**
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeUserAuthorized($query)
+    {
+        return $query->whereHas('branch',
+            fn ($query) => $query->userAuthorized()
+        );
     }
 }
