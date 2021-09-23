@@ -28,4 +28,14 @@ class ScheduleSubmission extends Model
         'schedule_in_datetime' => 'datetime:Y-m-d H:i:s',
         'schedule_out_datetime' => 'datetime:Y-m-d H:i:s',
     ];
+
+    /**
+     * Make a flexible schedule date.
+     * 
+     * @return string
+     */
+    public function getScheduleDateAttribute()
+    {
+        return $this->schedule_in_datetime->format('Y-m-d');
+    }
 }
