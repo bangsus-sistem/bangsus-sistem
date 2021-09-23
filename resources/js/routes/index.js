@@ -5,6 +5,7 @@ import auth from './modules/auth'
 import log from './modules/log'
 import system from './modules/system'
 import hrm from './modules/hrm'
+import report from './modules/report'
 
 const appMiddleware = ['authenticated', 'versionCheck']
 const blankComponent = { template: '<router-view></router-view>' }
@@ -47,5 +48,10 @@ export default [
         path: '/hrm',
         component: blankComponent,
         children: hrm,
+    },
+    {
+        path: '/report',
+        component: blankComponent,
+        children: report,
     },
 ]
