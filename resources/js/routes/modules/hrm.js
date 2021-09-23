@@ -9,6 +9,7 @@ import employee from './hrm/employee';
 import employeeAssignment from './hrm/employee-assignment';
 import employeeMutation from './hrm/employee-mutation';
 import attendance from './hrm/attendance';
+import scheduleSubmission from './hrm/schedule-submission';
 
 export default [
     ...contactType,
@@ -22,4 +23,5 @@ export default [
     ...employeeAssignment,
     ...employeeMutation,
     ...attendance,
+    ...scheduleSubmission,
 ];
