@@ -16,6 +16,7 @@ class Kernel
         'allWidgets' => Blueprint\Booleans\AllWidgetsBlueprint::class,
         'hidden' => Blueprint\Booleans\HiddenBlueprint::class,
         'locked' => Blueprint\Booleans\LockedBlueprint::class,
+        'monthly' => Blueprint\Booleans\MonthlyBlueprint::class,
         'required' => Blueprint\Booleans\RequiredBlueprint::class,
         'state' => Blueprint\Booleans\StateBlueprint::class,
 
