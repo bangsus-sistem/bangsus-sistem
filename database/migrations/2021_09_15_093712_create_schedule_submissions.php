@@ -18,7 +18,6 @@ class CreateScheduleSubmissions extends Migration
             $table->employee();
             $table->branch();
             $table->attendanceType();
-            $table->image();
             $table->timestamp('schedule_in_datetime')->nullable();
             $table->timestamp('schedule_out_datetime')->nullable();
             $table->userTimestamps();
