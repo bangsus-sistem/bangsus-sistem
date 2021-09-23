@@ -20,6 +20,7 @@ class CreateScheduleSubmissions extends Migration
             $table->attendanceType();
             $table->timestamp('schedule_in_datetime')->nullable();
             $table->timestamp('schedule_out_datetime')->nullable();
+            $table->monthly();
             $table->userTimestamps();
             $table->userAdmit();
             $table->userDelete();
