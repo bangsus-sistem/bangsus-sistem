@@ -29,6 +29,7 @@ class ScheduleSubmission extends Model
     protected $casts = [
         'schedule_in_datetime' => 'datetime:Y-m-d H:i:s',
         'schedule_out_datetime' => 'datetime:Y-m-d H:i:s',
+        'monthly' => 'boolean',
     ];
 
     /**
