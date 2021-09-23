@@ -1,6 +1,6 @@
 <template>
     <fragment>
-        <bsb-access-wrapper module-ref="employee_mutation" action-ref="update">
+        <bsb-access-wrapper module-ref="employee_mutation" action-ref="admit">
             <bsb-modal-form
                 title="Terima Pengajuan Mutasi Karyawan"
                 message="Apakah anda yakin?"

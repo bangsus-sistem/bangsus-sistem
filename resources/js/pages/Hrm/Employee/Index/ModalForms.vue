@@ -1,6 +1,6 @@
 <template>
     <fragment>
-        <bsb-access-wrapper module-ref="employee" action-ref="update">
+        <bsb-access-wrapper module-ref="employee" action-ref="admit">
             <bsb-modal-form
                 title="Terima Pengajuan Karyawan"
                 message="Apakah anda yakin?"
