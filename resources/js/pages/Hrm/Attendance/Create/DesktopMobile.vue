@@ -54,7 +54,7 @@
                                 :key="i"
                                 :value="attendanceType['id']"
                             >
-                                {{ attendanceType['ref'] }}
+                                {{ attendanceType['ref'] }} - {{ attendanceType['name'] }}
                             </option>
                         </bsb-select-errors>
                     </bsb-form-group>

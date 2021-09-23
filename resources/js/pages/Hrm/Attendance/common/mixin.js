@@ -54,6 +54,7 @@ export default {
                     loading: false,
                     submittable: false,
                     submitted: false,
+                    located: false,
                 },
             },
             resources: {

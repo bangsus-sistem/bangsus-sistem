@@ -21,7 +21,8 @@ export default {
                         'latitude': pos.coords.latitude,
                         'longitude': pos.coords.longitude,
                     }
-                })
+                    this.state.form.located = true
+                }, e => {}, { enableHighAccuracy: true, maximumAge: 2000, timeout: 5000 })
         },
         submit() {
             if (this.state.form.submittable)

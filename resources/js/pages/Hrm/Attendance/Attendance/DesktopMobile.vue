@@ -51,7 +51,7 @@
                                     :key="i"
                                     :value="attendanceType['id']"
                                 >
-                                    {{ attendanceType['ref'] }}
+                                    {{ attendanceType['ref'] }} - {{ attendanceType['name'] }}
                                 </option>
                             </bsb-select-errors>
                         </bsb-form-group>
@@ -66,6 +66,11 @@
                         </bsb-form-group>
                         <bsb-form-group>
                             <bsb-errors-wrapper :errors="form.errors['datetime']" />
+                        </bsb-form-group>
+                        <bsb-form-group v-if="!state.form.located">
+                            <span class="text-secondary">
+                                <bsb-spinner size="sm" class="mr-1" /> Mengambil lokasi anda. Refresh bila memakan waktu lama. Hubungi manajemen bila lokasi tidak bisa didapatkan.
+                            </span>
                         </bsb-form-group>
                         <bsb-button-spinner type="submit" :loading="state.form.loading" :disabled="!state.form.submittable">
                             Submit

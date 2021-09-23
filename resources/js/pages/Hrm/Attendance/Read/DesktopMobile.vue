@@ -29,7 +29,7 @@
                     </bsb-form-group>
                     <bsb-form-group>
                         <label>Tipe Absensi</label>
-                        <bsb-input :value="form.data['attendance_type']['ref']" :readonly="true" />
+                        <bsb-input :value="form.data['attendance_type']['ref'] + ' - ' + form.data['attendance_type']['name']" :readonly="true" />
                     </bsb-form-group>
                     <bsb-form-group>
                         <label>Jadwal Masuk</label>
