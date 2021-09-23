@@ -26,6 +26,7 @@ class ScheduleSubmissionRelatedResource extends RelatedResource
             'schedule_date' => $this->schedule_date,
             'schedule_in_datetime' => $this->schedule_in_datetime == null ? null : $this->schedule_in_datetime->toRfc3339String(),
             'schedule_out_datetime' => $this->schedule_out_datetime == null ? null : $this->schedule_out_datetime->toRfc3339String(),
+            'admitted' => (bool) $this->admitted,
             'user_create' => new UserSingleResource($this->userCreate),
             'user_update' => new UserSingleResource($this->userUpdate),
             'user_delete' => new UserSingleResource($this->userDelete),
