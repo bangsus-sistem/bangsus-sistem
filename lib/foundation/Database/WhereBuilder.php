@@ -273,7 +273,7 @@ class WhereBuilder
 
         $this->wheres[] = [
             fn ($query) => 
-                $query->whereDateBetween($queueColumn,
+                $query->whereBetween($queueColumn,
                     [$this->value($startIndex, date('Y-m-d')), $this->value($endIndex, date('Y-m-d'))]
                 )
         ];
