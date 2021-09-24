@@ -203,6 +203,20 @@ class WhereBuilder
     /**
      * @return void
      */
+    public function idArrayMode()
+    {
+        $queueIndex = $this->queueIndex;
+        $queueColumn = $this->queueColumn;
+        $request = $this->request;
+
+        $this->wheres[] = [
+            fn ($query) => $query->whereIn($queueColumn, $this->value($queueIndex, []))
+        ];
+    }
+
+    /**
+     * @return void
+     */
     public function booleanToTimestampMode()
     {
         $queueIndex = $this->queueIndex;
