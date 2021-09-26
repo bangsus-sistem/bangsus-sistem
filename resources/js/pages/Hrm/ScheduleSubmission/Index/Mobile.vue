@@ -11,6 +11,11 @@
             <bsb-access-wrapper module-ref="schedule_submission" action-ref="create">
                 <bsb-button-router-link-create :to="{ name: 'hrm.scheduleSubmission.create' }" />
             </bsb-access-wrapper>
+            <bsb-access-wrapper module-ref="schedule_submission" action-ref="create">
+                <bsb-button-router-link size="sm" color="info" :to="{ name: 'hrm.scheduleSubmission.createMonthly' }">
+                    Tambah Bulanan
+                </bsb-button-router-link>
+            </bsb-access-wrapper>
             <ScheduleSubmissionDataQuery
                 :loading="state.result.loading"
                 @search="search"

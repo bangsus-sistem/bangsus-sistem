@@ -43,6 +43,12 @@ export default {
                     submittable: false,
                     submitted: false,
                     located: false,
+                    dates: [],
+                    locked: false,
+                    table: {
+                        loading: false,
+                        show: {},
+                    }
                 },
             },
             resources: {
@@ -69,6 +75,9 @@ export default {
                     'attendance_type': data['attendance_type'],
                 }
             }
+        },
+        lock() {
+            this.state.form.locked = ! this.state.form.locked
         }
     },
     watch: {

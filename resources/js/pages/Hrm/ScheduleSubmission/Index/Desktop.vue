@@ -11,6 +11,16 @@
                 <bsb-access-wrapper module-ref="schedule_submission" action-ref="create">
                     <bsb-button-router-link-create :to="{ name: 'hrm.scheduleSubmission.create' }" />
                 </bsb-access-wrapper>
+                <bsb-access-wrapper module-ref="schedule_submission" action-ref="create">
+                    <bsb-button-router-link size="sm" color="info" :to="{ name: 'hrm.scheduleSubmission.createMonthly' }">
+                        Tambah Bulanan
+                    </bsb-button-router-link>
+                </bsb-access-wrapper>
+                <bsb-access-wrapper module-ref="schedule_submission" action-ref="admit">
+                    <bsb-button-router-link size="sm" color="info" :to="{ name: 'hrm.scheduleSubmission.admitMonthly' }">
+                        Terima Pengajuan Bulanan
+                    </bsb-button-router-link>
+                </bsb-access-wrapper>
                 <bsb-table-responsive class="p-1 mt-3">
                     <bsb-table :hover="true">
                         <thead class="thead-light">
