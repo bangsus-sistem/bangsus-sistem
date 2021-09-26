@@ -129,7 +129,9 @@ Route::prefix('schedule_submission')->group(function () {
     Route::get('', 'ScheduleSubmissionController@index');
     Route::get('{id}', 'ScheduleSubmissionController@show');
     Route::post('', 'ScheduleSubmissionController@store');
+    Route::post('monthly', 'ScheduleSubmissionController@storeMonthly');
     Route::put('', 'ScheduleSubmissionController@amend');
     Route::patch('admit', 'ScheduleSubmissionController@reviseAdmit');
+    Route::patch('admit_monthly', 'ScheduleSubmissionController@reviseAdmitMonthly');
     Route::delete('', 'ScheduleSubmissionController@destroy');
 });
