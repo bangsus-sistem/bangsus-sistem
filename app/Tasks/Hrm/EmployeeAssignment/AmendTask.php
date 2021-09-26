@@ -3,6 +3,7 @@
 namespace App\Tasks\Hrm\EmployeeAssignment;
 
 use Bsb\Foundation\Task;
+use App\Models\Hrm\EmployeeAssignment;
 
 class AmendTask extends Task
 {
@@ -23,6 +24,7 @@ class AmendTask extends Task
                     $employeeAssignment->start_date = $request->input('start_date');
                 }
                 $employeeAssignment->end_date = $request->input('end_date');
+                $employeeAssignment->base_salary = $request->input('base_salary');
                 $employeeAssignment->description = $request->input('description');
                 $employeeAssignment->note = $request->input('note');
                 $employeeAssignment->save();

@@ -29,6 +29,9 @@
                 <bsb-th-query>
                     <bsb-input size="sm" type="text" v-model="query['end_date']" />
                 </bsb-th-query>
+                <bsb-access-wrapper module-ref="employee_assignment" action-ref="admit">
+                    <bsb-th-query></bsb-th-query>
+                </bsb-access-wrapper>
                 <bsb-th-query>
                     <bsb-select size="sm"
                         v-model="query['admitted']"

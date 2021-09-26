@@ -52,6 +52,10 @@ class StoreRequest extends FeatureRequest
                 'date_format:Y-m-d',
                 'after_or_equal:start_date',
             ],
+            'base_salary' => [
+                'required',
+                'numeric',
+            ],
             'description' => [
                 'nullable',
                 'max:1000',

@@ -66,6 +66,12 @@
                         <label>Tanggal Selesai</label>
                         <bsb-input-errors v-model="form.data['end_date']" :errors="form.errors['end_date']" type="date" />
                     </bsb-form-group>
+                    <bsb-access-wrapper module-ref="employee_assignment" action-ref="admit">
+                        <bsb-form-group>
+                            <label>Gaji Pokok</label>
+                            <bsb-input-errors v-model="form.data['base_salary']" :errors="form.errors['base_salary']" type="number" />
+                        </bsb-form-group>
+                    </bsb-access-wrapper>
                     <bsb-form-group>
                         <label>Deskripsi</label>
                         <bsb-textarea-errors v-model="form.data['description']" :errors="form.errors['description']" />

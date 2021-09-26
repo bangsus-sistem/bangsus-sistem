@@ -25,6 +25,9 @@ class Kernel
         'endDate' => Blueprint\Date\EndDateBlueprint::class,
         'startDate' => Blueprint\Date\StartDateBlueprint::class,
 
+        // Decimal
+        'standarizedDecimal' => Blueprint\Decimal\StandarizedDecimalBlueprint::class,
+
         // Foreign
         'action' => Blueprint\Foreign\ActionBlueprint::class,
         'addressType' => Blueprint\Foreign\AddressTypeBlueprint::class,

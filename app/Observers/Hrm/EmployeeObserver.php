@@ -19,6 +19,7 @@ class EmployeeObserver extends Observer
         $employeeAssignment->branch_id = $employee->first_branch_id;
         $employeeAssignment->first_job_title_id = $employee->first_job_title_id;
         $employeeAssignment->start_date = $employee->start_date;
+        $employeeAssignment->base_salary = 0;
         $employeeAssignment->description = '';
         $employeeAssignment->note = '';
         $employeeAssignment->save();

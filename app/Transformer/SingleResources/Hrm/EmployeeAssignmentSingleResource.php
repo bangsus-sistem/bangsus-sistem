@@ -19,6 +19,7 @@ class EmployeeAssignmentSingleResource extends SingleResource
             'first_job_title_id' => $this->first_job_title_id,
             'start_date' => $this->start_date,
             'end_date' => $this->end_date,
+            'base_salary' => (float) $this->base_salary,
             'admitted' => (boolean) $this->admitted,
             'description' => $this->description,
             'note' => $this->note,

@@ -17,6 +17,7 @@ export default {
                     { index: 'first_job_title_id', title: 'Jabatan Pertama' },
                     { index: 'start_date', title: 'Tanggal Mulai' },
                     { index: 'end_date', title: 'Tanggal Selesai' },
+                    { index: 'base_salary', title: 'Gaji Pokok' },
                     { index: 'admitted', title: 'Admisi' },
                 ],
             },

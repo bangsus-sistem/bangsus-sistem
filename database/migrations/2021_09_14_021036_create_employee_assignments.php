@@ -20,6 +20,7 @@ class CreateEmployeeAssignments extends Migration
             $table->jobTitle('first_job_title_id');
             $table->startDate();
             $table->endDate()->nullable();
+            $table->standarizedDecimal('base_salary');
             $table->description();
             $table->note();
             $table->userTimestamps();

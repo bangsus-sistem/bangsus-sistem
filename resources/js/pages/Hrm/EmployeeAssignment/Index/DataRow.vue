@@ -7,6 +7,9 @@
                 <bsb-td justify="center">{{ item['first_job_title']['code'] }} - {{ item['first_job_title']['name'] }}</bsb-td>
                 <bsb-td justify="center">{{ item['start_date'] }}</bsb-td>
                 <bsb-td justify="center">{{ item['end_date'] }}</bsb-td>
+                <bsb-access-wrapper module-ref="employee_assignment" action-ref="admit">
+                    <bsb-td justify="center">{{ item['base_salary'] }}</bsb-td>
+                </bsb-access-wrapper>
                 <bsb-td justify="center">
                     <bsb-switch-badge :condition="item['admitted']" true-label="Disetujui" false-label="Menunggu Persetujuan"/>
                 </bsb-td>
@@ -37,7 +40,10 @@
                     <template v-slot:content>
                         <h6>{{ item['branch']['code'] }} - {{ item['branch']['name'] }}</h6>
                         <h6>{{ item['first_job_title']['code'] }} - {{ item['first_job_title']['name'] }}</h6>
-                        <small><b>{{ item['start_date'] }} - {{ item['end_date'] != null ? item['end_date'] : __('dictionary.now') }}</b></small>
+                        <small><b>{{ item['start_date'] }} - {{ item['end_date'] != null ? item['end_date'] : __('dictionary.now') }}</b></small><br>
+                        <bsb-access-wrapper module-ref="employee_assignment" action-ref="admit">
+                            <small>{{ item['base_salary'] }}</small>
+                        </bsb-access-wrapper>
                     </template>
                     <template v-slot:right>
                         <bsb-access-wrapper module-ref="employee_assignment" action-ref="read">

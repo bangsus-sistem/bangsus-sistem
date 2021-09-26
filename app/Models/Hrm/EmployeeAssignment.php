@@ -23,6 +23,13 @@ class EmployeeAssignment extends Model
         HasEmployee, HasBranch, AdmittedTimestamp;
 
     /**
+     * @var array
+     */
+    protected $casts = [
+        'base_salary' => 'float',
+    ];
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function employeeMutations()

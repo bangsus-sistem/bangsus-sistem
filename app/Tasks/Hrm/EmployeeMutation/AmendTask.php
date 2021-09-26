@@ -3,6 +3,7 @@
 namespace App\Tasks\Hrm\EmployeeMutation;
 
 use Bsb\Foundation\Task;
+use App\Models\Hrm\EmployeeMutation;
 
 class AmendTask extends Task
 {

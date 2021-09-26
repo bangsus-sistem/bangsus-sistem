@@ -11,6 +11,7 @@ export default {
                     'first_job_title_id': null,
                     'start_date': null,
                     'end_date': null,
+                    'base_salary': 0,
                     'description': '',
                     'note': '',
 
@@ -24,6 +25,7 @@ export default {
                     'first_job_title_id': [],
                     'start_date': [],
                     'end_date': [],
+                    'base_salary': [],
                     'description': [],
                     'note': [],
                 },
@@ -54,6 +56,7 @@ export default {
                     'first_job_title_id': data['first_job_title']['id'],
                     'start_date': data['start_date'],
                     'end_date': data['end_date'],
+                    'base_salary': data['base_salary'],
                     'admitted': data['admitted'],
                     'description': data['description'],
                     'note': data['note'],
