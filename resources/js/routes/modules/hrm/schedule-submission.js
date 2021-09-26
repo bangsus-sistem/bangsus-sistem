@@ -16,6 +16,12 @@ export default [
         beforeEnter: middleware(appMiddleware),
     },
     {
+        path: 'schedule_submission/create_monthly',
+        name: 'hrm.scheduleSubmission.createMonthly',
+        component: page('Hrm/ScheduleSubmission/CreateMonthly'),
+        beforeEnter: middleware(appMiddleware),
+    },
+    {
         path: 'schedule_submission/read/:id',
         name: 'hrm.scheduleSubmission.read',
         component: page('Hrm/ScheduleSubmission/Read'),
@@ -25,6 +31,12 @@ export default [
         path: 'schedule_submission/update/:id',
         name: 'hrm.scheduleSubmission.update',
         component: page('Hrm/ScheduleSubmission/Update'),
+        beforeEnter: middleware(appMiddleware),
+    },
+    {
+        path: 'schedule_submission/admit_monthly',
+        name: 'hrm.scheduleSubmission.admitMonthly',
+        component: page('Hrm/ScheduleSubmission/AdmitMonthly'),
         beforeEnter: middleware(appMiddleware),
     },
 ]
