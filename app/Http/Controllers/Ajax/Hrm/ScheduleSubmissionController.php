@@ -9,14 +9,18 @@ use App\Http\Requests\Ajax\Hrm\ScheduleSubmission\{
     IndexRequest,
     ShowRequest,
     StoreRequest,
+    StoreMonthlyRequest,
     AmendRequest,
     ReviseAdmissionRequest,
+    ReviseAdmissionMonthlyRequest,
     DestroyRequest,
 };
 use App\Tasks\Hrm\ScheduleSubmission\{
     StoreTask,
+    StoreMonthlyTask,
     AmendTask,
     ReviseAdmissionTask,
+    ReviseAdmissionMonthlyTask,
 };
 use App\Transformer\SingleCollections\Hrm\ScheduleSubmissionSingleCollection;
 use App\Transformer\PaginatedCollections\Hrm\ScheduleSubmissionPaginatedCollection;
@@ -104,6 +108,19 @@ class ScheduleSubmissionController extends Controller
     }
 
     /**
+     * @param  \App\Http\Requests\Ajax\Hrm\ScheduleSubmission\StoreMonthlyRequest  $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function storeMonthly(StoreMonthlyRequest $request)
+    {
+        $this->transmit(new StoreMonthlyTask, $request);
+        return response()->json(
+            [],
+            201
+        );
+    }
+
+    /**
      * @param  \App\Http\Requests\Ajax\Hrm\ScheduleSubmission\AmendRequest  $request
      * @return \Illuminate\Http\JsonResponse
      */
@@ -129,6 +146,16 @@ class ScheduleSubmissionController extends Controller
             ),
             200
         );
+    }
+
+    /**
+     * @param  \App\Http\Requests\Ajax\Hrm\ScheduleSubmission\ReviseAdmissionMonthlyRequest  $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function reviseAdmitMonthly(ReviseAdmissionMonthlyRequest $request)
+    {
+        $this->transmit(new ReviseAdmissionMonthlyTask, $request, true);
+        return response()->json([], 200);
     }
 
     /**

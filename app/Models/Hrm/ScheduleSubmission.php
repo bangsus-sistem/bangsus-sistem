@@ -21,7 +21,7 @@ class ScheduleSubmission extends Model
 {
     use Extent;
     use SoftDeletes, HasEmployee, HasBranch, HasAttendanceType,
-        HasUserTimestamps, HasUserDelete, AdmittedTimestamp;
+        HasUserTimestamps, HasUserAdmit, HasUserDelete, AdmittedTimestamp;
 
     /**
      * @var array
@@ -30,6 +30,17 @@ class ScheduleSubmission extends Model
         'schedule_in_datetime' => 'datetime:Y-m-d H:i:s',
         'schedule_out_datetime' => 'datetime:Y-m-d H:i:s',
         'monthly' => 'boolean',
+    ];
+
+    /**
+     * @var array
+     */
+    protected $fillable = [
+        'employee_id',
+        'branch_id',
+        'attendance_type_id',
+        'schedule_in_datetime',
+        'monthly',
     ];
 
     /**
