@@ -124,8 +124,13 @@ class Employee extends Model
      */
     public function scopeUserAuthorized($query)
     {
-        return $query->whereHas('employeeAssignments',
-            fn ($query) => $query->userAuthorized()
-        );
+        return $query->where(function ($query) {
+            return $query->whereNull('admitted_at')
+                ->whereHas('firstBranch', fn ($query) => $query->userAuthorized());
+        })
+            ->orWhere(function ($query) {
+                return $query->whereNotNull('admitted_at')
+                    ->whereHas('employeeAssignments', fn ($query) => $query->userAuthorized());
+            });
     }
 }
