@@ -9,6 +9,7 @@ use App\Models\Hrm\{
     EmployeeContact,
     EmployeePhoto,
 };
+use Illuminate\Support\Str;
 
 class AmendTask extends Task
 {
@@ -22,8 +23,8 @@ class AmendTask extends Task
         $this->transaction(
             function () use ($request, $employee) {
                 $employee->nik = $request->input('nik');
-                $employee->full_name = $request->input('full_name');
-                $employee->birth_place = $request->input('birth_place');
+                $employee->full_name = Str::upper($request->input('full_name'));
+                $employee->birth_place = Str::upper($request->input('birth_place'));
                 $employee->birth_date = $request->input('birth_date');
                 $employee->blood_type_id = $request->input('blood_type_id');
                 $employee->gender_id = $request->input('gender_id');
