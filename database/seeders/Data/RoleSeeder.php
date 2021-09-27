@@ -3,6 +3,7 @@
 namespace Database\Seeders\Data;
 
 use Bsb\Foundation\Database\ResourceSeeder;
+use App\Models\Auth\Feature;
 
 class RoleSeeder extends ResourceSeeder
 {
@@ -22,6 +23,9 @@ class RoleSeeder extends ResourceSeeder
     {
         \DB::table('roles')->insert(
             $this->parseData($this->data['roles'])
+        );
+        \DB::table('role_authorizations')->insert(
+            $this->parseRoleAuthorizations($this->data['roles'])
         );
     }
 
@@ -60,12 +64,12 @@ class RoleSeeder extends ResourceSeeder
     {
         $return = [];
 
-        $features = \DB::table('features')->with('module', 'action')->get();
+        $features = Feature::with('module', 'action');
         foreach ($this->data['roles'] as $role) {
             // Feature.
             foreach ($role['role_authorizations']['features'] as $module => $actions) {
                 foreach ($actions as $action) {
-                    $feature = with($features)->whereHas('module', fn ($q) => $q->where('ref', $module))
+                    $feature = with(clone $features)->whereHas('module', fn ($q) => $q->where('ref', $module))
                         ->whereHas('action', fn($q) => $q->where('ref', $action))->first();
                     $return[] = [
                         'role_id' => $role['id'],

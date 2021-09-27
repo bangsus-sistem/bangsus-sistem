@@ -49,7 +49,7 @@ class UserSeeder extends ResourceSeeder
             $user->user_create_id = 1;
             $user->save();
 
-            $branchIds = with($branches)->whereIn('code', $userData['branch_codes'])
+            $branchIds = with(clone $branches)->whereIn('code', $userData['branch_codes'])
                 ->pluck('id')
                 ->all();
 

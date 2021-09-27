@@ -8,11 +8,11 @@
         "note": "",
         "role_authorizations": {
             "features": {
-                "employee": ["create", "read"],
-                "employee_assignment": ["create", "read"],
-                "employee_mutation": ["create", "read"],
-                "schedule_submission": ["create", "read", "update", "delete"],
-                "attendance": ["read", "attendance"]
+                "employee": ["index", "create", "read"],
+                "employee_assignment": ["index", "create", "read"],
+                "employee_mutation": ["index", "create", "read"],
+                "schedule_submission": ["index", "create", "read", "update", "delete"],
+                "attendance": ["index", "read", "attendance"]
             },
             "widgets": {},
             "reports": {}
