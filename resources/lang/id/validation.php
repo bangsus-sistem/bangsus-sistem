@@ -151,6 +151,7 @@ return [
         'address_type_id' => 'Tipe Alamat',
         'contact_type_id' => 'Tipe Kontak',
         'employee_photo_type_id' => 'Tipe Foto Karyawan',
+        'attendance_type_id' => 'Tipe Absensi',
         'image_id' => 'Gambar',
         'address' => 'Alamat',
         'contact' => 'Kontak',
