@@ -24,6 +24,8 @@ class DataSeeder extends Seeder
                 Data\GenderSeeder::class,
                 Data\DivisionSeeder::class,
                 Data\JobTitleSeeder::class,
+                Data\RoleSeeder::class,
+                Data\UserSeeder::class,
             ]);
         });
     }

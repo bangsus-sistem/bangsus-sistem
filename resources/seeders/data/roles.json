@@ -1,0 +1,21 @@
+[
+    {
+        "id": 2,
+        "code": "BRC",
+        "name": "Cabang",
+        "active": true,
+        "description": "",
+        "note": "",
+        "role_authorizations": {
+            "features": {
+                "employee": ["create", "read"],
+                "employee_assignment": ["create", "read"],
+                "employee_mutation": ["create", "read"],
+                "schedule_submission": ["create", "read", "update", "delete"],
+                "attendance": ["read", "attendance"]
+            },
+            "widgets": {},
+            "reports": {}
+        }
+    }
+]
