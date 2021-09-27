@@ -4,12 +4,160 @@
         "password": "semolowaru112233",
         "full_name": "Bangsus Semolowaru",
         "role_id": 2,
-        "all_branches": true,
-        "active": true,
-        "locked": true,
-        "hidden": true,
-        "description": "",
-        "note": "",
         "branch_codes": ["11101"]
+    },
+    {
+        "username": "keputih",
+        "password": "keputih112233",
+        "full_name": "Bangsus Keputih",
+        "role_id": 2,
+        "branch_codes": ["11103"]
+    },
+    {
+        "username": "lontar",
+        "password": "lontar112233",
+        "full_name": "Bangsus Lontar",
+        "role_id": 2,
+        "branch_codes": ["11106"]
+    },
+    {
+        "username": "gresik",
+        "password": "gresik112233",
+        "full_name": "Bangsus Gresik",
+        "role_id": 2,
+        "branch_codes": ["11107"]
+    },
+    {
+        "username": "lamongan",
+        "password": "lamongan112233",
+        "full_name": "Bangsus Lamongan",
+        "role_id": 2,
+        "branch_codes": ["11108"]
+    },
+    {
+        "username": "beji",
+        "password": "beji112233",
+        "full_name": "Bangsus Beji",
+        "role_id": 2,
+        "branch_codes": ["11109"]
+    },
+    {
+        "username": "bangil",
+        "password": "bangil112233",
+        "full_name": "Bangsus Bangil",
+        "role_id": 2,
+        "branch_codes": ["11110"]
+    },
+    {
+        "username": "pasuruan",
+        "password": "pasuruan112233",
+        "full_name": "Bangsus Pasuruan",
+        "role_id": 2,
+        "branch_codes": ["11111"]
+    },
+    {
+        "username": "ngopak",
+        "password": "ngopak112233",
+        "full_name": "Bangsus Ngopak",
+        "role_id": 2,
+        "branch_codes": ["11112"]
+    },
+    {
+        "username": "lawang",
+        "password": "lawang112233",
+        "full_name": "Bangsus Lawang",
+        "role_id": 2,
+        "branch_codes": ["11113"]
+    },
+    {
+        "username": "singosari",
+        "password": "singosari112233",
+        "full_name": "Bangsus Semolowaru",
+        "role_id": 2,
+        "branch_codes": ["11114"]
+    },
+    {
+        "username": "blimbing",
+        "password": "blimbing112233",
+        "full_name": "Bangsus Blimbing",
+        "role_id": 2,
+        "branch_codes": ["11116"]
+    },
+    {
+        "username": "sawojajar",
+        "password": "sawojajar112233",
+        "full_name": "Bangsus Sawojajar",
+        "role_id": 2,
+        "branch_codes": ["11117"]
+    },
+    {
+        "username": "mojokerto",
+        "password": "mojokerto112233",
+        "full_name": "Bangsus Mojokerto",
+        "role_id": 2,
+        "branch_codes": ["11119"]
+    },
+    {
+        "username": "mojoagung",
+        "password": "mojoagung112233",
+        "full_name": "Bangsus Mojoagung",
+        "role_id": 2,
+        "branch_codes": ["11120"]
+    },
+    {
+        "username": "jombang",
+        "password": "jombang112233",
+        "full_name": "Bangsus Jombang",
+        "role_id": 2,
+        "branch_codes": ["11121"]
+    },
+    {
+        "username": "madiun",
+        "password": "madiun112233",
+        "full_name": "Bangsus Madiun",
+        "role_id": 2,
+        "branch_codes": ["11126"]
+    },
+    {
+        "username": "trenggalek",
+        "password": "trenggalek112233",
+        "full_name": "Bangsus Trenggalek",
+        "role_id": 2,
+        "branch_codes": ["11129"]
+    },
+    {
+        "username": "ponorogo",
+        "password": "ponorogo112233",
+        "full_name": "Bangsus Ponorogo",
+        "role_id": 2,
+        "branch_codes": ["11130"]
+    },
+    {
+        "username": "sumoroto",
+        "password": "sumoroto112233",
+        "full_name": "Bangsus Sumoroto",
+        "role_id": 2,
+        "branch_codes": ["11131"]
+    },
+    {
+        "username": "pacitan",
+        "password": "pacitan112233",
+        "full_name": "Bangsus Pacitan",
+        "role_id": 2,
+        "branch_codes": ["11132"]
+    },
+    {
+        "username": "solongemplak",
+        "password": "solongemplak112233",
+        "full_name": "Bangsus Solo Ngemplak",
+        "role_id": 2,
+        "branch_codes": ["11134"]
+    },
+    {
+        "username": "kuta",
+        "password": "kuta112233",
+        "full_name": "Bangsus Kuta",
+        "role_id": 2,
+        "branch_codes": ["11136"]
     }
 ]
