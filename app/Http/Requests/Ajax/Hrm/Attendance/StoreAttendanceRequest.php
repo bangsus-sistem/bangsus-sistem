@@ -20,7 +20,7 @@ class StoreAttendanceRequest extends FeatureRequest
      */
     protected $refs = [
         'module' => 'attendance',
-        'action' => 'create',
+        'action' => 'attendance',
     ];
 
     /**
