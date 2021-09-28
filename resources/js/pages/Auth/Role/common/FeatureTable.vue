@@ -91,13 +91,9 @@ export default {
     },
     methods: {
         getFeature(moduleId, actionId) {
-            return lodash.find(this.resources['features'], {
-                'module_id': moduleId,
-                'action_id': actionId,
-            })
+            return lodash.find(this.resources['features'], (feature) => feature['module_id'] == moduleId && feature['action_id'] == actionId)
         },
         featureExists(moduleId, actionId) {
-            console.log(this.getFeature(moduleId, actionId))
             return this.getFeature(moduleId, actionId) != undefined
         },
         getModulesByPackageId(packageId) {
