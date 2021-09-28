@@ -97,6 +97,7 @@ export default {
             })
         },
         featureExists(moduleId, actionId) {
+            console.log(this.getFeature(moduleId, actionId))
             return this.getFeature(moduleId, actionId) != undefined
         },
         getModulesByPackageId(packageId) {
