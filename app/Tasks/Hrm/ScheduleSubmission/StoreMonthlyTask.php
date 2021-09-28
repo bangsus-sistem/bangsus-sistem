@@ -4,6 +4,7 @@ namespace App\Tasks\Hrm\ScheduleSubmission;
 
 use Bsb\Foundation\Task;
 use App\Models\Hrm\ScheduleSubmission;
+use Carbon\Carbon;
 
 class StoreMonthlyTask extends Task
 {
@@ -29,6 +30,7 @@ class StoreMonthlyTask extends Task
                     if ($time == '' || is_null($time)) {
                         continue;
                     }
+                    $time = Carbon::createFromFormat('H:i', $time)->addHours($request->_timezone)->format('H:i');
                     ScheduleSubmission::create(
                         [
                             'employee_id' => $employeeId,

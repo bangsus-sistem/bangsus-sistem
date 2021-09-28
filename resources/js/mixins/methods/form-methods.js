@@ -325,6 +325,8 @@ const formMethods = {
      * @param  {Object}  allows
      */
     submitForm(link, method = 'post', allows = { resolve: true, reject: true }) {
+        this.form.data['_timezone'] = (new Date()).getTimezoneOffset() / 60
+
         return new Promise((resolve, reject) => {
             this.initiateForm()
             axios[method](link, this.getFormData())

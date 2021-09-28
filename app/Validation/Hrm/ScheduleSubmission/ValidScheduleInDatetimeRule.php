@@ -25,8 +25,13 @@ class ValidScheduleInDatetimeRule extends RequestRule implements Rule
                 ->index('attendance_type_id')->mode('id')
                 ->done()
         )
-            ->whereDate('schedule_in_datetime', (new Carbon($value))->format('Y-m-d'))
-            ->first();
+            ->whereDate('schedule_in_datetime', (new Carbon($value))->format('Y-m-d'));
+
+        if ($this->request->exists('id')) {
+            $attendance->where('id', '!=', $this->request->input('id'));
+        }
+
+        $attendance = $attendance->first();
 
         if ( ! is_null($attendance)) {
             $this->setMessage('Pengajuan Jadwal untuk tanggal '.(new Carbon($value))->format('Y-m-d').' sudah ada.');
