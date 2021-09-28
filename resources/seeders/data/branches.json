@@ -265,7 +265,11 @@
     {
         "code": "134",
         "name": "Geprek Bangsus Solo Ngemplak",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "location": {
+            "latitude": -7.554775773388818,
+            "longitude": 110.83206380470604
+        }
     },
     {
         "code": "135",
