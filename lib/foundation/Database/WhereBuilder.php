@@ -174,11 +174,18 @@ class WhereBuilder
                 $rightWildCard,
                 $request
             ) {
-                return $query->where(
-                    $queueColumn,
-                    'like', 
-                    $leftWildcard.$this->value($queueIndex, '').$rightWildCard
-                )->orWhereNull($queueColumn);
+                $value = $this->value($queueIndex, '');
+                return is_null($value) || $value == ''
+                    ?   $query->where(
+                            $queueColumn,
+                            'like', 
+                            $leftWildcard.$this->value($queueIndex, '').$rightWildCard
+                        )->orWhereNull($queueColumn)
+                    :   $query->where(
+                            $queueColumn,
+                            'like', 
+                            $leftWildcard.$this->value($queueIndex, '').$rightWildCard
+                        );
             }
         ];
     }
