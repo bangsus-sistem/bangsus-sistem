@@ -32,6 +32,14 @@ export default {
     },
     methods: {
         prepare() {
+            const featureAuth = this.$store.getters['utils/auth/features']
+            const feature = lodash.find(featureAuth, (feature) => {
+                return feature['module']['ref'] == 'employee_assignment' && feature['action']['ref'] == 'admit'
+            })
+            if (feature == undefined) {
+                this.meta.sortOrders.splice(4, 1)
+            }
+
             this.fetchAndSetFormData(
                 '/ajax/hrm/employee/' + this.$route.params.employeeId,
                 { resolve: true, reject: false },
