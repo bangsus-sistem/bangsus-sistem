@@ -79,7 +79,7 @@
                                                 </td>
                                             </tr>
                                             <template v-if="state.form.table.show[employee['id']]">
-                                                <tr v-for="(date, k) in state.form['dates']" :key="k">
+                                                <tr v-for="(date, k) in state.form['dates']" :key="'schedule-submission-' + i + '-' + k">
                                                     <td></td>
                                                     <td>{{ date }}</td>
                                                     <td colspan="2">
