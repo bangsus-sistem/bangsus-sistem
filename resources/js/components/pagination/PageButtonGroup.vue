@@ -98,7 +98,7 @@ export default {
                 lastPage: this.lastPage <= this.boxes
                     ?   this.lastPage
                     :   (this.boxes - 1),
-                misc: this.lastPage >= this.boxes - 1
+                misc: this.lastPage > this.boxes
             }
         },
         middleRangeMeta() {
