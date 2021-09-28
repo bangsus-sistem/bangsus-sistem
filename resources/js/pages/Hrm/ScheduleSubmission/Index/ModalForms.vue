@@ -10,5 +10,15 @@
                 @success="$emit('success')"
             />
         </bsb-access-wrapper>
+        <bsb-access-wrapper module-ref="schedule_submission" action-ref="delete">
+            <bsb-modal-form
+                title="Hapus Pengajuan Jadwal"
+                message="Apakah anda yakin?"
+                ref="delete"
+                link="/ajax/hrm/schedule_submission"
+                method="delete"
+                @success="$emit('success')"
+            />
+        </bsb-access-wrapper>
     </fragment>
 </template>
