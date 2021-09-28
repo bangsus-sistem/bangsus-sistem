@@ -95,7 +95,7 @@ export default {
         leftRangeMeta() {
             return {
                 firstPage: 1,
-                lastPage: this.lastPage < this.boxes - 1
+                lastPage: this.lastPage <= this.boxes - 1
                     ?   this.lastPage
                     :   (this.boxes - 1),
                 misc: this.lastPage >= this.boxes - 1
