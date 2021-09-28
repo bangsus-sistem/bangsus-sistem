@@ -34,7 +34,11 @@
     {
         "code": "103",
         "name": "Geprek Bangsus Keputih",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "position": {
+            "latitude": -7.290662,
+            "longitude": 112.800344
+        }
     },
     {
         "code": "104",
@@ -54,42 +58,74 @@
     {
         "code": "107",
         "name": "Geprek Bangsus Gresik",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "position": {
+            "latitude": -7.150280,
+            "longitude": 112.597166
+        }
     },
     {
         "code": "108",
         "name": "Geprek Bangsus Lamongan",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "position": {
+            "latitude": -7.113319,
+            "longitude": 112.422346
+        }
     },
     {
         "code": "109",
         "name": "Geprek Bangsus Beji",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "location": {
+            "latitude": -7.586732,
+            "longitude": 112.723275
+        }
     },
     {
         "code": "110",
         "name": "Geprek Bangsus Bangil",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "location": {
+            "latitude": -7.598167,
+            "longitude": 112.779042
+        }
     },
     {
         "code": "111",
         "name": "Geprek Bangsus Pasuruan",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "location": {
+            "latitude": -7.647619,
+            "longitude": 112.902237
+        }
     },
     {
         "code": "112",
         "name": "Geprek Bangsus Ngopak",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "location": {
+            "latitude": -7.699137,
+            "longitude": 112.975762
+        }
     },
     {
         "code": "113",
         "name": "Geprek Bangsus Lawang",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "location": {
+            "latitude": -7.828636,
+            "longitude": 112.698177
+        }
     },
     {
         "code": "114",
         "name": "Geprek Bangsus Singosari",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "location": {
+            "latitude": -7.891734005021248,
+            "longitude": 112.65891348537082
+        }
     },
     {
         "code": "115",
@@ -99,12 +135,20 @@
     {
         "code": "116",
         "name": "Geprek Bangsus Blimbing",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "location": {
+            "latitude": -7.94038120785395,
+            "longitude": 112.63862800920643
+        }
     },
     {
         "code": "117",
         "name": "Geprek Bangsus Sawojajar",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "location": {
+            "latitude": -7.97572184923492,
+            "longitude": 112.66182621398501
+        }
     },
     {
         "code": "118",
@@ -114,17 +158,29 @@
     {
         "code": "119",
         "name": "Geprek Bangsus Mojokerto",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "location": {
+            "latitude": -7.46878314260264,
+            "longitude": 112.45221272411302
+        }
     },
     {
         "code": "120",
         "name": "Geprek Bangsus Mojoagung",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "location": {
+            "latitude": -7.569954829266107,
+            "longitude": 112.35089312614349
+        }
     },
     {
         "code": "121",
         "name": "Geprek Bangsus Jombang",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "location": {
+            "latitude": -7.551904889926004,
+            "longitude": 112.24509554844231
+        }
     },
     {
         "code": "122",
@@ -149,7 +205,11 @@
     {
         "code": "126",
         "name": "Geprek Bangsus Madiun",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "location": {
+            "latitude": -7.632777155434366,
+            "longitude": 111.53384883169282
+        }
     },
     {
         "code": "127",
@@ -164,22 +224,38 @@
     {
         "code": "129",
         "name": "Geprek Bangsus Trenggalek",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "location": {
+            "latitude": -8.048593923781477,
+            "longitude": 111.71799906053214
+        }
     },
     {
         "code": "130",
         "name": "Geprek Bangsus Ponorogo",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "location": {
+            "latitude": -7.8779747082324665,
+            "longitude": 111.46932157826856
+        }
     },
     {
         "code": "131",
         "name": "Geprek Bangsus Sumoroto",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "location": {
+            "latitude": -7.870322,
+            "longitude": 111.408472
+        }
     },
     {
         "code": "132",
         "name": "Geprek Bangsus Pacitan",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "location": {
+            "latitude": -8.194373339730886,
+            "longitude": 111.11098439731336
+        }
     },
     {
         "code": "133",
@@ -199,7 +275,11 @@
     {
         "code": "136",
         "name": "Geprek Bangsus Kuta",
-        "branch_type_id": 2
+        "branch_type_id": 2,
+        "location": {
+            "latitude": -8.72413428561212,
+            "longitude": 115.17874957218146
+        }
     },
     {
         "code": "137",
