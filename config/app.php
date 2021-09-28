@@ -242,6 +242,6 @@ return [
     |
     */
 
-    'version' => '0.0.8-beta',
+    'version' => '0.0.9-beta',
 
 ];

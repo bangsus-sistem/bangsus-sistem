@@ -4,7 +4,7 @@ export default {
     mixins: [commonMixin],
     created() {
         this.fetchAndSetFormData(
-            '/ajax/hrm/attendance/' + this.$route.params.id,
+            '/ajax/hrm/schedule_submission/' + this.$route.params.id,
             { resolve: true, reject: false },
             { startLoading: true, stopLoading: false },
             this.getFormDataCallback()
