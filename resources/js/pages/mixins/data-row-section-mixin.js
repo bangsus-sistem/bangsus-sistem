@@ -19,5 +19,13 @@ export default {
             moment.locale('id')
             return datetime == null ? '-' : moment(datetime).format('dddd, Do MMMM YYYY')
         },
+        __(index) {
+            let res = this.$store.getters['utils/lang/src']
+            let indexes = index.split('.')
+            indexes.forEach(index => {
+                res = res[index]
+            })
+            return res
+        },
     }
 }

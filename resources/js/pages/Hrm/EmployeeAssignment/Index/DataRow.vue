@@ -41,9 +41,6 @@
                         <h6>{{ item['branch']['code'] }} - {{ item['branch']['name'] }}</h6>
                         <h6>{{ item['first_job_title']['code'] }} - {{ item['first_job_title']['name'] }}</h6>
                         <small><b>{{ item['start_date'] }} - {{ item['end_date'] != null ? item['end_date'] : __('dictionary.now') }}</b></small><br>
-                        <bsb-access-wrapper module-ref="employee_assignment" action-ref="admit">
-                            <small>{{ item['base_salary'] }}</small>
-                        </bsb-access-wrapper>
                     </template>
                     <template v-slot:right>
                         <bsb-access-wrapper module-ref="employee_assignment" action-ref="read">
@@ -65,6 +62,9 @@
                         </bsb-access-wrapper>
                     </template>
                     <template v-slot:footer>
+                        <bsb-access-wrapper module-ref="employee_assignment" action-ref="admit">
+                            <small><b>Gaji Pokok:</b> {{ item['base_salary'] }}</small>
+                        </bsb-access-wrapper><br>
                         <bsb-switch-badge :condition="item['admitted']" true-label="Disetujui" false-label="Menunggu Persetujuan"/>
                     </template>
                 </bsb-list-group-item-content>
