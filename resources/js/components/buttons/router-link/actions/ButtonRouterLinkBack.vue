@@ -22,7 +22,12 @@ export default {
     },
     methods: {
         click() {
-            const route = this.$store.getters['utils/history/latestBeforeDeep']
+            let route = this.$store.getters['utils/history/latestBeforeDeep']
+            while (route.name == this.$route.name) {
+                this.$store.dispatch('utils/history/deleteLatest')
+                route = this.$store.getters['utils/history/latestBeforeDeep']
+            }
+
             if (route != null) {
                 this.$store.dispatch('utils/history/deleteLatest')
                 this.$router.replace({ name: route.name, query: route.query })

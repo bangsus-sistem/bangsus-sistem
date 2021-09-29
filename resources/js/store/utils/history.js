@@ -63,7 +63,7 @@ export default {
             state.plain.pop()
         },
         deleteLatestDeep(state) {
-            state.plain.pop()
+            state.deep.pop()
         },
     },
     actions: {
