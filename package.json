@@ -31,7 +31,7 @@
         "qs": "^6.10.1",
         "uuid": "^8.3.2",
         "vue-frag": "^1.2.0",
-        "vue-fragment": "^1.5.1",
+        "vue-fragment": "^1.5.2",
         "vue-mobile-detection": "^1.0.0",
         "vue-router": "^3.5.2",
         "vue-router-multiguard": "^1.0.3",

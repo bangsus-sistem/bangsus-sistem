@@ -1,7 +1,7 @@
 <template>
-    <div v-frag>
+    <fragment>
         <slot v-if="show" />
-    </div>
+    </fragment>
 </template>
 
 <script>
