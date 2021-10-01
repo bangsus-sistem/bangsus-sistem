@@ -32,6 +32,6 @@ class ValidPositionRule extends RequestRule implements Rule
 
         $this->setMessage('Anda tidak sedang berada di Cabang');
 
-        return $distance < 50;
+        return $distance < 100;
     }
 }

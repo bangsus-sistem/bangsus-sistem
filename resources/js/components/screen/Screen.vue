@@ -1,10 +1,10 @@
 <template>
-    <div v-frag>
+    <fragment>
         <template v-if="$isMobile()">
             <slot name="mobile" />
         </template>
         <template v-else>
             <slot name="desktop" />
         </template>
-    </div>
+    </fragment>
 </template>
