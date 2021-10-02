@@ -28,7 +28,7 @@ class ValidScheduleInDatetimeRule extends RequestRule implements Rule
             ->whereDate('schedule_in_datetime', (new Carbon($value))->format('Y-m-d'));
         
         if ($this->request->exists('id')) {
-            $attendance = $attendance->whereNot('id', $this->request->input('id'));
+            $attendance = $attendance->where('id', '!=', $this->request->input('id'));
         }
 
         $attendance = $attendance->first();
