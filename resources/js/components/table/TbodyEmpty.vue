@@ -1,7 +1,7 @@
 <template>
     <tbody>
-        <slot v-if="items.length > 0" />
-        <tr v-else>
+        <slot v-show="items.length > 0" />
+        <tr v-show="items.length <= 0">
             <Td :colspan="col + 2" justify="center">
                 {{ emptyLabel }}
             </Td>
