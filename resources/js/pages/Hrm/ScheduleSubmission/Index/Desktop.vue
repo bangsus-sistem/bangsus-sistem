@@ -28,6 +28,7 @@
                                 :loading="state.result.loading"
                                 @search="search"
                                 v-model="query"
+                                :resources="resources"
                             />
                             <bsb-tr-sort
                                 :sort-orders="meta.sortOrders"

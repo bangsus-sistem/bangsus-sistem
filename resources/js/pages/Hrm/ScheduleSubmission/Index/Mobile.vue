@@ -20,6 +20,7 @@
                 :loading="state.result.loading"
                 @search="search"
                 v-model="query"
+                :resources="resources"
             />
             <bsb-list-group-empty class="mt-3 shadow-sm" :items="result.items">
                 <ScheduleSubmissionDataRow
