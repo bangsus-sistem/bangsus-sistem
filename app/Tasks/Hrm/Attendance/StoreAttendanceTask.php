@@ -88,7 +88,8 @@ class StoreAttendanceTask extends Task
         // Check if hanging attendance_in_datetime exists.
         $attendance = Attendance::where($wheres)
             ->orderBy('attendance_in_datetime', 'desc')
-            ->where('attendance_out_datetime', null)
+            ->whereNotNull('attendance_in_datetime')
+            ->whereNull('attendance_out_datetime')
             ->first();
         if ( ! is_null($attendance)) {
             $mode = 'out';
