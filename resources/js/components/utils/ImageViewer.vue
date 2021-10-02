@@ -1,5 +1,5 @@
 <template>
-    <div v-frag>
+    <fragment>
         <div class="image-large-viewer-wrapper" v-if="largeViewerOpened">
             <button class="btn btn-image-large-viewer-close" @click="closeLargeViewer">
                 <Icon color="light" icon="times" size="2x" />
@@ -22,7 +22,7 @@
                 Lihat Gambar
             </a>
         </div>
-    </div>
+    </fragment>
 </template>
 
 <script>
