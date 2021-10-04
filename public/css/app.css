@@ -27249,6 +27249,10 @@ readers do not read off random characters that represent icons */
   transform: translate(-50%, -50%);
 }
 
+.image-capturer-front {
+  transform: translate(-50%, -50%) scaleX(-1) !important;
+}
+
 .screen-mode-wrapper {
   position: fixed;
   bottom: 10px;

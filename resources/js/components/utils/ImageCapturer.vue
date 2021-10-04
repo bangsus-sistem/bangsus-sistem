@@ -1,6 +1,6 @@
 <template>
     <div class="image-large-viewer-wrapper" v-if="state.open">
-        <video ref="video" :width="config.width" :height="config.height" playsinline autoplay v-show="state.video" class="image-uploaded-large-viewer"></video>
+        <video ref="video" :width="config.width" :height="config.height" playsinline autoplay v-show="state.video" class="image-uploaded-large-viewer" :class="{'image-capturer-front': !mode.environment}"></video>
         <canvas ref="canvas" :width="config.width" :height="config.height" v-show="state.canvas" class="image-uploaded-large-viewer"></canvas>
         <button type="button" class="btn btn-image-large-viewer-close" @click="close">
             <Icon color="light" icon="times" size="2x" />
