@@ -15,7 +15,7 @@
                         submitForm('/ajax/hrm/employee_photo_type', 'post', {
                             resolve: true,
                             reject: false
-                        }).then(() => $router.push({ name: 'hrm.employeePhotoType' }))
+                        }).then(() => back({ name: 'hrm.employeePhotoType' }))
                     "
                 >
                     <bsb-form-group>

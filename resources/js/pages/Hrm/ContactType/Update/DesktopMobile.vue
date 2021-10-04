@@ -21,7 +21,7 @@
                         submitForm('/ajax/hrm/contact_type', 'put', {
                             resolve: true,
                             reject: false
-                        }).then(() => $router.push({ name: 'hrm.contactType' }))
+                        }).then(() => back({ name: 'hrm.contactType' }))
                     "
                 >
                     <bsb-form-group>

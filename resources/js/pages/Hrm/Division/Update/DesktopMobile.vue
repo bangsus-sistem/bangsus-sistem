@@ -21,7 +21,7 @@
                         submitForm('/ajax/hrm/division', 'put', {
                             resolve: true,
                             reject: false
-                        }).then(() => $router.push({ name: 'hrm.division' }))
+                        }).then(() => back({ name: 'hrm.division' }))
                     "
                 >
                     <bsb-form-group>

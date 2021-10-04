@@ -15,7 +15,7 @@
                         submitForm('/ajax/hrm/blood_type', 'post', {
                             resolve: true,
                             reject: false
-                        }).then(() => $router.push({ name: 'hrm.bloodType' }))
+                        }).then(() => back({ name: 'hrm.bloodType' }))
                     "
                 >
                     <bsb-form-group>

@@ -15,7 +15,7 @@
                         submitForm('/ajax/hrm/schedule_submission/monthly', 'post', {
                             resolve: true,
                             reject: false
-                        }).then(() => $router.push({ name: 'hrm.scheduleSubmission' }))
+                        }).then(() => back({ name: 'hrm.scheduleSubmission' }))
                     "
                 >
                     <bsb-form-group>

@@ -15,7 +15,7 @@
                         submitForm('/ajax/hrm/employee_mutation', 'post', {
                             resolve: true,
                             reject: false
-                        }).then(() => $router.push({ name: 'hrm.employeeMutation', params: { employeeId: $route.params.employeeId, employeeAssignmentId: $route.params.employeeAssignmentId } }))
+                        }).then(() => back({ name: 'hrm.employeeMutation', params: { employeeId: $route.params.employeeId, employeeAssignmentId: $route.params.employeeAssignmentId } }))
                     "
                 >
                     <bsb-form-group>

@@ -21,7 +21,7 @@
                         submitForm('/ajax/hrm/employee_assignment', 'put', {
                             resolve: true,
                             reject: false
-                        }).then(() => $router.push({ name: 'hrm.employeeAssignment', params: { employeeId: $route.params.employeeId } }))
+                        }).then(() => back({ name: 'hrm.employeeAssignment', params: { employeeId: $route.params.employeeId } }))
                     "
                 >
                     <bsb-form-group>

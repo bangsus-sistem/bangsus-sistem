@@ -15,7 +15,7 @@
                         submitForm('/ajax/auth/role', 'post', {
                             resolve: true,
                             reject: false
-                        }).then(() => $router.push({ name: 'auth.role' }))
+                        }).then(() => back({ name: 'auth.role' }))
                     "
                 >
                     <bsb-form-group>

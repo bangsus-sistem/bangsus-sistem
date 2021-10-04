@@ -21,7 +21,7 @@
                         submitForm('/ajax/hrm/job_title', 'put', {
                             resolve: true,
                             reject: false
-                        }).then(() => $router.push({ name: 'hrm.jobTitle' }))
+                        }).then(() => back({ name: 'hrm.jobTitle' }))
                     "
                 >
                     <bsb-form-group>

@@ -15,7 +15,7 @@
                         submitForm('/ajax/hrm/attendance', 'post', {
                             resolve: true,
                             reject: false
-                        }).then(() => $router.push({ name: 'hrm.attendance' }))
+                        }).then(() => back({ name: 'hrm.attendance' }))
                     "
                 >
                     <bsb-form-group>

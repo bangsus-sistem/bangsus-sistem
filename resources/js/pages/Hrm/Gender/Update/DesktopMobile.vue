@@ -21,7 +21,7 @@
                         submitForm('/ajax/hrm/gender', 'put', {
                             resolve: true,
                             reject: false
-                        }).then(() => $router.push({ name: 'hrm.gender' }))
+                        }).then(() => back({ name: 'hrm.gender' }))
                     "
                 >
                     <bsb-form-group>

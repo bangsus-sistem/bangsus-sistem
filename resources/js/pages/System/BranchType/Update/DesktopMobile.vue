@@ -21,7 +21,7 @@
                         submitForm('/ajax/system/branch_type', 'put', {
                             resolve: true,
                             reject: false
-                        }).then(() => $router.push({ name: 'system.branchType' }))
+                        }).then(() => back({ name: 'system.branchType' }))
                     "
                 >
                     <bsb-form-group>
