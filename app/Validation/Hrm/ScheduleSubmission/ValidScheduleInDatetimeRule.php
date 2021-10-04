@@ -16,7 +16,7 @@ class ValidScheduleInDatetimeRule extends RequestRule implements Rule
      */
     public function passes($attribute, $value)
     {
-        $attendance = ScheduleSubmission::where(
+        $scheduleSubmission = ScheduleSubmission::where(
             $this->buildWhere()
                 ->with($this->request)
                 ->usage('input')
@@ -25,15 +25,16 @@ class ValidScheduleInDatetimeRule extends RequestRule implements Rule
                 ->index('attendance_type_id')->mode('id')
                 ->done()
         )
-            ->whereDate('schedule_in_datetime', (new Carbon($value))->format('Y-m-d'));
+            ->whereDate('schedule_in_datetime', (new Carbon($value))->format('Y-m-d'))
+            ->isNotAdmitted();
 
         if ($this->request->exists('id')) {
-            $attendance->where('id', '!=', $this->request->input('id'));
+            $scheduleSubmission->where('id', '!=', $this->request->input('id'));
         }
 
-        $attendance = $attendance->first();
+        $scheduleSubmission = $scheduleSubmission->first();
 
-        if ( ! is_null($attendance)) {
+        if ( ! is_null($scheduleSubmission)) {
             $this->setMessage('Pengajuan Jadwal untuk tanggal '.(new Carbon($value))->format('Y-m-d').' sudah ada.');
             return false;
         }
