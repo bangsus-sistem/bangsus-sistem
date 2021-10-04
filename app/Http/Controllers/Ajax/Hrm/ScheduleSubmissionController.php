@@ -159,6 +159,16 @@ class ScheduleSubmissionController extends Controller
     }
 
     /**
+     * @param  \App\Http\Requests\Ajax\Hrm\ScheduleSubmission\ReviseAdmissionAllRequest  $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function reviseAdmitAll(ReviseAdmissionAllRequest $request)
+    {
+        $this->transmit(new ReviseAdmissionAllTask, $request, true);
+        return response()->json([], 200);
+    }
+
+    /**
      * @param  \App\Http\Requests\Ajax\Hrm\ScheduleSubmission\DestroyRequest  $request
      * @return \Illuminate\Http\Response
      */

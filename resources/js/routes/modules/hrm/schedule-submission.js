@@ -39,4 +39,10 @@ export default [
         component: page('Hrm/ScheduleSubmission/AdmitMonthly'),
         beforeEnter: middleware(appMiddleware),
     },
+    {
+        path: 'schedule_submission/admit_all',
+        name: 'hrm.scheduleSubmission.admitAll',
+        component: page('Hrm/ScheduleSubmission/AdmitAll'),
+        beforeEnter: middleware(appMiddleware),
+    },
 ]

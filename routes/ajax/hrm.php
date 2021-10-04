@@ -133,5 +133,6 @@ Route::prefix('schedule_submission')->group(function () {
     Route::put('', 'ScheduleSubmissionController@amend');
     Route::patch('admit', 'ScheduleSubmissionController@reviseAdmit');
     Route::patch('admit_monthly', 'ScheduleSubmissionController@reviseAdmitMonthly');
+    Route::patch('admit_all', 'ScheduleSubmissionController@reviseAdmitAll');
     Route::delete('', 'ScheduleSubmissionController@destroy');
 });
