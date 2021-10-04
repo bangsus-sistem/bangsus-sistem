@@ -34,7 +34,16 @@
                 </bsb-th-query>
                 <bsb-th-query></bsb-th-query>
                 <bsb-th-query></bsb-th-query>
-                <bsb-th-query></bsb-th-query>
+                <bsb-th-query>
+                    <bsb-select size="sm"
+                        v-model="query['admitted']"
+                        :options="[
+                            { value: '*', title: 'Semua' },
+                            { value: true, title: 'Disetujui' },
+                            { value: false, title: 'Menunggu Persetujuan' }
+                        ]"
+                    />
+                </bsb-th-query>
                 <bsb-th-query>
                     <bsb-button-spinner color="primary" size="sm" @click="$emit('search')" :loading="loading">
                         Cari
@@ -77,6 +86,17 @@
                             {{ attendanceType['code'] }} - {{ attendanceType['name'] }}
                         </option>
                     </bsb-select>
+                </bsb-form-group>
+                <bsb-form-group>
+                    <label>Admisi</label>
+                    <bsb-select size="sm"
+                        v-model="query['admitted']"
+                        :options="[
+                            { value: '*', title: 'Semua' },
+                            { value: true, title: 'Disetujui' },
+                            { value: false, title: 'Menunggu Persetujuan' }
+                        ]"
+                    />
                 </bsb-form-group>
                 <bsb-button-spinner color="primary" size="sm" @click="$emit('search')" :loading="loading">
                     Cari

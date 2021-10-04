@@ -58,7 +58,14 @@ const queryMethods = {
             // Check if the value pass the allowed value, and if it doesn't,
             // then we change the value to the first index of the allowed.
             if (allowed.indexOf(value) === -1) {
-                value = allowed[0]
+
+                // Check if the value is numerical.
+                if ( ! isNaN(value)) {
+                    if (lodash.find(allowed, a => a == value) == undefined)
+                        value = allowed[0]
+                } else {
+                    value = allowed[0]
+                }
             }
         }
 
