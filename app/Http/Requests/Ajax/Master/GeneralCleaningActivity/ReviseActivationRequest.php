@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Requests\Ajax\Master\MarketingActivity;
+namespace App\Http\Requests\Ajax\Master\GeneralCleaningActivity;
 
 use App\Http\Requests\FeatureIdRequest;
-use App\Models\Master\MarketingActivity;
+use App\Models\Master\GeneralCleaningActivity;
 
 class ReviseActivationRequest extends FeatureIdRequest
 {
@@ -11,7 +11,7 @@ class ReviseActivationRequest extends FeatureIdRequest
      * @var array
      */
     protected $refs = [
-        'module' => 'marketing_activity',
+        'module' => 'general_cleaning_activity',
         'action' => 'update',
     ];
 
@@ -20,6 +20,6 @@ class ReviseActivationRequest extends FeatureIdRequest
      */
     protected function model()
     {
-        return MarketingActivity::class;
+        return GeneralCleaningActivity::class;
     }
 }
