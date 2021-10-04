@@ -155,5 +155,12 @@ return [
         'image_id' => 'Gambar',
         'address' => 'Alamat',
         'contact' => 'Kontak',
+
+        'schedule_in_datetime' => 'Jadwal Masuk',
+        'schedule_out_datetime' => 'Jadwal Keluar',
+        'attendance_in_datetime' => 'Absensi Masuk',
+        'attendance_out_datetime' => 'Absensi Keluar',
+        'image_in_id' => 'Gambar Masuk',
+        'image_out_id' => 'Gambar Keluar',
     ],
 ];
