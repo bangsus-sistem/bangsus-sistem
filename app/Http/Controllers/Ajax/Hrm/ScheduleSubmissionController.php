@@ -13,6 +13,7 @@ use App\Http\Requests\Ajax\Hrm\ScheduleSubmission\{
     AmendRequest,
     ReviseAdmissionRequest,
     ReviseAdmissionMonthlyRequest,
+    ReviseAdmissionAllRequest,
     DestroyRequest,
 };
 use App\Tasks\Hrm\ScheduleSubmission\{
@@ -21,6 +22,7 @@ use App\Tasks\Hrm\ScheduleSubmission\{
     AmendTask,
     ReviseAdmissionTask,
     ReviseAdmissionMonthlyTask,
+    ReviseAdmissionAllTask,
 };
 use App\Transformer\SingleCollections\Hrm\ScheduleSubmissionSingleCollection;
 use App\Transformer\PaginatedCollections\Hrm\ScheduleSubmissionPaginatedCollection;
