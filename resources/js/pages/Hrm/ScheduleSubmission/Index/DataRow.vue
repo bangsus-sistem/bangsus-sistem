@@ -18,7 +18,7 @@
                         <bsb-button-router-link-read :to="{ name: 'hrm.scheduleSubmission.read', params: { id: item['id'] } }" />
                     </bsb-access-wrapper>
                     <bsb-access-wrapper module-ref="schedule_submission" action-ref="update">
-                        <bsb-button-router-link-update :to="{ name: 'hrm.scheduleSubmission.update', params: { id: item['id'] } }" />
+                        <bsb-button-router-link-update v-if="!item['admitted']" :to="{ name: 'hrm.scheduleSubmission.update', params: { id: item['id'] } }" />
                     </bsb-access-wrapper>
                     <bsb-access-wrapper module-ref="schedule_submission" action-ref="admit">
                         <bsb-button-admit @click="$emit('admit')" v-if="!item['admitted']" />
@@ -43,7 +43,7 @@
                             <bsb-button-router-link-read :to="{ name: 'hrm.scheduleSubmission.read', params: { id: item['id'] } }" />
                         </bsb-access-wrapper>
                         <bsb-access-wrapper module-ref="schedule_submission" action-ref="update">
-                            <bsb-button-router-link-update :to="{ name: 'hrm.scheduleSubmission.update', params: { id: item['id'] } }" />
+                            <bsb-button-router-link-update v-if="!item['admitted']" :to="{ name: 'hrm.scheduleSubmission.update', params: { id: item['id'] } }" />
                         </bsb-access-wrapper>
                         <bsb-access-wrapper module-ref="schedule_submission" action-ref="admit">
                             <bsb-button-admit @click="$emit('admit')" v-if="!item['admitted']" />
