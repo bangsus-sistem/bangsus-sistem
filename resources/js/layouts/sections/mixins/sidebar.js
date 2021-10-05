@@ -183,6 +183,12 @@ export default {
                     route: { name: 'report' },
                     active: false,
                 },
+                {
+                    title: 'Logout',
+                    icon: 'log-out',
+                    route: { name: 'logout' },
+                    active: false,
+                },
             ],
             collapsedIndex: null,
         }
