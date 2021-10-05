@@ -88,6 +88,9 @@ Route::prefix('employee')->group(function () {
     Route::put('', 'EmployeeController@amend');
     Route::patch('admit', 'EmployeeController@reviseAdmit');
     Route::delete('', 'EmployeeController@destroy');
+    Route::prefix('widget')->group(function () {
+        Route::get('latest_submission', 'EmployeeController@revealLatestSubmission');
+    });
 });
 
 Route::prefix('employee_assignment')->group(function () {

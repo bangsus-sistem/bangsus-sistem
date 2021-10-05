@@ -35,6 +35,13 @@ export default {
             moment.locale('id')
             return datetime == null ? '-' : moment(datetime).format('dddd, Do MMMM YYYY H:mm:ss')
         },
+        showModalForm(wrapper, ref, data, link = null, method = null) {
+            this.$refs[wrapper].$refs[ref].setData(data)
+            this.$refs[wrapper].$refs[ref].setLink(link)
+            this.$refs[wrapper].$refs[ref].setMethod(method)
+    
+            this.$refs[wrapper].$refs[ref].show()
+        },
     },
     created() {
         this.fetchData()

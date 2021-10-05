@@ -12,11 +12,15 @@ use App\Http\Requests\Ajax\Hrm\Employee\{
     AmendRequest,
     ReviseAdmissionRequest,
     DestroyRequest,
+    RevealLatestSubmissionRequest,
 };
 use App\Tasks\Hrm\Employee\{
     StoreTask,
     AmendTask,
     ReviseAdmissionTask,
+};
+use App\Widgets\Hrm\Employee\{
+    LatestSubmissionWidget,
 };
 use App\Transformer\SingleCollections\Hrm\EmployeeSingleCollection;
 use App\Transformer\PaginatedCollections\Hrm\EmployeePaginatedCollection;
@@ -145,5 +149,14 @@ class EmployeeController extends Controller
         $employee = Employee::findOrFail($request->input('id'));
         $this->transaction(fn () => $employee->delete());
         return response()->noContent();
+    }
+
+    /**
+     * @param  \App\Http\Requests\Ajax\Hrm\Employee\RevealLatestSubmissionRequest  $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function revealLatestSubmission(RevealLatestSubmissionRequest $request)
+    {
+        return response()->json($this->reveal(new LatestSubmissionWidget, $request));
     }
 }

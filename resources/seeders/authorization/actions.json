@@ -1,0 +1,23 @@
+[
+    {
+        "ref": "index"
+    },
+    {
+        "ref": "create"
+    },
+    {
+        "ref": "read"
+    },
+    {
+        "ref": "update"
+    },
+    {
+        "ref": "delete"
+    },
+    {
+        "ref": "admit"
+    },
+    {
+        "ref": "attendance"
+    }
+]

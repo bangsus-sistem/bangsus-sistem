@@ -17,16 +17,25 @@
                 <LatestActivityLog class="my-3" />
                 <ActivityLogTraffic class="my-3" />
             </bsb-row>
+            <h4 class="mt-4">HRM</h4>
+            <bsb-row>
+                <LatestEmployeeSubmission class="my-3" />
+            </bsb-row>
         </template>
     </Layout>
 </template>
 
 <script>
 import Layout from '../../layouts/Application'
+
+// Authentication Widgets
 import LatestAuthenticationLog from '../../widgets/log/LatestAuthenticationLog'
 import AuthenticationLogTraffic from '../../widgets/log/AuthenticationLogTraffic'
 import LatestActivityLog from '../../widgets/log/LatestActivityLog'
 import ActivityLogTraffic from '../../widgets/log/ActivityLogTraffic'
+
+// HRM Widgets
+import LatestEmployeeSubmission from '../../widgets/hrm/LatestEmployeeSubmission'
 
 export default {
     components: {
@@ -35,6 +44,7 @@ export default {
         AuthenticationLogTraffic,
         LatestActivityLog,
         ActivityLogTraffic,
+        LatestEmployeeSubmission,
     },
     data() {
         return {
