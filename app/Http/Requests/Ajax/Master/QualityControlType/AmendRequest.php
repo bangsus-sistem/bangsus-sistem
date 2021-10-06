@@ -4,7 +4,11 @@ namespace App\Http\Requests\Ajax\Master\QualityControlType;
 
 use App\Http\Requests\FeatureIdRequest;
 use Illuminate\Validation\Rule;
-use App\Models\Master\QualityControlType;
+use App\Models\Master\{
+    QualityControlType,
+    QualityControlParameter,
+    QualityControlValue,
+};
 
 class AmendRequest extends FeatureIdRequest
 {
@@ -45,6 +49,10 @@ class AmendRequest extends FeatureIdRequest
                 'array',
                 'min:1',
             ],
+            'quality_control_parameters.*.id' => [
+                'nullable',
+                'bsb_exists:'.QualityControlParameter::class,
+            ],
             'quality_control_parameters.*.name' => [
                 'required',
                 'max:200',
@@ -53,6 +61,10 @@ class AmendRequest extends FeatureIdRequest
                 'required',
                 'array',
                 'min:1',
+            ],
+            'quality_control_parameters.*.quality_control_values.*.id' => [
+                'nullable',
+                'bsb_exists:'.QualityControlValue::class,
             ],
             'quality_control_parameters.*.quality_control_values.*.name' => [
                 'required',

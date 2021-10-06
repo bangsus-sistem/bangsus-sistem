@@ -4,7 +4,10 @@ namespace App\Http\Requests\Ajax\Master\DisciplinaryParameter;
 
 use App\Http\Requests\FeatureIdRequest;
 use Illuminate\Validation\Rule;
-use App\Models\Master\DisciplinaryParameter;
+use App\Models\Master\{
+    DisciplinaryParameter,
+    DisciplinaryValue,
+};
 
 class AmendRequest extends FeatureIdRequest
 {
@@ -44,6 +47,10 @@ class AmendRequest extends FeatureIdRequest
                 'required',
                 'array',
                 'min:1',
+            ],
+            'discplinary_values.*.id' => [
+                'nullable',
+                'bsb_exists:'.DisciplinaryValue::class,
             ],
             'discplinary_values.*.name' => [
                 'required',
