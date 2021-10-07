@@ -131,5 +131,44 @@
             { "ref": "latest_employee_submission" }
         ],
         "reports": []
+    },
+    {
+        "ref": "master",
+        "modules": [
+            {
+                "ref": "disciplinary_parameter",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
+                "ref": "general_cleaning_activity",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
+                "ref": "marketing_activity",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
+                "ref": "marketing_item",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
+                "ref": "operational_photo_type",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
+                "ref": "production_type",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
+                "ref": "quality_control_type",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
+                "ref": "unit",
+                "actions": ["index", "create", "read", "update", "delete"]
+            }
+        ],
+        "widgets": [],
+        "reports": []
     }
 ]
