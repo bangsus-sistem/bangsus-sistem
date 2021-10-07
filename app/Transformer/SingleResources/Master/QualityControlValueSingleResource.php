@@ -16,7 +16,7 @@ class QualityControlValueSingleResource extends SingleResource
             'id' => $this->id,
             'quality_control_parameter_id' => $this->quality_control_parameter_id,
             'name' => $this->name,
-            'expected_value' => $this->expected_value,
+            'expected_value' => (bool) $this->expected_value,
         ];
     }
 }

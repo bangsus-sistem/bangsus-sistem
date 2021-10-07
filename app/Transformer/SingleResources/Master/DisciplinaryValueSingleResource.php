@@ -16,7 +16,7 @@ class DisciplinaryValueSingleResource extends SingleResource
             'id' => $this->id,
             'disciplinary_parameter_id' => $this->disciplinary_parameter_id,
             'name' => $this->name,
-            'expected_value' => $this->expected_value,
+            'expected_value' => (bool) $this->expected_value,
         ];
     }
 }
