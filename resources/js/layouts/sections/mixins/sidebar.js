@@ -91,6 +91,85 @@ export default {
                     collapse: false,
                 },
                 {
+                    title: 'Master',
+                    icon: 'database',
+                    children: [
+                        {
+                            title: 'Satuan',
+                            route: { name: 'master.unit' },
+                            access: {
+                                moduleRef: 'unit',
+                                actionRef: 'index',
+                            },
+                            active: false,
+                        },
+                        {
+                            title: 'Tipe Produksi',
+                            route: { name: 'master.productionType' },
+                            access: {
+                                moduleRef: 'production_type',
+                                actionRef: 'index',
+                            },
+                            active: false,
+                        },
+                        {
+                            title: 'Tipe Foto Operasional',
+                            route: { name: 'master.operationalPhotoType' },
+                            access: {
+                                moduleRef: 'operational_photo_type',
+                                actionRef: 'index',
+                            },
+                            active: false,
+                        },
+                        {
+                            title: 'Tipe Quality Control',
+                            route: { name: 'master.qualityControlType' },
+                            access: {
+                                moduleRef: 'quality_control_type',
+                                actionRef: 'index',
+                            },
+                            active: false,
+                        },
+                        {
+                            title: 'Parameter Kedisiplinan',
+                            route: { name: 'master.disciplinaryParameter' },
+                            access: {
+                                moduleRef: 'disciplinary_parameter',
+                                actionRef: 'index',
+                            },
+                            active: false,
+                        },
+                        {
+                            title: 'Aktivitas General Cleaning',
+                            route: { name: 'master.generalCleaningActivity' },
+                            access: {
+                                moduleRef: 'general_cleaning_activity',
+                                actionRef: 'index',
+                            },
+                            active: false,
+                        },
+                        {
+                            title: 'Aktivitas Marketing',
+                            route: { name: 'master.marketingActivity' },
+                            access: {
+                                moduleRef: 'marketing_activity',
+                                actionRef: 'index',
+                            },
+                            active: false,
+                        },
+                        {
+                            title: 'Item Marketing',
+                            route: { name: 'master.marketingItem' },
+                            access: {
+                                moduleRef: 'marketing_item',
+                                actionRef: 'index',
+                            },
+                            active: false,
+                        },
+                    ],
+                    collapse: false,
+                },
+                {
                     title: 'HRM',
                     icon: 'users',
                     children: [
