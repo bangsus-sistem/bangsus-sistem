@@ -59,7 +59,7 @@ class AuthorizationSeeder extends ResourceSeeder
         $packages = \DB::table('packages')->get();
         $return = [];
         foreach ($this->data['packages'] as $package)
-            if (is_null(with(clone $packages)->where('ref', $package['ref'])))
+            if (is_null(with(clone $packages)->where('ref', $package['ref'])->first()))
                 $return[] = [
                     'ref' => $package['ref']
                 ];
@@ -75,7 +75,7 @@ class AuthorizationSeeder extends ResourceSeeder
         $actions = \DB::table('actions')->get();
         $return = [];
         foreach ($this->data['actions'] as $action)
-            if (is_null(with(clone $actions)->where('ref', $action['ref'])))
+            if (is_null(with(clone $actions)->where('ref', $action['ref'])->first()))
                 $return[] = [
                     'ref' => $action['ref']
                 ];
