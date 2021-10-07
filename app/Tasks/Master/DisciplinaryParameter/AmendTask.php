@@ -25,9 +25,14 @@ class AmendTask extends Task
                 $disciplinaryParameter->note = $request->input('note');
                 $disciplinaryParameter->save();
 
-                foreach ($request->input('disciplinary_values' []) as $disciplinaryValueInput) {
+                $disciplinaryParameter
+                    ->disciplinaryValues()
+                    ->whereNotIn('id', collect($request->input('disciplinary_values'))->pluck('id')->all())
+                    ->delete();
+
+                foreach ($request->input('disciplinary_values', []) as $disciplinaryValueInput) {
                     $disciplinaryValueInput = (object) $disciplinaryValueInput;
-                    $disciplinaryValue = DisciplinaryValue::find($disciplinaryValueInput->id);
+                    $disciplinaryValue = DisciplinaryValue::find($disciplinaryValueInput->id ?? null);
                     if (is_null($disciplinaryValue)) {
                         $disciplinaryValue = new DisciplinaryValue;
                         $disciplinaryValue->disciplinary_parameter_id = $disciplinaryParameter->id;
