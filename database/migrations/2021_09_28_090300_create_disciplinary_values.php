@@ -13,7 +13,7 @@ class CreateDisciplinaryValues extends Migration
      */
     public function up()
     {
-        Schema::create('discipline_values', function (Blueprint $table) {
+        Schema::create('disciplinary_values', function (Blueprint $table) {
             $table->id();
             $table->disciplinaryParameter();
             $table->name();
@@ -28,6 +28,6 @@ class CreateDisciplinaryValues extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('discipline_values');
+        Schema::dropIfExists('disciplinary_values');
     }
 }
