@@ -12,7 +12,7 @@ use App\Models\Concerns\{
     ActiveFlag,
 };
 
-class GeneralActivity extends Model
+class GeneralCleaningActivity extends Model
 {
     use SoftDeletes, HasUserTimestamps, HasUserDelete, ActiveFlag;
 }
