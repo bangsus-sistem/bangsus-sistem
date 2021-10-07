@@ -48,7 +48,7 @@ class Kernel
         'module' => Blueprint\Foreign\ModuleBlueprint::class,
         'package' => Blueprint\Foreign\PackageBlueprint::class,
         'qualityControlType' => Blueprint\Foreign\QualityControlTypeBlueprint::class,
-        'qualityControlValue' => Blueprint\Foreign\QualityControlValueBlueprint::class,
+        'qualityControlParameter' => Blueprint\Foreign\QualityControlParameterBlueprint::class,
         'role' => Blueprint\Foreign\RoleBlueprint::class,
         'userAdmit' => Blueprint\Foreign\UserAdmitBlueprint::class,
         'user' => Blueprint\Foreign\UserBlueprint::class,

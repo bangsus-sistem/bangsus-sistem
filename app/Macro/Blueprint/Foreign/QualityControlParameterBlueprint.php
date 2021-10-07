@@ -5,7 +5,7 @@ namespace App\Macro\Blueprint\Foreign;
 use Bsb\Foundation\Macro\BlueprintContract;
 use Closure;
 
-class QualityControlValueBlueprint implements BlueprintContract
+class QualityControlParameterBlueprint implements BlueprintContract
 {
     /**
      * @return \Closure
@@ -13,10 +13,10 @@ class QualityControlValueBlueprint implements BlueprintContract
     public static function register() : Closure
     {
         return (
-            function ($fieldName = 'quality_control_value_id', $nullable = false) {
+            function ($fieldName = 'quality_control_parameter_id', $nullable = false) {
                 $table = $this->foreignId($fieldName);
                 if ($nullable) $table->nullable();
-                return $table->constrained('quality_control_values')->onUpdate('cascade');
+                return $table->constrained('quality_control_parameters')->onUpdate('cascade');
             }
         );
     }

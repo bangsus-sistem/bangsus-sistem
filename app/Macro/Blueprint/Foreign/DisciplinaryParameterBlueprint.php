@@ -13,10 +13,10 @@ class DisciplinaryParameterBlueprint implements BlueprintContract
     public static function register() : Closure
     {
         return (
-            function ($fieldName = 'discplinary_parameter_id', $nullable = false) {
+            function ($fieldName = 'disciplinary_parameter_id', $nullable = false) {
                 $table = $this->foreignId($fieldName);
                 if ($nullable) $table->nullable();
-                return $table->constrained('discplinary_parameters')->onUpdate('cascade');
+                return $table->constrained('disciplinary_parameters')->onUpdate('cascade');
             }
         );
     }
