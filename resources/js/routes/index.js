@@ -4,6 +4,7 @@ import middleware from './middleware'
 import auth from './modules/auth'
 import log from './modules/log'
 import system from './modules/system'
+import master from './modules/master'
 import hrm from './modules/hrm'
 import report from './modules/report'
 
@@ -43,6 +44,11 @@ export default [
         path: '/system',
         component: blankComponent,
         children: system,
+    },
+    {
+        path: '/master',
+        component: blankComponent,
+        children: master,
     },
     {
         path: '/hrm',
