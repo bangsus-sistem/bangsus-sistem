@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Ajax\Master;
 
 use Bsb\Foundation\Http\Controller;
-use App\Models\Master\ProductType;
+use App\Models\Master\ProductionType;
 use Illuminate\Http\Request;
-use App\Http\Requests\Ajax\Master\ProductType\{
+use App\Http\Requests\Ajax\Master\ProductionType\{
     IndexRequest,
     ShowRequest,
     StoreRequest,
@@ -13,34 +13,34 @@ use App\Http\Requests\Ajax\Master\ProductType\{
     ReviseActivationRequest,
     DestroyRequest,
 };
-use App\Tasks\Master\ProductType\{
+use App\Tasks\Master\ProductionType\{
     StoreTask,
     AmendTask,
     ReviseActivationTask,
 };
-use App\Transformer\SingleCollections\Master\ProductTypeSingleCollection;
-use App\Transformer\PaginatedCollections\Master\ProductTypePaginatedCollection;
-use App\Transformer\RelatedResources\Master\ProductTypeRelatedResource;
+use App\Transformer\SingleCollections\Master\ProductionTypeSingleCollection;
+use App\Transformer\PaginatedCollections\Master\ProductionTypePaginatedCollection;
+use App\Transformer\RelatedResources\Master\ProductionTypeRelatedResource;
 
-class ProductTypeController extends Controller
+class ProductionTypeController extends Controller
 {
     /**
      * @return \Illuminate\Http\JsonResponse
      */
     public function manifest()
     {
-        return response()->json(new ProductTypeSingleCollection(ProductType::all()), 200);
+        return response()->json(new ProductionTypeSingleCollection(ProductionType::all()), 200);
     }
 
     /**
-     * @param  \App\Http\Requests\Ajax\Master\ProductType\IndexRequest  $request
+     * @param  \App\Http\Requests\Ajax\Master\ProductionType\IndexRequest  $request
      * @return \Illuminate\Http\JsonResponse
      */
     public function index(IndexRequest $request)
     {
         return response()->json(
-            new ProductTypePaginatedCollection(
-                ProductType::where(
+            new ProductionTypePaginatedCollection(
+                ProductionType::where(
                     $this->buildWhere($request)
                         ->with($request)
                         ->index('code')->mode('string')
@@ -56,26 +56,26 @@ class ProductTypeController extends Controller
     }
 
     /**
-     * @param  \App\Http\Requests\Ajax\Master\ProductType\ShowRequest  $request
+     * @param  \App\Http\Requests\Ajax\Master\ProductionType\ShowRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\JsonResponse
      */
     public function show(ShowRequest $request, $id)
     {
         return response()->json(
-            new ProductTypeRelatedResource(ProductType::findOrFail($id)),
+            new ProductionTypeRelatedResource(ProductionType::findOrFail($id)),
             200
         );
     }
 
     /**
-     * @param  \App\Http\Requests\Ajax\Master\ProductType\StoreRequest  $request
+     * @param  \App\Http\Requests\Ajax\Master\ProductionType\StoreRequest  $request
      * @return \Illuminate\Http\JsonResponse
      */
     public function store(StoreRequest $request)
     {
         return response()->json(
-            new ProductTypeRelatedResource(
+            new ProductionTypeRelatedResource(
                 $this->transmit(new StoreTask, $request)
             ),
             201
@@ -83,13 +83,13 @@ class ProductTypeController extends Controller
     }
 
     /**
-     * @param  \App\Http\Requests\Ajax\Master\ProductType\AmendRequest  $request
+     * @param  \App\Http\Requests\Ajax\Master\ProductionType\AmendRequest  $request
      * @return \Illuminate\Http\JsonResponse
      */
     public function amend(AmendRequest $request)
     {
         return response()->json(
-            new ProductTypeRelatedResource(
+            new ProductionTypeRelatedResource(
                 $this->transmit(new AmendTask, $request)
             ),
             200
@@ -97,13 +97,13 @@ class ProductTypeController extends Controller
     }
 
     /**
-     * @param  \App\Http\Requests\Ajax\Master\ProductType\ReviseActivationRequest  $request
+     * @param  \App\Http\Requests\Ajax\Master\ProductionType\ReviseActivationRequest  $request
      * @return \Illuminate\Http\JsonResponse
      */
     public function reviseActivate(ReviseActivationRequest $request)
     {
         return response()->json(
-            new ProductTypeRelatedResource(
+            new ProductionTypeRelatedResource(
                 $this->transmit(new ReviseActivationTask, $request, true)
             ),
             200
@@ -111,13 +111,13 @@ class ProductTypeController extends Controller
     }
 
     /**
-     * @param  \App\Http\Requests\Ajax\Master\ProductType\ReviseActivationRequest  $request
+     * @param  \App\Http\Requests\Ajax\Master\ProductionType\ReviseActivationRequest  $request
      * @return \Illuminate\Http\JsonResponse
      */
     public function reviseDeactivate(ReviseActivationRequest $request)
     {
         return response()->json(
-            new ProductTypeRelatedResource(
+            new ProductionTypeRelatedResource(
                 $this->transmit(new ReviseActivationTask, $request, false)
             ),
             200
@@ -125,12 +125,12 @@ class ProductTypeController extends Controller
     }
 
     /**
-     * @param  \App\Http\Requests\Ajax\Master\ProductType\DestroyRequest  $request
+     * @param  \App\Http\Requests\Ajax\Master\ProductionType\DestroyRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function destroy(DestroyRequest $request)
     {
-        $productType = ProductType::findOrFail($request->input('id'));
+        $productType = ProductionType::findOrFail($request->input('id'));
         $this->transaction(fn () => $productType->delete());
         return response()->noContent();
     }
