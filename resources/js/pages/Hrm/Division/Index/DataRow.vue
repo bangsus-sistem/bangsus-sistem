@@ -45,7 +45,6 @@
                     </template>
                     <template v-slot:footer>
                         <bsb-switch-badge :condition="item['active']" true-label="Aktif" false-label="Tidak Aktif"/>
-                        <bsb-switch-badge :condition="item['required']" true-label="Harus Diisi" false-label="Tidak Harus Diisi"/>
                     </template>
                 </bsb-list-group-item-content>
             </bsb-list-group-item>
