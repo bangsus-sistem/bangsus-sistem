@@ -43,20 +43,20 @@ class AmendRequest extends FeatureIdRequest
                 'required',
                 'max:200',
             ],
-            'discplinary_values' => [
+            'disciplinary_values' => [
                 'required',
                 'array',
                 'min:1',
             ],
-            'discplinary_values.*.id' => [
+            'disciplinary_values.*.id' => [
                 'nullable',
                 'bsb_exists:'.DisciplinaryValue::class,
             ],
-            'discplinary_values.*.name' => [
+            'disciplinary_values.*.name' => [
                 'required',
                 'max:200',
             ],
-            'discplinary_values.*.expected_value' => [
+            'disciplinary_values.*.expected_value' => [
                 'required',
                 'boolean',
             ],
@@ -69,5 +69,23 @@ class AmendRequest extends FeatureIdRequest
                 'max:1000',
             ],
         ];
+    }
+
+    /**
+     * @return void
+     */
+    protected function additionalPrepareForValidation()
+    {
+        $disciplinaryValues = [];
+        foreach ($this->input('disciplinary_values') as $disciplinaryValue) {
+            if ($disciplinaryValue['name'] == '' || is_null($disciplinaryValue['name']))
+                continue;
+            
+            $disciplinaryValues[] = $disciplinaryValue;
+        }
+        
+        $this->merge([
+            'disciplinary_values' => $disciplinaryValues,
+        ]);
     }
 }
