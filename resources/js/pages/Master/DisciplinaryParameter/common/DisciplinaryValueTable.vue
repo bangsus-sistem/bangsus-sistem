@@ -17,7 +17,7 @@
                             </span>
                             <bsb-input-errors size="sm" v-model="disciplinaryValues[i]['name']" :errors="disciplinaryValueErrors[i] != null ? disciplinaryValueErrors[i]['name'] : []" v-else />
                         </td>
-                        <td>
+                        <bsb-td justify="center">
                             <bsb-switch-icon
                                 :value="disciplinaryValues[i]['expected_value']"
                                 v-if="readonly"
@@ -28,7 +28,7 @@
                                 :value="true"
                                 v-else
                             >
-                        </td>
+                        </bsb-td>
                         <td>
                             <bsb-button size="sm" color="danger" type="button" @click="deleteValue(i)" v-if="!readonly">Hapus</bsb-button>
                         </td>

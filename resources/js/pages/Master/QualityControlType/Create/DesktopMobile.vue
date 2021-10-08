@@ -1,30 +1,21 @@
 <template>
     <fragment>
-        <h3>Aktivitas Parameter Kedisiplinan</h3>
+        <h3>Tipe Quality Control</h3>
         <bsb-card class="my-3">
             <bsb-card-body-spinner-error-back
                 :loading="state.page.loading"
                 :error="state.page.error"
                 :error-message="state.page.message"
-                :default-back="{ name: 'master.disciplinaryParameter' }"
+                :default-back="{ name: 'master.qualityControlType' }"
             >
-                <h5 class="mb-3">Ubah Aktivitas Parameter Kedisiplinan</h5>
-                <bsb-user-timestamps
-                    :user-create="form.data['user_create']"
-                    :created-at="form.data['created_at']"
-                    :user-update="form.data['user_update']"
-                    :updated-at="form.data['updated_at']"
-                />
-                <small class="text-danger">
-                    Fitur ini masih dalam tahap pengembangan. Jangan dipakai.
-                </small>
+                <h5 class="mb-3">Tambah Tipe Quality Control</h5>
                 <form
                     class="mt-5"
                     @submit.prevent="
-                        submitForm('/ajax/master/disciplinary_parameter', 'put', {
+                        submitForm('/ajax/master/quality_control_type', 'post', {
                             resolve: true,
                             reject: false
-                        }).then(() => back({ name: 'master.disciplinaryParameter' }))
+                        }).then(() => back({ name: 'master.qualityControlType' }))
                     "
                 >
                     <bsb-form-group>
@@ -34,11 +25,6 @@
                     <bsb-form-group>
                         <label>Nama</label>
                         <bsb-input-errors v-model="form.data['name']" :errors="form.errors['name']" />
-                    </bsb-form-group>
-                    <bsb-form-group>
-                        <label>Pilihan</label>
-                        <DisciplinaryValueTable v-model="form.data['disciplinary_values']" :errors="form.errors['disciplinary_values']" />
-                        {{ form.errors }}
                     </bsb-form-group>
                     <bsb-form-group>
                         <label>Deskripsi</label>
@@ -59,12 +45,8 @@
 
 <script>
 import mixin from './mixin'
-import DisciplinaryValueTable from '../common/DisciplinaryValueTable'
 
 export default {
     mixins: [mixin],
-    components: {
-        DisciplinaryValueTable,
-    },
 }
 </script>

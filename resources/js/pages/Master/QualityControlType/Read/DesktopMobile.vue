@@ -1,14 +1,14 @@
 <template>
     <fragment>
-        <h3>Aktivitas General Cleaning</h3>
+        <h3>Tipe Quality Control</h3>
         <bsb-card class="my-3">
             <bsb-card-body-spinner-error-back
                 :loading="state.page.loading"
                 :error="state.page.error"
                 :error-message="state.page.message"
-                :default-back="{ name: 'master.generalCleaningActivity' }"
+                :default-back="{ name: 'master.qualityControlType' }"
             >
-                <h5 class="mb-3">Lihat Aktivitas General Cleaning</h5>
+                <h5 class="mb-3">Lihat Tipe Quality Control</h5>
                 <bsb-user-timestamps
                     :user-create="form.data['user_create']"
                     :created-at="form.data['created_at']"
