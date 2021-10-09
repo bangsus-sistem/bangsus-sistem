@@ -104,7 +104,7 @@ class StoreAttendanceTask extends Task
         $localDate = (new Carbon($datetime))->subHours($request->_timezone)
             ->format('Y-m-d');
         
-        if ($date == $localDate) {
+        if ($date != $localDate) {
             $attendances = Attendance::where($wheres)
                 ->whereDate(
                     'schedule_in_datetime',
@@ -115,7 +115,6 @@ class StoreAttendanceTask extends Task
                     $date
                 )
                 ->get();
-            dd($attendances, $attendances->toArray());
             
             if ($attendances->count() == 2) {
                 $attendances = $attendances->toArray();
