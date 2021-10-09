@@ -271,6 +271,18 @@ class WhereBuilder
     /**
      * @return void
      */
+    public function callbackMode($callback)
+    {
+        $return = $callback($this->request);
+
+        $this->wheres[] = [
+            $return
+        ];
+    }
+
+    /**
+     * @return void
+     */
     public function dateBetweenMode()
     {
         $queueIndex = $this->queueIndex;

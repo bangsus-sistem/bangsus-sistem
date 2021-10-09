@@ -98,6 +98,45 @@ class StoreAttendanceTask extends Task
                 'mode' => $mode,
             ];
         }
+
+        // Check if the given day is different on the local timezone and the GMT
+        $date = (new Carbon($datetime))->format('Y-m-d');
+        $localDate = (new Carbon($datetime))->subHours($request->_timezone)
+            ->format('Y-m-d');
+        
+        if ($date == $localDate) {
+            $attendances = Attendance::where($wheres)
+                ->whereDate(
+                    'schedule_in_datetime',
+                    $localDate
+                )
+                ->orWhereDate(
+                    'schedule_in_datetime',
+                    $date
+                )
+                ->get();
+            dd($attendances, $attendances->toArray());
+            
+            if ($attendances->count() == 2) {
+                $attendances = $attendances->toArray();
+
+                $firstDiff = (new Carbon($attendances[0]->schedule_in_datetime))->diffInSeconds($datetime);
+                $secondDiff = (new Carbon($attendances[1]->schedule_in_datetime))->diffInSeconds($datetime);
+
+                $attendance = $firstDiff > $secondDiff ? $attendance[0] : $attendance[1];
+
+                return (object) [
+                    'attendance' => Attendance::find($attendance['id']),
+                    'mode' => 'in',
+                ];
+            } else {
+                return (object) [
+                    'attendance' => $attendances->first(),
+                    'mode' => 'in',
+                ];
+            }
+        }
+        
         
         // Check if the schedule on the related day exists.
         $attendance = Attendance::where($wheres)

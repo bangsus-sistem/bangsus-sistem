@@ -47,9 +47,38 @@ class AttendanceController extends Controller
                     $this->buildWhere($request)
                         ->with($request)
                         ->index('branch_id')->mode('id')
-                        ->index('attendance_date')
-                            ->column(['schedule_in_datetime', 'attendance_in_datetime'])
-                            ->mode('date')
+                        ->index('attendance_date')->mode('callback', [
+                            function ($request) {
+                                $value = $request->input('attendance_date', date('Y-m-d'));
+
+                                return 
+                                    function ($query) use ($value) {
+                                        return $query->where(
+                                            function ($query) use ($value) {
+                                                return $query
+                                                    ->whereNotNull('schedule_in_datetime')
+                                                    ->whereNotNull('attendance_in_datetime')
+                                                    ->whereDate('schedule_in_datetime', $value);
+                                            }
+                                        )->orWhere(
+                                            function ($query) use ($value) {
+                                                return $query
+                                                    ->whereNotNull('schedule_in_datetime')
+                                                    ->whereNull('attendance_in_datetime')
+                                                    ->whereDate('schedule_in_datetime', $value);
+                                            }
+                                        )->orWhere(
+                                            function ($query) use ($value) {
+                                                return $query
+                                                    ->whereNull('schedule_in_datetime')
+                                                    ->whereNotNull('attendance_in_datetime')
+                                                    ->whereDate('attendance_in_datetime', $value);
+                                            }
+                                        );
+                                    }
+                                ;
+                            }
+                        ])
                         ->index('attendance_type_id')->mode('id')
                         ->done()
                 )

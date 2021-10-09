@@ -1,2 +1,4 @@
 1. Make attendance report
 2. Make app by default return to its previous query after store and amending
+3. Fix attendance bug on index query
+4. Fix attendance schedule pruning algorithm
