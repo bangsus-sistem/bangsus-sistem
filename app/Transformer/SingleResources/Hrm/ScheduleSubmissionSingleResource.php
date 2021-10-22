@@ -4,7 +4,7 @@ namespace App\Transformer\SingleResources\Hrm;
 
 use Bsb\Foundation\Transformer\SingleResource;
 
-class AttendanceSingleResource extends SingleResource
+class ScheduleSubmissionSingleResource extends SingleResource
 {
     /**
      * @param  \Illuminate\Http\Request  $request
