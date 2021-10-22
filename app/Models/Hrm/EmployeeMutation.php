@@ -43,4 +43,15 @@ class EmployeeMutation extends Model
     {
         return $this->belongsTo(JobTitle::class);
     }
+
+    /**
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeUserAuthorized($query)
+    {
+        return $query->whereHas('employeeAssignment',
+            fn ($query) => $query->userAuthorized()
+        );
+    }
 }
