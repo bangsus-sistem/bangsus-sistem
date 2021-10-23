@@ -46,6 +46,9 @@ class Kernel
         'image' => Blueprint\Foreign\ImageBlueprint::class,
         'jobTitle' => Blueprint\Foreign\JobTitleBlueprint::class,
         'module' => Blueprint\Foreign\ModuleBlueprint::class,
+        'operationalPhotoBlueprint' => Blueprint\Foreign\OperationalPhotoBlueprint::class,
+        'operationalPhotoTypeBlueprint' => Blueprint\Foreign\OperationalPhotoTypeBlueprint::class,
+        'operationalPhotoPenaltyTypeBlueprint' => Blueprint\Foreign\OperationalPhotoPenaltyTypeBlueprint::class,
         'package' => Blueprint\Foreign\PackageBlueprint::class,
         'qualityControlType' => Blueprint\Foreign\QualityControlTypeBlueprint::class,
         'qualityControlParameter' => Blueprint\Foreign\QualityControlParameterBlueprint::class,
@@ -77,6 +80,7 @@ class Kernel
         // Timestamp
         'admittedAt' => Blueprint\Timestamp\AdmittedAtBlueprint::class,
         'expiredAt' => Blueprint\Timestamp\ExpiredAtBlueprint::class,
+        'transactionDatetime' => Blueprint\Timestamp\TransactionDatetimeBlueprint::class,
     ];
 
     /**
