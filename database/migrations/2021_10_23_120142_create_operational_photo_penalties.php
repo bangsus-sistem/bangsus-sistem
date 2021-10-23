@@ -17,7 +17,7 @@ class CreateOperationalPhotoPenalties extends Migration
             $table->id();
             $table->code();
             $table->operationalPhoto();
-            $table->operationalPhotoPenaltyType();
+            $table->operationalPhotoPenaltyType()->index('long_index_1');
             $table->standarizedDecimal('amount');
             $table->description();
             $table->note();
