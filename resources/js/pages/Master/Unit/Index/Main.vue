@@ -30,7 +30,7 @@ export default {
                         label: 'HRM',
                     },
                     {
-                        label: 'Divisi',
+                        label: 'Satuan',
                     }
                 ]
             },
