@@ -130,8 +130,8 @@ class DisciplinaryParameterController extends Controller
      */
     public function destroy(DestroyRequest $request)
     {
-        $generalCleaningActivity = DisciplinaryParameter::findOrFail($request->input('id'));
-        $this->transaction(fn () => $generalCleaningActivity->delete());
+        $disciplinaryParameter = DisciplinaryParameter::findOrFail($request->input('id'));
+        $this->transaction(fn () => $disciplinaryParameter->delete());
         return response()->noContent();
     }
 }
