@@ -130,7 +130,11 @@
         "widgets": [
             { "ref": "latest_employee_submission" }
         ],
-        "reports": []
+        "reports": [
+            { "ref": "attendance" },
+            { "ref": "schedule" },
+            { "ref": "salary" }
+        ]
     },
     {
         "ref": "master",
@@ -156,6 +160,14 @@
                 "actions": ["index", "create", "read", "update", "delete"]
             },
             {
+                "ref": "minimum_operational_photo",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
+                "ref": "operational_photo_penalty_type",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
                 "ref": "production_type",
                 "actions": ["index", "create", "read", "update", "delete"]
             },
@@ -170,5 +182,33 @@
         ],
         "widgets": [],
         "reports": []
+    },
+    {
+        "ref": "operational",
+        "modules": [
+            {
+                "ref": "operational_photo",
+                "actions": ["index", "create", "read", "update", "delete"]
+            }
+        ],
+        "widgets": [],
+        "reports": []
+    },
+    {
+        "ref": "penalty",
+        "modules": [
+            {
+                "ref": "operational_photo_penalty",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
+                "ref": "material_penalty",
+                "actions": ["index", "create", "read", "update", "delete"]
+            },
+            {
+                "ref": "common_penalty",
+                "actions": ["index", "create", "read", "update", "delete"]
+            }
+        ]
     }
 ]
