@@ -57,6 +57,12 @@ Route::prefix('disciplinary_parameter')->group(function () {
     Route::delete('', 'DisciplinaryParameterController@destroy');
 });
 
+Route::prefix('disciplinary_value')->group(function () {
+    Route::post('', 'DisciplinaryValueController@store');
+    Route::put('', 'DisciplinaryValueController@amend');
+    Route::delete('', 'DisciplinaryValueController@destroy');
+});
+
 Route::prefix('general_cleaning_activity')->group(function () {
     Route::get('all', 'GeneralCleaningActivityController@manifest');
     Route::get('', 'GeneralCleaningActivityController@index');
