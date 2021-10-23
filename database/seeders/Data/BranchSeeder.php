@@ -41,6 +41,7 @@ class BranchSeeder extends ResourceSeeder
                 'name' => $branch['name'],
                 'branch_type_id' => $branchType->id,
                 'position' => isset($branch['position']) ? \DB::raw("GeomFromText('POINT({$branch['position']['latitude']} {$branch['position']['longitude']})')") : null,
+                'off_day' => 4,
                 'active' => $branch['active'] ?? true,
                 'locked' => false,
                 'hidden' => false,
