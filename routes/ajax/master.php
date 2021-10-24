@@ -35,6 +35,22 @@ Route::prefix('operational_photo_type')->group(function () {
     Route::delete('', 'OperationalPhotoTypeController@destroy');
 });
 
+Route::prefix('operational_photo_penalty_type')->group(function () {
+    Route::get('all', 'OperationalPhotoPenaltyTypeController@manifest');
+    Route::get('', 'OperationalPhotoPenaltyTypeController@index');
+    Route::get('{id}', 'OperationalPhotoPenaltyTypeController@show');
+    Route::post('', 'OperationalPhotoPenaltyTypeController@store');
+    Route::put('', 'OperationalPhotoPenaltyTypeController@amend');
+    Route::patch('activate', 'OperationalPhotoPenaltyTypeController@reviseActivate');
+    Route::patch('deactivate', 'OperationalPhotoPenaltyTypeController@reviseDeactivate');
+    Route::delete('', 'OperationalPhotoPenaltyTypeController@destroy');
+});
+
+Route::prefix('minimum_operational_photo')->group(function () {
+    Route::get('{id}', 'MinimumOperationalPhotoController@show');
+    Route::put('', 'MinimumOperationalPhotoController@amend');
+});
+
 Route::prefix('quality_control_type')->group(function () {
     Route::get('all', 'QualityControlTypeController@manifest');
     Route::get('', 'QualityControlTypeController@index');
