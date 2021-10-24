@@ -15,4 +15,12 @@ use App\Models\Concerns\{
 class OperationalPhotoType extends Model
 {
     use SoftDeletes, HasUserTimestamps, HasUserDelete, ActiveFlag;
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function minimumOperationalPhotos()
+    {
+        return $this->hasMany(MinimumOperationalPhoto::class);
+    }
 }

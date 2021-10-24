@@ -16,6 +16,7 @@ use App\Models\Concerns\{
 };
 use Illuminate\Support\Facades\Auth;
 use App\Models\Auth\User;
+use App\Models\Master\MinimumOperationalPhoto;
 
 class Branch extends Model
 {
@@ -50,6 +51,14 @@ class Branch extends Model
     public function users()
     {
         return $this->belongsToMany(User::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function minimumOperationalPhotos()
+    {
+        return $this->hasMany(MinimumOperationalPhoto::class);
     }
 
     /**
