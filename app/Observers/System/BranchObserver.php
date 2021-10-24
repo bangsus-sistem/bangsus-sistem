@@ -5,6 +5,10 @@ namespace App\Observers\System;
 use Bsb\Foundation\Observer;
 use Illuminate\Support\Str;
 use App\Models\Auth\User;
+use App\Models\Master\{
+    OperationalPhotoType,
+    MinimumOperationalPhoto,
+};
 
 class BranchObserver extends Observer
 {
@@ -14,19 +18,7 @@ class BranchObserver extends Observer
      */
     public static function saving($branch)
     {
-        // if ($branch->isDirty('code')) {
-        //     $warehouses = $branch->warehouses;
-        //     if ( ! is_null($warehouses)) {
-        //         $warehouses->each(function ($warehouse) use ($branch) {
-        //             $warehouse->code = Str::replaceFirst(
-        //                 $branch->getOriginal('code'),
-        //                 $branch->code,
-        //                 $warehouse->code,
-        //             );
-        //             $warehouse->save();
-        //         });
-        //     }
-        // }
+        
 
         return true;
     }
@@ -43,35 +35,18 @@ class BranchObserver extends Observer
                 User::where('all_branches', true)
                     ->get()->pluck('id')->all()
             );
-        
-        // Sync products.
-        // $products = wbcm_model('master.product')::where('all_branches', true)->get();
-        // $branchType = wbcm_model('system.branch_type')::whereHas(
-        //     'products',
-        //     function ($query) use ($products) {
-        //         $query->whereIn('product_id', $products->pluck('id')->all());
-        //     }
-        // )->find($branch->branch_type_id);
-        // if ( ! is_null($products)) {
-        //     $data = [];
-        //     $products->each(function ($product) use (&$data, $branchType) {
-        //         $branchTypeProduct = $branchType->products->find($product->id);
-        //         $data[$product->id] = is_null($branchTypeProduct)
-        //             ?   [
-        //                     'purchase' => $product->all_purchase,
-        //                     'sales' => $product->all_sales,
-        //                     'incoming_mutation' => $product->all_incoming_mutation,
-        //                     'outgoing_mutation' => $product->all_outgoing_mutation,
-        //                 ]
-        //             :   [
-        //                     'purchase' => $branchTypeProduct->pivot->purchase,
-        //                     'sales' => $branchTypeProduct->pivot->sales,
-        //                     'incoming_mutation' => $branchTypeProduct->pivot->incoming_mutation,
-        //                     'outgoing_mutation' => $branchTypeProduct->pivot->outgoing_mutation,
-        //                 ];
-        //     });
-        //     $branch->products()->sync($data);
-        // }
+
+        OperationalPhotoType::whereDoesntHave('minimumOperationalPhotos', function ($query) use ($branch) {
+            return $query->where('branch_id', $branch->id);
+        })
+            ->get()
+            ->each(function ($operationalPhotoType) use ($branch) {
+                $minimumOperationalPhoto = new MinimumOperationalPhoto;
+                $minimumOperationalPhoto->operational_photo_type_id = $operationalPhotoType->id;
+                $minimumOperationalPhoto->branch_id = $branch->id;
+                $minimumOperationalPhoto->minimum = 0;
+                $minimumOperationalPhoto->save();
+            });
     }
     
     /**
