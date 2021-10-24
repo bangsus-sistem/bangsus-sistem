@@ -25,6 +25,11 @@
                             Denda
                         </bsb-button-router-link>
                     </bsb-access-wrapper>
+                    <bsb-access-wrapper module-ref="minimum_operational_photo" action-ref="index">
+                        <bsb-button-router-link :to="{ name: 'master.minimumOperationalPhoto', params: { operationalPhotoTypeId: item['id'] } }" color="secondary" size="sm">
+                            Minimum
+                        </bsb-button-router-link>
+                    </bsb-access-wrapper>
                 </bsb-td>
             </tr>
         </template>
@@ -50,6 +55,11 @@
                         <bsb-access-wrapper module-ref="operational_photo_penalty_type" action-ref="index">
                             <bsb-button-router-link :to="{ name: 'master.operationalPhotoPenaltyType', params: { operationalPhotoTypeId: item['id'] } }" color="secondary" size="sm">
                                 Denda
+                            </bsb-button-router-link>
+                        </bsb-access-wrapper>
+                        <bsb-access-wrapper module-ref="minimum_operational_photo" action-ref="index">
+                            <bsb-button-router-link :to="{ name: 'master.minimumOperationalPhoto', params: { operationalPhotoTypeId: item['id'] } }" color="secondary" size="sm">
+                                Minimum
                             </bsb-button-router-link>
                         </bsb-access-wrapper>
                     </template>
