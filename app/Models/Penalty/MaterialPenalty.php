@@ -30,4 +30,9 @@ class MaterialPenalty extends Model
     protected $casts = [
         'total' => 'float'
     ];
+
+    public static function getPenalty($month, $year, $branchId)
+    {
+        return self::where('month', $month)->where('year', $year)->where('branch_id', $branchId)->sum('total');
+    }
 }

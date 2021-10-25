@@ -47,4 +47,9 @@ Route::middleware('auth:sanctum')->group(function () {
      * @package \Waffleboss\Library\Http\Controllers\Ajax\Operational
      */
     Route::prefix('operational')->namespace('Operational')->group(__DIR__.'/operational.php');
+    
+    /**
+     * @package \Waffleboss\Library\Http\Controllers\Ajax\Report
+     */
+    Route::prefix('report')->namespace('Report')->group(__DIR__.'/report.php');
 });

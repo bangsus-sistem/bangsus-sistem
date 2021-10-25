@@ -30,4 +30,9 @@ class CommonPenalty extends Model
     protected $casts = [
         'total' => 'float'
     ];
+
+    public static function getPenalty($month, $year, $branchId)
+    {
+        return self::whereMonth('transaction_datetime', '=', $month)->whereYear('transaction_datetime', '=', $year)->where('branch_id', $branchId)->sum('total');
+    }
 }

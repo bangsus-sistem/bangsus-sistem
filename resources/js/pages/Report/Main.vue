@@ -2,11 +2,11 @@
     <Layout :breadcrumbs="msc.breadcrumbs" active="report">
         <!-- Mobile -->
         <template v-slot:mobile>
-            <!-- <Mobile /> -->
+            <bsb-button-router-link :to="{ name: 'report.salary' }">Laporan Gaji</bsb-button-router-link>
         </template>
         <!-- Desktop -->
         <template v-slot:desktop>
-            <!-- <Desktop /> -->
+            <bsb-button-router-link :to="{ name: 'report.salary' }">Laporan Gaji</bsb-button-router-link>
         </template>
     </Layout>
 </template>
