@@ -160,12 +160,12 @@
                 "actions": ["index", "create", "read", "update", "delete"]
             },
             {
-                "ref": "minimum_operational_photo",
+                "ref": "operational_photo_penalty_type",
                 "actions": ["index", "create", "read", "update", "delete"]
             },
             {
-                "ref": "operational_photo_penalty_type",
-                "actions": ["index", "create", "read", "update", "delete"]
+                "ref": "minimum_operational_photo",
+                "actions": ["update"]
             },
             {
                 "ref": "production_type",
@@ -209,6 +209,8 @@
                 "ref": "common_penalty",
                 "actions": ["index", "create", "read", "update", "delete"]
             }
-        ]
+        ],
+        "widgets": [],
+        "reports": []
     }
 ]

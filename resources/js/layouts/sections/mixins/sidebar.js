@@ -257,6 +257,29 @@ export default {
                     collapse: false,
                 },
                 {
+                    title: 'Denda',
+                    icon: 'shield',
+                    children: [
+                        {
+                            title: 'Denda Umum',
+                            route: { name: 'penalty.commonPenalty' },
+                            access: {
+                                moduleRef: 'common_penalty',
+                                actionRef: 'index',
+                            },
+                        },
+                        {
+                            title: 'Denda Bahan',
+                            route: { name: 'penalty.materialPenalty' },
+                            access: {
+                                moduleRef: 'material_penalty',
+                                actionRef: 'index',
+                            },
+                        },
+                    ],
+                    collapse: false,
+                },
+                {
                     title: 'Laporan',
                     icon: 'file-text',
                     route: { name: 'report' },

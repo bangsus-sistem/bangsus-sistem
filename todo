@@ -1,4 +1,5 @@
-1. Make attendance report
-2. Make app by default return to its previous query after store and amending
-3. Fix attendance bug on index query
-4. Fix attendance schedule pruning algorithm
+1. Make sync observer for minimum operational photo and branch
+2. Finalize operational photo type master
+3. Fix attendance data
+4. Make common penalty and material penalty
+5. Make attendance, and salary report

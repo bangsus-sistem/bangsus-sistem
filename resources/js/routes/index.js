@@ -6,6 +6,7 @@ import log from './modules/log'
 import system from './modules/system'
 import master from './modules/master'
 import hrm from './modules/hrm'
+import penalty from './modules/penalty'
 import report from './modules/report'
 
 const appMiddleware = ['authenticated', 'versionCheck']
@@ -54,6 +55,11 @@ export default [
         path: '/hrm',
         component: blankComponent,
         children: hrm,
+    },
+    {
+        path: '/penalty',
+        component: blankComponent,
+        children: penalty,
     },
     {
         path: '/report',

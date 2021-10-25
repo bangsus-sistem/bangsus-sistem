@@ -37,4 +37,9 @@ Route::middleware('auth:sanctum')->group(function () {
      * @package \Waffleboss\Library\Http\Controllers\Ajax\Hrm
      */
     Route::prefix('hrm')->namespace('Hrm')->group(__DIR__.'/hrm.php');
+    
+    /**
+     * @package \Waffleboss\Library\Http\Controllers\Ajax\Penalty
+     */
+    Route::prefix('penalty')->namespace('Penalty')->group(__DIR__.'/penalty.php');
 });
