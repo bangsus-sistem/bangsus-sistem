@@ -25,7 +25,7 @@ class SalaryController extends Controller
         $container = [];
 
         $month = explode('-', $request->query('month'))[1];
-        $year = explode('-', $request->query('year'))[0];
+        $year = explode('-', $request->query('month'))[0];
         $branches = Branch::get();
 
         $branches->each(function ($branch) use (&$container, $month, $year) {
@@ -38,7 +38,7 @@ class SalaryController extends Controller
             $data[] = [];
             $data[] = [];
 
-            $data[] = ['No.', 'Nama Karyawan', 'Absen Masuk', 'Off', 'Denda Terlambat', 'Denda Umum', 'Denda Bahan'];
+            $data[] = ['No.', 'Nama Karyawan', 'Absen Masuk', 'Off', 'Total', 'Gaji Pokok', 'Gaji Diterima', 'Denda Terlambat', 'Denda Umum', 'Denda Bahan', 'Total Gaji'];
 
             $employees = Employee::whereHas('employeeAssignments', function ($query) use ($branch) {
                 return $query->where('branch_id', $branch->id);
@@ -46,6 +46,7 @@ class SalaryController extends Controller
                 ->whereHas('attendances', function ($query) use ($month, $year) {
                     return $query->whereMonth('attendance_in_datetime', '=', $month)->whereYear('attendance_in_datetime', '=', $year);
                 })
+                ->with('attendances')
                 ->get();
 
             $count = $employees->count();
@@ -54,15 +55,27 @@ class SalaryController extends Controller
             $commonPenalty = CommonPenalty::getPenalty($month, $year, $branch->id) / $count;
             $materialPenalty = MaterialPenalty::getPenalty($month, $year, $branch->id) / $count;
 
-            $employees->each(function ($employee) use (&$data, $branch, $commonPenalty, $materialPenalty) {
+            $employees->each(function ($employee) use (&$data, $branch, $commonPenalty, $materialPenalty, $month, $year) {
+                $attendanceCount = $employee->attendances()->count();
+                $branchOff = $branch->off;
+                $total = $attendanceCount + $branchOff;
+                $baseSalary = $employee->employeeAssignments->where('branch_id', $branch->id)->first()->base_salary ?? 0;
+                $baseSalary = is_null($baseSalary) ? 0 : $baseSalary;
+                $givenSalary = $baseSalary * $total / 30;
+                $attendancePenalty = 0;
+                $grandTotal = $givenSalary - $attendancePenalty - $commonPenalty - $materialPenalty;
                 $data[] = [
                     '',
                     $employee->full_name,
-                    '',
+                    $attendanceCount,
                     $branch->off,
-                    '0', // Attendance::getLatePenalty($employee->id, $branch->id, $month, $year),
+                    $total,
+                    (string) $baseSalary,
+                    $givenSalary,
+                    $attendancePenalty,
                     $commonPenalty,
                     $materialPenalty,
+                    $grandTotal,
                 ];
             });
 
