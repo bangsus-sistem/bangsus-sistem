@@ -6,6 +6,7 @@ import log from './modules/log'
 import system from './modules/system'
 import master from './modules/master'
 import hrm from './modules/hrm'
+import operational from './modules/operational'
 import penalty from './modules/penalty'
 import report from './modules/report'
 
@@ -55,6 +56,11 @@ export default [
         path: '/hrm',
         component: blankComponent,
         children: hrm,
+    },
+    {
+        path: '/operational',
+        component: blankComponent,
+        children: operational,
     },
     {
         path: '/penalty',

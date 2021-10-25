@@ -12,13 +12,20 @@ use App\Models\Concerns\{
     HasBranch,
     HasEmployee,
     HasImage,
+    HasCode,
     ActiveFlag,
 };
+use App\Models\Master\OperationalPhotoType;
 
 class OperationalPhoto extends Model
 {
     use SoftDeletes, HasUserTimestamps, HasUserDelete, ActiveFlag,
-        HasBranch, HasEmployee, HasImage;
+        HasBranch, HasEmployee, HasImage, HasCode;
+
+    /**
+     * @var string
+     */
+    protected static $codePrefix = 'OPP';
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

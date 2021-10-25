@@ -48,10 +48,6 @@
                         </option>
                     </bsb-select>
                 </bsb-form-group>
-                <bsb-form-group>
-                    <label>Tanggal Absensi</label>
-                    <bsb-input size="sm" type="date" v-model="query['attendance_date']" />
-                </bsb-form-group>
                 <bsb-button-spinner color="primary" size="sm" @click="$emit('search')" :loading="loading">
                     Cari
                 </bsb-button-spinner>

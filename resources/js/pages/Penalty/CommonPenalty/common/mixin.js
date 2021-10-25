@@ -10,6 +10,8 @@ export default {
                     'total': '',
                     'description': '',
                     'note': '',
+
+                    'branch': {},
                 },
                 errors: {
                     'branch_id': [],

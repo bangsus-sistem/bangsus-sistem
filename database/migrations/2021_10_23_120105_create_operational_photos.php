@@ -18,7 +18,7 @@ class CreateOperationalPhotos extends Migration
             $table->code();
             $table->operationalPhotoType();
             $table->branch();
-            $table->employee();
+            $table->employee('employee_id', true);
             $table->transactionDatetime();
             $table->image();
             $table->description();

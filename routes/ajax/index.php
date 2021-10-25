@@ -42,4 +42,9 @@ Route::middleware('auth:sanctum')->group(function () {
      * @package \Waffleboss\Library\Http\Controllers\Ajax\Penalty
      */
     Route::prefix('penalty')->namespace('Penalty')->group(__DIR__.'/penalty.php');
+    
+    /**
+     * @package \Waffleboss\Library\Http\Controllers\Ajax\Operational
+     */
+    Route::prefix('operational')->namespace('Operational')->group(__DIR__.'/operational.php');
 });

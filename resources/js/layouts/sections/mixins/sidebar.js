@@ -257,6 +257,21 @@ export default {
                     collapse: false,
                 },
                 {
+                    title: 'Operasional',
+                    icon: 'maximize',
+                    children: [
+                        {
+                            title: 'Form Foto Operasional',
+                            route: { name: 'operational.operationalPhoto' },
+                            access: {
+                                moduleRef: 'operational_photo',
+                                actionRef: 'index',
+                            },
+                        },
+                    ],
+                    collapse: false,
+                },
+                {
                     title: 'Denda',
                     icon: 'shield',
                     children: [
