@@ -15,7 +15,9 @@ class CreateMaterialPenalties extends Migration
     {
         Schema::create('material_penalties', function (Blueprint $table) {
             $table->id();
-            $table->smallInteger('month');
+            $table->code();
+            $table->transactionDatetime();
+            $table->mediumInteger('month');
             $table->mediumInteger('year');
             $table->branch();
             $table->standarizedDecimal('total');

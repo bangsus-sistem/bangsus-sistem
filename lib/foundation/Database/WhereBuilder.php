@@ -271,6 +271,31 @@ class WhereBuilder
     /**
      * @return void
      */
+    public function monthMode()
+    {
+        $queueIndex = $this->queueIndex;
+        $queueColumn = $this->queueColumn;
+        $request = $this->request;
+        $value = $this->value($queueIndex, date('Y-m'));
+        if ($value == '') {
+            $value = date('Y-m');
+        }
+        $month = explode('-', $value)[1];
+        $year = explode('-', $value)[0];
+
+        if ($value !== '*') {
+            $this->wheres[] = [
+                'month', '=', $month
+            ];
+            $this->wheres[] = [
+                'year', '=', $year
+            ];
+        }
+    }
+
+    /**
+     * @return void
+     */
     public function callbackMode($callback)
     {
         $return = $callback($this->request);
