@@ -7,6 +7,7 @@ export default {
             query: {
                 'code': '',
                 'transaction_date': '',
+                'month': '',
                 'branch_id': '',
             },
             meta: {
@@ -14,6 +15,7 @@ export default {
                     { index: 'code', title: 'Kode' },
                     { index: 'transaction_date', title: 'Tanggal Transaksi' },
                     { index: 'branch_id', title: 'Cabang' },
+                    { index: 'month', title: 'Bulan' },
                     { title: 'Total', sort: false },
                 ],
             },
@@ -38,6 +40,7 @@ export default {
                     this.setQuery({
                         'code': [''],
                         'transaction_date': [''],
+                        'month': [''],
                         'branch_id': ['*', ['*', ...lodash.map(this.resources['branches'], (val) => val.id)]],
                     })
                     this.getAndSetResult()

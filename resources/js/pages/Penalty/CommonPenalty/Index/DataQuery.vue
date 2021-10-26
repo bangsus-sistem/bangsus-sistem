@@ -19,6 +19,9 @@
                         </option>
                     </bsb-select>
                 </bsb-th-query>
+                <bsb-th-query>
+                    <bsb-input size="sm" type="month" v-model="query['month']" />
+                </bsb-th-query>
                 <bsb-th-query></bsb-th-query>
                 <bsb-th-query>
                     <bsb-button-spinner color="primary" size="sm" @click="$emit('search')" :loading="loading">
@@ -47,6 +50,10 @@
                             {{ branch['code'] }} - {{ branch['name'] }}
                         </option>
                     </bsb-select>
+                </bsb-form-group>
+                <bsb-form-group>
+                    <label>Bulan</label>
+                    <bsb-input size="sm" type="month" v-model="query['month']" />
                 </bsb-form-group>
                 <bsb-button-spinner color="primary" size="sm" @click="$emit('search')" :loading="loading">
                     Cari

@@ -33,6 +33,6 @@ class CommonPenalty extends Model
 
     public static function getPenalty($month, $year, $branchId)
     {
-        return self::whereMonth('transaction_datetime', '=', $month)->whereYear('transaction_datetime', '=', $year)->where('branch_id', $branchId)->sum('total');
+        return self::where('month', $month)->where('year', $year)->where('branch_id', $branchId)->sum('total');
     }
 }

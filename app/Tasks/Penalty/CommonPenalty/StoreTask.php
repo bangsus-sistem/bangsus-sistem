@@ -16,6 +16,8 @@ class StoreTask extends Task
         $commonPenalty = new CommonPenalty;
         $this->transaction(
             function () use ($request, $commonPenalty) {
+                $commonPenalty->month = date('m', strtotime($request->input('month')));
+                $commonPenalty->year = date('Y', strtotime($request->input('month')));
                 $commonPenalty->transaction_datetime = date('Y-m-d H:i:s');
                 $commonPenalty->branch_id = $request->input('branch_id');
                 $commonPenalty->total = $request->input('total');

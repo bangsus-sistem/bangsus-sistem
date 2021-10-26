@@ -23,6 +23,9 @@ class StoreRequest extends FeatureRequest
     public function rules()
     {
         return [
+            'month' => [
+                'required',
+            ],
             'branch_id' => [
                 'required',
                 'bsb_exists:'.Branch::class,

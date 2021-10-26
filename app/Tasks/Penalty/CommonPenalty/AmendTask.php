@@ -16,6 +16,8 @@ class AmendTask extends Task
         $commonPenalty = CommonPenalty::findOrFail($request->input('id'));
         $this->transaction(
             function () use ($request, $commonPenalty) {
+                $commonlPenalty->month = date('m', strtotime($request->input('month')));
+                $commonlPenalty->year = date('Y', strtotime($request->input('month')));
                 $commonPenalty->branch_id = $request->input('branch_id');
                 $commonPenalty->total = $request->input('total');
                 $commonPenalty->description = $request->input('description');

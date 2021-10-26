@@ -7,6 +7,7 @@ export default {
             form: {
                 data: {
                     'branch_id': '',
+                    'month': '',
                     'total': '',
                     'description': '',
                     'note': '',
@@ -15,6 +16,7 @@ export default {
                 },
                 errors: {
                     'branch_id': [],
+                    'month': [],
                     'total': [],
                     'description': [],
                     'note': [],

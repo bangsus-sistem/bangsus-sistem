@@ -39,6 +39,10 @@
                         </bsb-select-errors>
                     </bsb-form-group>
                     <bsb-form-group>
+                        <label>Bulan</label>
+                        <bsb-input-errors type="month" v-model="form.data['month']" :errors="form.errors['month']" />
+                    </bsb-form-group>
+                    <bsb-form-group>
                         <label>Total</label>
                         <bsb-input-errors type="number" v-model="form.data['total']" :errors="form.errors['total']" />
                     </bsb-form-group>

@@ -19,6 +19,7 @@ class CommonPenaltyPaginatedResource extends PaginatedResource
             'transaction_datetime' => $this->transaction_datetime,
             'branch' => new BranchPaginatedResource($this->branch),
             'total' => (float) $this->total,
+            'month' => $this->year . '-' . $this->month,
         ];
     }
 }

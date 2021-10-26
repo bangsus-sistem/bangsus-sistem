@@ -31,6 +31,9 @@ class AmendRequest extends FeatureIdRequest
     public function additionalRules()
     {
         return [
+            'month' => [
+                'required',
+            ],
             'branch_id' => [
                 'required',
                 'bsb_exists:'.Branch::class,

@@ -24,6 +24,10 @@
                         <bsb-input v-model="form.data['total']" :readonly="true" />
                     </bsb-form-group>
                     <bsb-form-group>
+                        <label>Bulan</label>
+                        <bsb-input type="month" v-model="form.data['month']" :readonly="true" />
+                    </bsb-form-group>
+                    <bsb-form-group>
                         <bsb-input :value="form.data['branch']['code'] + ' - ' + form.data['branch']['name']" :readonly="true" />
                     </bsb-form-group>
                     <bsb-form-group>

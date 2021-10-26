@@ -19,6 +19,8 @@ class CommonPenaltyRelatedResource extends RelatedResource
             'code' => $this->code,
             'transaction_datetime' => $this->transaction_datetime,
             'branch' => new BranchSingleResource($this->branch),
+            'total' => (float) $this->total,
+            'month' => $this->year . '-' . $this->month,
             'description' => $this->description,
             'note' => $this->note,
             'user_create' => new UserSingleResource($this->userCreate),

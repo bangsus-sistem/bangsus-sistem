@@ -6,6 +6,7 @@
                 <bsb-td>{{ item['code'] }}</bsb-td>
                 <bsb-td>{{ standardDatetime(item['transaction_datetime']) }}</bsb-td>
                 <bsb-td>{{ item['branch']['code'] }} - {{ item['branch']['name'] }}</bsb-td>
+                <bsb-td>{{ item['month'] }}</bsb-td>
                 <bsb-td>{{ item['total'] }}</bsb-td>
                 <bsb-td justify="center">
                     <bsb-access-wrapper module-ref="common_penalty" action-ref="read">
@@ -26,7 +27,8 @@
                     <template v-slot:content>
                         <small>{{ item['code'] }}</small>
                         <h6>{{ item['total'] }}</h6>
-                        <small>{{ item['branch']['code'] }} - {{ item['branch']['name'] }}</small>
+                        <small>{{ item['branch']['code'] }} - {{ item['branch']['name'] }}</small><br>
+                        <small>{{ item['month'] }}</small>
                     </template>
                     <template v-slot:right>
                         <bsb-access-wrapper module-ref="common_penalty" action-ref="read">
