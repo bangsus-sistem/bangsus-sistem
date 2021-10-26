@@ -72,7 +72,7 @@ class SalaryController extends Controller
                 $ordinate = $key + 16;
 
                 $attendanceCount = $employee
-                    ->attendances()
+                    ->attendances
                     ->where('attendance_type_id', 1)
                     ->whereNotNull('attendance_in_datetime')
                     ->count();
