@@ -71,7 +71,11 @@ class SalaryController extends Controller
             $employees->each(function ($employee, $key) use (&$data, $branch, $commonPenalty, $materialPenalty, $month, $year, $count) {
                 $ordinate = $key + 16;
 
-                $attendanceCount = $employee->attendances()->where('attendance_type_id', 1)->count();
+                $attendanceCount = $employee
+                    ->attendances()
+                    ->where('attendance_type_id', 1)
+                    ->whereNotNull('attendance_in_datetime')
+                    ->count();
                 $baseSalary = $employee->employeeAssignments->where('branch_id', $branch->id)->first()->base_salary ?? 0;
                 $baseSalary = is_null($baseSalary) ? 0 : $baseSalary;
 
