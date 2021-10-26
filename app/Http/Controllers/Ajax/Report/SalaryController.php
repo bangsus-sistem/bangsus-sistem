@@ -78,6 +78,7 @@ class SalaryController extends Controller
                 $attendancePenalty = 0;
                 $employee->attendances()->each(function ($attendance) use (&$attendancePenalty) {
                     if (is_null($attendance->schedule_in_datetime)) return;
+                    if (is_null($attendance->attendance_in_datetime)) return;
                     if ($attendance->attendance_in_datetime->lessThan($attendance->schedule_in_datetime)) return;
 
                     $penalty = $attendance->attendance_in_datetime->diffInMinutes($attendance->schedule_in_datetime);
