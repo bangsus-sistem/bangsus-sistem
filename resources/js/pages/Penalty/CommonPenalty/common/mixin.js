@@ -42,6 +42,7 @@ export default {
                 return {
                     'id': data['id'],
                     'code': data['code'],
+                    'month': data['month'],
                     'branch_id': data['branch']['id'],
                     'total': data['total'],
                     'description': data['description'],

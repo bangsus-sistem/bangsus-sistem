@@ -19,6 +19,7 @@
                         </option>
                     </bsb-select>
                 </bsb-th-query>
+                <bsb-th-query></bsb-th-query>
                 <bsb-th-query>
                     <bsb-select size="sm"
                         v-model="query['active']"

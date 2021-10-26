@@ -15,6 +15,7 @@ export default {
                     { index: 'code', title: 'Kode' },
                     { index: 'name', title: 'Nama' },
                     { index: 'branch_type_id', title: 'Tipe Cabang' },
+                    { index: 'off_day', title: 'Off Day' },
                     { index: 'active', title: 'Status' },
                 ],
             },

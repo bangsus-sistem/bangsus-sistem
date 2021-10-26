@@ -38,6 +38,11 @@ class StoreRequest extends FeatureRequest
                 'required',
                 'bsb_exists:'.BranchType::class,
             ],
+            'off_day' => [
+                'required',
+                'numeric',
+                'between:0,31',
+            ],
             'description' => [
                 'nullable',
                 'max:1000',

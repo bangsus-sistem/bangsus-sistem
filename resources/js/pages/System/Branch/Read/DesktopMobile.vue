@@ -47,6 +47,10 @@
                         </div>
                     </bsb-form-group>
                     <bsb-form-group>
+                        <label>Off Day</label>
+                        <bsb-input v-model="form.data['off_day']" :readonly="true" />
+                    </bsb-form-group>
+                    <bsb-form-group>
                         <label>Deskripsi</label>
                         <bsb-textarea v-model="form.data['description']" :readonly="true" />
                     </bsb-form-group>

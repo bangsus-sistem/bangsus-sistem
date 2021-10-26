@@ -6,6 +6,7 @@
                 <bsb-td>{{ item['code'] }}</bsb-td>
                 <bsb-td>{{ item['name'] }}</bsb-td>
                 <bsb-td v-if="flWithBranchType">{{ item['branch_type']['code'] }} - {{ item['branch_type']['name'] }}</bsb-td>
+                <bsb-td>{{ item['off_day'] }}</bsb-td>
                 <bsb-td justify="center">
                     <bsb-switch-badge :condition="item['active']" true-label="Aktif" false-label="Tidak Aktif"/>
                 </bsb-td>
@@ -30,7 +31,8 @@
                     <template v-slot:content>
                         <small>{{ item['code'] }}</small>
                         <h6>{{ item['name'] }}</h6>
-                        <small v-if="flWithBranchType">{{ item['branch_type']['code'] }} - {{ item['branch_type']['name'] }}</small>
+                        <small v-if="flWithBranchType">{{ item['branch_type']['code'] }} - {{ item['branch_type']['name'] }}</small><br>
+                        <small>{{ item['off_day'] }}</small>
                     </template>
                     <template v-slot:right>
                         <bsb-access-wrapper module-ref="branch" action-ref="read">

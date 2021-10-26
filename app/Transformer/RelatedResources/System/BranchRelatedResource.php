@@ -19,6 +19,7 @@ class BranchRelatedResource extends RelatedResource
             'code' => $this->code,
             'name' => $this->name,
             'branch_type' => new BranchTypeSingleResource($this->branchType),
+            'off_day' => $this->off_day,
             'active' => (bool) $this->active,
             'locked' => (bool) $this->locked,
             'hidden' => (bool) $this->hidden,

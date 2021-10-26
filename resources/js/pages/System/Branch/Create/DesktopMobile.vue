@@ -41,6 +41,10 @@
                         </bsb-select-errors>
                     </bsb-form-group>
                     <bsb-form-group>
+                        <label>Off Day</label>
+                        <bsb-input-errors v-model="form.data['off_day']" :errors="form.errors['off_day']" />
+                    </bsb-form-group>
+                    <bsb-form-group>
                         <label>Deskripsi</label>
                         <bsb-textarea-errors v-model="form.data['description']" :errors="form.errors['description']" />
                     </bsb-form-group>

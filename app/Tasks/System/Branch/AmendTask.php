@@ -19,6 +19,7 @@ class AmendTask extends Task
                 $branch->code = $request->input('code');
                 $branch->name = $request->input('name');
                 $branch->branch_type_id = $request->input('branch_type_id');
+                $branch->off_day = $request->input('off_day');
                 $branch->active = $request->boolean('active');
                 $branch->description = $request->input('description');
                 $branch->note = $request->input('note');
