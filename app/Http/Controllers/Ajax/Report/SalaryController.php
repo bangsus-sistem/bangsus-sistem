@@ -96,7 +96,7 @@ class SalaryController extends Controller
                     '',
                     $employee->full_name,
                     $attendanceCount,
-                    $branch->off,
+                    $branch->off_day,
                     '=C'.$ordinate.'+D'.$ordinate,
                     (string) $baseSalary,
                     '=E'.$ordinate.'*F'.$ordinate.'/30',
