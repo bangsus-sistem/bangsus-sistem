@@ -38,6 +38,20 @@ class SalaryController extends Controller
             $data[] = [];
             $data[] = [];
 
+            $commonPenalty = CommonPenalty::getPenalty($month, $year, $branch->id);
+            $materialPenalty = MaterialPenalty::getPenalty($month, $year, $branch->id);
+
+            $data[] = ['Denda Umum', $commonPenalty];
+            $data[] = ['Beban Denda Umum', 100];
+            $data[] = ['Total Denda Umum', '=B6*B7/100'];
+            $data[] = [];
+            $data[] = ['Denda Bahan', $materialPenalty];
+            $data[] = ['Beban Denda Bahan', 100];
+            $data[] = ['Total Denda Bahan', '=B10*B11/100'];
+
+            $data[] = [];
+            $data[] = [];
+
             $data[] = ['No.', 'Nama Karyawan', 'Absen Masuk', 'Off', 'Total', 'Gaji Pokok', 'Gaji Diterima', 'Denda Terlambat', 'Denda Umum', 'Denda Bahan', 'Total Gaji'];
 
             $employees = Employee::whereHas('employeeAssignments', function ($query) use ($branch) {
@@ -52,30 +66,39 @@ class SalaryController extends Controller
             $count = $employees->count();
             $count = $count == 0 ? 1 : $count;
 
-            $commonPenalty = CommonPenalty::getPenalty($month, $year, $branch->id) / $count;
-            $materialPenalty = MaterialPenalty::getPenalty($month, $year, $branch->id) / $count;
+            
 
-            $employees->each(function ($employee) use (&$data, $branch, $commonPenalty, $materialPenalty, $month, $year) {
+            $employees->each(function ($employee, $key) use (&$data, $branch, $commonPenalty, $materialPenalty, $month, $year, $count) {
+                $ordinate = $key + 16;
+
                 $attendanceCount = $employee->attendances()->count();
-                $branchOff = $branch->off;
-                $total = $attendanceCount + $branchOff;
                 $baseSalary = $employee->employeeAssignments->where('branch_id', $branch->id)->first()->base_salary ?? 0;
                 $baseSalary = is_null($baseSalary) ? 0 : $baseSalary;
-                $givenSalary = $baseSalary * $total / 30;
+
                 $attendancePenalty = 0;
-                $grandTotal = $givenSalary - $attendancePenalty - $commonPenalty - $materialPenalty;
+                $employee->attendances()->each(function ($attendance) use (&$attendancePenalty) {
+                    if (is_null($attendance->schedule_in_datetime)) return;
+                    if ($attendance->attendance_in_datetime->lessThan($attendance->schedule_in_datetime)) return;
+
+                    $penalty = $attendance->attendance_in_datetime->diffInMinutes($attendance->schedule_in_datetime);
+                    $penalty = $penalty * 5000;
+                    $penalty = $penalty > 25000 ? 25000 : $penalty;
+
+                    $attendancePenalty += $penalty;
+                });
+
                 $data[] = [
                     '',
                     $employee->full_name,
                     $attendanceCount,
                     $branch->off,
-                    $total,
+                    '=C'.$ordinate.'+D'.$ordinate,
                     (string) $baseSalary,
-                    $givenSalary,
-                    $attendancePenalty,
-                    $commonPenalty,
-                    $materialPenalty,
-                    $grandTotal,
+                    '=E'.$ordinate.'*F'.$ordinate.'/30',
+                    (string) $attendancePenalty,
+                    '=B8/'.$count,
+                    '=B12/'.$count,
+                    '=G'.$ordinate.'-H'.$ordinate.'-I'.$ordinate.'-J'.$ordinate,
                 ];
             });
 
